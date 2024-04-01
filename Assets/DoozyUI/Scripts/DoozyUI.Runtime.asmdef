@@ -1,0 +1,18 @@
+{
+    "name": "DoozyUI.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:10f74c9edb08b2741903c1e687b48319",
+        "GUID:4fc64cc293e21d14e93f3c9c6f5b8235"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
