@@ -1,0 +1,18 @@
+{
+    "name": "QuickEngine.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:10f74c9edb08b2741903c1e687b48319"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
