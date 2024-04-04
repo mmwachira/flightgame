@@ -5,7 +5,6 @@ using UnityEngine.TextCore.Text;
 
 public class Movement : MonoBehaviour
 {
-    public Rigidbody rb;
 
     public float forwardForce = 5f;
     public float upwardForce = 1f;
