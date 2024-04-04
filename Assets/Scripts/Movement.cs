@@ -8,8 +8,7 @@ public class Movement : MonoBehaviour
     public Rigidbody rb;
 
     public float forwardForce = 5f;
-    public float upwardForce = 50f;
-    public float backwardForce = 5f;
+    public float upwardForce = 1f;
     public float sidewaysForce = 5f;
 
     // Start is called before the first frame update
@@ -25,8 +24,17 @@ public class Movement : MonoBehaviour
     {
         transform.Translate(Vector3.forward * forwardForce * Time.deltaTime, Space.World);
 
-        if(Input.GetKey("space")){
-            rb.AddForce(0,forwardForce,0);
+        if(Input.GetKey("w")){
+            transform.Translate(
+                //Vector3.Lerp(Vector3.forward, Vector3.up, upwardForce)); 
+                Vector3.up * upwardForce * Time.deltaTime);
+        }
+        if(Input.GetKey("s")){
+            if(this.gameObject.transform.position.y > LevelBoundary.ground)
+            {
+               transform.Translate(Vector3.down * upwardForce * Time.deltaTime); 
+            }
+            
         }
         
         if(Input.GetKey("a")){
