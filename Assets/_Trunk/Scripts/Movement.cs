@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         
-     GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
+     //GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
 
     }
 
@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
                 Vector3.up * upwardForce * Time.deltaTime);
         }
         if(Input.GetKey("s")){
-            if(this.gameObject.transform.position.y > LevelBoundary.ground)
+            if(gameObject.transform.position.y > LevelBoundary.ground)
             {
                transform.Translate(Vector3.down * upwardForce * Time.deltaTime); 
             }
@@ -37,14 +37,14 @@ public class Movement : MonoBehaviour
         }
         
         if(Input.GetKey("a")){
-            if(this.gameObject.transform.position.x > LevelBoundary.leftSide)
+            if(gameObject.transform.position.x > LevelBoundary.leftSide)
             {
                 transform.Translate(Vector3.left * sidewaysForce * Time.deltaTime);
             }
             //rb.AddForce(-forwardForce,0,0);
         }
         if(Input.GetKey("d")){
-            if(this.gameObject.transform.position.x < LevelBoundary.rightSide)
+            if(gameObject.transform.position.x < LevelBoundary.rightSide)
             {
                 transform.Translate(Vector3.right * sidewaysForce * Time.deltaTime);
             }
