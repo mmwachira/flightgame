@@ -30,7 +30,7 @@ public class PlayerInputController: MonoBehaviour
         public void Start()
     {
         currentHealth = maxHealth;
-        //UpdateUI();
+        UpdateUI();
     }
 
     void Update()
@@ -74,7 +74,7 @@ public class PlayerInputController: MonoBehaviour
     }
     void OnCollisionEnter(Collision collision) 
     {
-        if(collision.gameObject.CompareTag("Obstacle"))
+        if(collision.gameObject.CompareTag("player"))
         {
             Debug.Log("Obstacle hit");
             Destroy(collision.gameObject);
