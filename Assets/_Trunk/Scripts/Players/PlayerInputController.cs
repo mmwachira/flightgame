@@ -72,13 +72,12 @@ public class PlayerInputController: MonoBehaviour
         }
         
     }
-    void OnCollisionEnter(Collision collision) 
+    void OnTriggerEnter(Collider collision) 
     {
-        if(collision.gameObject.CompareTag("player"))
+        if(collision.tag == "Obstacle")
         {
             Debug.Log("Obstacle hit");
-            Destroy(collision.gameObject);
-            _IsMoving = false;
+            //_IsMoving = false;
             TakeDamage(1);
             
             
@@ -108,8 +107,5 @@ public class PlayerInputController: MonoBehaviour
         }
 
     }
-
     
-
-    
-    }
+}
