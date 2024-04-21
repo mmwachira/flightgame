@@ -22,7 +22,7 @@ public class ScoreCounter : MonoBehaviour
     IEnumerator Adding0is()
     {
         score += 1;
-        scoredisplay.GetComponent<TMP_Text> ().text = "" + score;
+        scoredisplay.GetComponent<TMP_Text> ().text = "Points: " + score;
         yield return new WaitForSeconds(0.25f);
         adding0is = false;
     }
