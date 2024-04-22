@@ -6,9 +6,9 @@ using TMPro;
 
 public class ScoreCounter : MonoBehaviour 
 {
-    public GameObject scoredisplay;
-    public int score;
-    public bool adding0is = false;
+    [SerializeField] private GameObject scoredisplay;
+    [SerializeField] private int score;
+    private bool adding0is = false;
 
     void Update()
     {

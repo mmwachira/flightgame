@@ -12,11 +12,11 @@ public class PlayerInputController: MonoBehaviour
 
     private Rigidbody _rigidbody;
 
-    public float maxSpeed = 100f;
-    public float laneChangeSpeed = 1.0f;
+    [SerializeField] private float maxSpeed = 100f;
+    [SerializeField] private float laneChangeSpeed = 1.0f;
 
-    private Vector3 _inputVector;
-    private Vector3 _inputStartPosition;
+    private Vector2 _inputVector;
+    private Vector2 _inputStartPosition;
 
     public int maxHealth = 3;
 
@@ -91,6 +91,7 @@ public class PlayerInputController: MonoBehaviour
 
     private void HandleInput()
     {
+        // Handle input for PC
         #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
@@ -98,8 +99,8 @@ public class PlayerInputController: MonoBehaviour
         }
         else if (Input.GetMouseButton(0))
         {
-            Vector3 currentPos = Input.mousePosition;
-            Vector3 delta = currentPos - _inputStartPosition;
+            Vector2 currentPos = Input.mousePosition;
+            Vector2 delta = currentPos - _inputStartPosition;
             _inputVector = new Vector2(delta.x, delta.y).normalized;
         }
         else if (Input.GetMouseButtonUp(0))

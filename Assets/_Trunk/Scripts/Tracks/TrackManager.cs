@@ -5,27 +5,22 @@ using System.Linq;
 
 public class TrackManager : MonoBehaviour
 {
-    //public GameObject[] section;
-    public GameObject[] sectionPrefab;
-    public float sectionSpawnInterval = 5f;
-    public float sectionDestroyInterval = 15f;
+    [SerializeField] private GameObject[] sectionPrefab;
+    private float sectionSpawnInterval = 5f;
+    private float sectionDestroyInterval = 15f;
 
-    public GameObject sectionToDestroy;
-    public GameObject nextSectionToDestroy;
+    private GameObject sectionToDestroy;
 
     private LinkedList<GameObject> sectionsList = new LinkedList<GameObject>();
-    public string parentName;
-    public int zPos = 50;
-    public int secNum;
-
-    public bool creatingSection = false;
+    private int zPos = 50;
+    private int secNum;
+    private bool creatingSection = false;
 
 
 
     void Start()
     {
         InvokeRepeating("SpawnSection", 0f, sectionSpawnInterval);
-        parentName = transform.name;
         InvokeRepeating("DestroySection", 15f, sectionDestroyInterval);
         
     }
@@ -35,7 +30,6 @@ public class TrackManager : MonoBehaviour
         if (creatingSection == false)
         {
             creatingSection = true;
-            //StartCoroutine(GenerateSection());
         }
         
     }
