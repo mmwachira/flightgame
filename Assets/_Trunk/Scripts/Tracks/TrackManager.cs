@@ -1,15 +1,19 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using System.Linq;
 
 public class TrackManager : MonoBehaviour
 {
     //public GameObject[] section;
-    public GameObject sectionPrefab;
-    public float sectionSpawnInterval = 2f;
+    public GameObject[] sectionPrefab;
+    public float sectionSpawnInterval = 5f;
+    public float sectionDestroyInterval = 15f;
 
-    private List<GameObject> sectionsList = new List<GameObject>();
-    //public GameObject sectiontoDestroy;
+    public GameObject sectionToDestroy;
+    public GameObject nextSectionToDestroy;
+
+    private LinkedList<GameObject> sectionsList = new LinkedList<GameObject>();
     public string parentName;
     public int zPos = 50;
     public int secNum;
@@ -22,7 +26,8 @@ public class TrackManager : MonoBehaviour
     {
         InvokeRepeating("SpawnSection", 0f, sectionSpawnInterval);
         parentName = transform.name;
-        StartCoroutine(DestroySection(gameObject));
+        InvokeRepeating("DestroySection", 15f, sectionDestroyInterval);
+        
     }
 
     void Update()
@@ -35,48 +40,36 @@ public class TrackManager : MonoBehaviour
         
     }
 
+    // Spawning new random sections every 5 seconds 
     private void SpawnSection()
     {
-        GameObject newSection = Instantiate(sectionPrefab, new Vector3(0, 0, zPos), Quaternion.identity);
+        secNum = Random.Range(0,2);
+        GameObject newSection = Instantiate(sectionPrefab[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
         zPos += 50;
-        sectionsList.Add(newSection);
-        
+        sectionsList.AddLast(newSection);
+        //creatingSection = false;
+
     }
 
-// IEnumerator GenerateSection(){
-//     secNum = Random.Range(0, 2);
-//     Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
-//     zPos += 50;
-//     yield return new WaitForSeconds(3);
-//     creatingSection = false;
-// }
-
-    IEnumerator DestroySection(GameObject sectionToDestroy)
+    // Destroying old sections every 15 seconds
+    private void DestroySection()
     {
-        yield return new WaitForSeconds(3);
-        if (sectionsList.Contains(sectionToDestroy))
+
+        sectionToDestroy = sectionsList.FirstOrDefault();
+        
+
+        if (sectionsList.Count > 0)
         {
+            Debug.Log("Found objects in the list");
+
             sectionsList.Remove(sectionToDestroy);
             Destroy(sectionToDestroy);
-            Debug.Log("Destroyed section: " + sectionToDestroy.name);
+            Debug.Log("Destroyed Section");
         }
-        else
-        {
-            Debug.LogWarning("Section not found in the list!");
+        else{
+            Debug.LogWarning("Nothing found in the list");
         }
+
     }
 
-    // IEnumerator DestroyClone()
-    // {
-    //     yield return new WaitForSeconds(20);
-    //     if (parentName == "LevelController")
-    //     {
-    //         Destroy(sectiontoDestroy);
-    //     }
-    //     // if (parentName == "Section(Clone)")
-    //     // {
-    //     //     Destroy(gameObject);
-    //     //     Debug.Log("Section destroyed!");
-    //     // }
-    // }
 }
