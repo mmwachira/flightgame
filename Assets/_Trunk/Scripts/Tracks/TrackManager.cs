@@ -7,9 +7,13 @@ public class TrackManager : MonoBehaviour
 {
     //public GameObject[] section;
     public GameObject[] sectionPrefab;
-    public float sectionSpawnInterval = 2f;
+    public float sectionSpawnInterval = 5f;
+    public float sectionDestroyInterval = 15f;
 
-    private List<GameObject> sectionsList = new List<GameObject>();
+    public GameObject sectionToDestroy;
+    public GameObject nextSectionToDestroy;
+
+    private LinkedList<GameObject> sectionsList = new LinkedList<GameObject>();
     public string parentName;
     public int zPos = 50;
     public int secNum;
@@ -22,6 +26,7 @@ public class TrackManager : MonoBehaviour
     {
         InvokeRepeating("SpawnSection", 0f, sectionSpawnInterval);
         parentName = transform.name;
+        InvokeRepeating("DestroySection", 15f, sectionDestroyInterval);
         
     }
 
@@ -35,74 +40,36 @@ public class TrackManager : MonoBehaviour
         
     }
 
-    void FixedUpdate()
-    {
-        StartCoroutine(DestroySection(gameObject));
-    }
-
+    // Spawning new random sections every 5 seconds 
     private void SpawnSection()
     {
         secNum = Random.Range(0,2);
         GameObject newSection = Instantiate(sectionPrefab[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
         zPos += 50;
-        sectionsList.Add(newSection);
-        if(sectionsList.Contains(newSection))
-        {
-            Debug.Log("New section added");
-        }
-        else{
-            Debug.Log("Could not add new section");
-        }
-        
+        sectionsList.AddLast(newSection);
+        //creatingSection = false;
+
     }
 
-// IEnumerator GenerateSection(){
-//     secNum = Random.Range(0, 2);
-//     Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
-//     zPos += 50;
-//     yield return new WaitForSeconds(3);
-//     creatingSection = false;
-// }
-
-    IEnumerator DestroySection(GameObject sectionToDestroy)
+    // Destroying old sections every 15 seconds
+    private void DestroySection()
     {
+
         sectionToDestroy = sectionsList.FirstOrDefault();
-        yield return new WaitForSeconds(20);
+        
 
         if (sectionsList.Count > 0)
         {
             Debug.Log("Found objects in the list");
-            
+
+            sectionsList.Remove(sectionToDestroy);
             Destroy(sectionToDestroy);
             Debug.Log("Destroyed Section");
         }
         else{
-            Debug.Log("Nothing found in the list");
+            Debug.LogWarning("Nothing found in the list");
         }
 
-        // if (sectionsList.Contains(sectionToDestroy))
-        // {
-        //     sectionsList.Remove(sectionToDestroy);
-        //     Destroy(sectionToDestroy);
-        //     Debug.Log("Destroyed section: " + sectionToDestroy.name);
-        // }
-        // else
-        // {
-        //     Debug.LogWarning("Section not found in the list!");
-        // }
     }
 
-    // IEnumerator DestroyClone()
-    // {
-    //     yield return new WaitForSeconds(20);
-    //     if (parentName == "LevelController")
-    //     {
-    //         Destroy(sectiontoDestroy);
-    //     }
-    //     // if (parentName == "Section(Clone)")
-    //     // {
-    //     //     Destroy(gameObject);
-    //     //     Debug.Log("Section destroyed!");
-    //     // }
-    // }
 }
