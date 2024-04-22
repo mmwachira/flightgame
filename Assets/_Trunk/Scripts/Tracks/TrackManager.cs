@@ -16,20 +16,32 @@ public class TrackManager : MonoBehaviour
     private int secNum;
     private bool creatingSection = false;
 
+    private Transform _levelSegmentsContainer;
+    private int _spawnedSectionNameCount;
 
+    private const int DesiredSectionsToSpawn = 10;
+    private int _spawnedSectionsCount;
+    
 
     void Start()
     {
-        InvokeRepeating("SpawnSection", 0f, sectionSpawnInterval);
-        InvokeRepeating("DestroySection", 15f, sectionDestroyInterval);
-        
+        GameObject obj = new GameObject("Level Segments");
+        _levelSegmentsContainer = obj.transform;
+
+        // InvokeRepeating("SpawnSection", 0f, sectionSpawnInterval);
+        // InvokeRepeating("DestroySection", 15f, sectionDestroyInterval);
     }
 
     void Update()
     {
-        if (creatingSection == false)
+        // if (creatingSection == false)
+        // {
+        //     creatingSection = true;
+        // }
+
+        if (_spawnedSectionsCount < DesiredSectionsToSpawn)
         {
-            creatingSection = true;
+            SpawnSection();
         }
         
     }
@@ -37,12 +49,15 @@ public class TrackManager : MonoBehaviour
     // Spawning new random sections every 5 seconds 
     private void SpawnSection()
     {
+        _spawnedSectionNameCount++;
         secNum = Random.Range(0,2);
         GameObject newSection = Instantiate(sectionPrefab[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
+        newSection.name = $"Section {_spawnedSectionNameCount}";
+        newSection.transform.SetParent(_levelSegmentsContainer);
         zPos += 50;
         sectionsList.AddLast(newSection);
+        _spawnedSectionsCount++;
         //creatingSection = false;
-
     }
 
     // Destroying old sections every 15 seconds
