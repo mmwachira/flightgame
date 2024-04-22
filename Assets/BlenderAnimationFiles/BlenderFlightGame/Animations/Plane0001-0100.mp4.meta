@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 26f38c407c13531429765ab4912281df
+=======
+guid: a1aba29dac2f63e4082307818d6d1220
+>>>>>>> 8f83d77182bf08158c01ff3dfd58d36fbf77da91
 VideoClipImporter:
   externalObjects: {}
   serializedVersion: 2
