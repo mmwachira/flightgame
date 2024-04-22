@@ -1,15 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using System.Linq;
 
 public class TrackManager : MonoBehaviour
 {
     //public GameObject[] section;
-    public GameObject sectionPrefab;
+    public GameObject[] sectionPrefab;
     public float sectionSpawnInterval = 2f;
 
     private List<GameObject> sectionsList = new List<GameObject>();
-    //public GameObject sectiontoDestroy;
     public string parentName;
     public int zPos = 50;
     public int secNum;
@@ -22,7 +22,7 @@ public class TrackManager : MonoBehaviour
     {
         InvokeRepeating("SpawnSection", 0f, sectionSpawnInterval);
         parentName = transform.name;
-        StartCoroutine(DestroySection(gameObject));
+        
     }
 
     void Update()
@@ -35,11 +35,24 @@ public class TrackManager : MonoBehaviour
         
     }
 
+    void FixedUpdate()
+    {
+        StartCoroutine(DestroySection(gameObject));
+    }
+
     private void SpawnSection()
     {
-        GameObject newSection = Instantiate(sectionPrefab, new Vector3(0, 0, zPos), Quaternion.identity);
+        secNum = Random.Range(0,2);
+        GameObject newSection = Instantiate(sectionPrefab[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
         zPos += 50;
         sectionsList.Add(newSection);
+        if(sectionsList.Contains(newSection))
+        {
+            Debug.Log("New section added");
+        }
+        else{
+            Debug.Log("Could not add new section");
+        }
         
     }
 
@@ -53,17 +66,30 @@ public class TrackManager : MonoBehaviour
 
     IEnumerator DestroySection(GameObject sectionToDestroy)
     {
-        yield return new WaitForSeconds(3);
-        if (sectionsList.Contains(sectionToDestroy))
+        sectionToDestroy = sectionsList.FirstOrDefault();
+        yield return new WaitForSeconds(20);
+
+        if (sectionsList.Count > 0)
         {
-            sectionsList.Remove(sectionToDestroy);
+            Debug.Log("Found objects in the list");
+            
             Destroy(sectionToDestroy);
-            Debug.Log("Destroyed section: " + sectionToDestroy.name);
+            Debug.Log("Destroyed Section");
         }
-        else
-        {
-            Debug.LogWarning("Section not found in the list!");
+        else{
+            Debug.Log("Nothing found in the list");
         }
+
+        // if (sectionsList.Contains(sectionToDestroy))
+        // {
+        //     sectionsList.Remove(sectionToDestroy);
+        //     Destroy(sectionToDestroy);
+        //     Debug.Log("Destroyed section: " + sectionToDestroy.name);
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("Section not found in the list!");
+        // }
     }
 
     // IEnumerator DestroyClone()
