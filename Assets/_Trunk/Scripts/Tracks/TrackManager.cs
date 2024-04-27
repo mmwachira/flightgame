@@ -5,14 +5,28 @@ using System.Linq;
 
 public class TrackManager : MonoBehaviour
 {
+    public PlayerInputController playerInputController;
+    static protected TrackManager s_Instance;
     [SerializeField] private GameObject[] sectionPrefab;
-    private float sectionSpawnInterval = 5f;
-    private float sectionDestroyInterval = 15f;
+
+    private float sectionSpawnInterval;
+    private float sectionDestroyInterval;
 
     private GameObject sectionToDestroy;
+    [SerializeField] private Transform playerTransform;
 
-    private LinkedList<GameObject> sectionsList = new LinkedList<GameObject>();
-    private int zPos = 50;
+    private List<GameObject> li_spawnedSections = new List<GameObject>();
+
+    [SerializeField] private float m_currentSectionDistance;
+    private float sectionSpawnDistance = 50f;
+    [SerializeField] private float nextSectionDistance = 0f;
+
+    private const float k_StartingSectionDistance = 0f;
+    private const float k_SectionRemovalDistance = 50f;
+    const float _WorldThreshold = 10000f;
+
+    private Vector3 currentPos;
+    private Quaternion currentRot;
     private int secNum;
     private bool creatingSection = false;
 
@@ -20,64 +34,113 @@ public class TrackManager : MonoBehaviour
     private int _spawnedSectionNameCount;
 
     private const int DesiredSectionsToSpawn = 10;
-    private int _spawnedSectionsCount;
+    private const int SafeSections = 5;
+    private int _spawnedSectionsCount = 0;
+
+    protected float m_Score;
+    protected float m_ScoreAccum;
     
 
     void Start()
     {
+        m_ScoreAccum = 0;
+        s_Instance = this;
+        m_currentSectionDistance = k_StartingSectionDistance;
+
         GameObject obj = new GameObject("Level Segments");
         _levelSegmentsContainer = obj.transform;
 
-        // InvokeRepeating("SpawnSection", 0f, sectionSpawnInterval);
-        // InvokeRepeating("DestroySection", 15f, sectionDestroyInterval);
+         while (_spawnedSections < DesiredSectionsToSpawn)
+         {
+             SpawnInitialSections();
+             
+             _spawnedSections++;
+         }
+
+         nextSectionDistance+=sectionSpawnDistance;
+        
     }
+
+    [SerializeField] private int _spawnedSections = 0;
 
     void Update()
     {
-        // if (creatingSection == false)
-        // {
-        //     creatingSection = true;
-        // }
 
-        if (_spawnedSectionsCount < DesiredSectionsToSpawn)
-        {
-            SpawnSection();
-        }
+        // Spawn new sections
+        
+            while(_spawnedSections < SafeSections)
+            {
+                SpawnNewSection();
+        
+            }
+        
+
+        // Check and destroy past sections
+        DestroyPastSections();
+
         
     }
 
-    // Spawning new random sections every 5 seconds 
-    private void SpawnSection()
+    public void SpawnInitialSections()
     {
-        _spawnedSectionNameCount++;
-        secNum = Random.Range(0,2);
-        GameObject newSection = Instantiate(sectionPrefab[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
-        newSection.name = $"Section {_spawnedSectionNameCount}";
-        newSection.transform.SetParent(_levelSegmentsContainer);
-        zPos += 50;
-        sectionsList.AddLast(newSection);
-        _spawnedSectionsCount++;
-        //creatingSection = false;
+                _spawnedSectionNameCount++;
+
+                secNum = Random.Range(0,2);
+                GameObject newSection = Instantiate(sectionPrefab[secNum], new Vector3(0, 0, sectionSpawnDistance), Quaternion.identity);
+                newSection.name = $"Section {_spawnedSectionNameCount}";
+                newSection.transform.SetParent(_levelSegmentsContainer);
+
+                sectionSpawnDistance += 50;
+                li_spawnedSections.Add(newSection);
     }
 
-    // Destroying old sections every 15 seconds
-    private void DestroySection()
+    // Spawning new random sections once player distance is greater than the spawning distance for the next section 
+    public void SpawnNewSection()
+    {   
+
+            for(int i = 0; i < DesiredSectionsToSpawn; i++)
+            {
+                _spawnedSectionNameCount++;
+                secNum = Random.Range(0,2);
+
+                GameObject newSection = Instantiate(sectionPrefab[secNum], new Vector3(0, 0, nextSectionDistance), Quaternion.identity);
+                newSection.name = $"Section {_spawnedSectionNameCount}";
+                newSection.transform.SetParent(_levelSegmentsContainer);
+
+                nextSectionDistance += 50;
+                li_spawnedSections.Add(newSection);
+
+                _spawnedSections++;
+            }
+
+
+
+    }
+    // Destroy old sections once player is some distance from the past section
+    private void DestroyPastSections()
     {
-
-        sectionToDestroy = sectionsList.FirstOrDefault();
         
-
-        if (sectionsList.Count > 0)
+        for (int i = 0; i < li_spawnedSections.Count; i++)
         {
-            Debug.Log("Found objects in the list");
 
-            sectionsList.Remove(sectionToDestroy);
-            Destroy(sectionToDestroy);
-            Debug.Log("Destroyed Section");
+             if(playerTransform.position.z >= li_spawnedSections[i].transform.position.z + 250f * playerInputController.scaledSpeed)
+             {
+                 if (li_spawnedSections.Count > 0)
+                 {
+
+                     Destroy(li_spawnedSections[i]);
+                     li_spawnedSections.RemoveAt(i);
+                     Debug.Log("Destroyed Section");
+                     i--;
+
+                     _spawnedSections--;
+                 }
+          else{
+              Debug.LogWarning("Nothing found in the list");
+          }
+             }
         }
-        else{
-            Debug.LogWarning("Nothing found in the list");
-        }
+         
 
     }
 

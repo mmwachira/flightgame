@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Collectibles
+  - Trigger
   layers:
   - Default
   - TransparentFX
