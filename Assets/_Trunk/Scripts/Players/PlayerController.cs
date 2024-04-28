@@ -20,6 +20,8 @@ public class PlayerController: MonoBehaviour
     private const float maxSpeed = 45f;
     [SerializeField] private float laneChangeSpeed = 1.0f;
 
+    public Animator anim;
+
     private Rigidbody _rigidbody;
 
     private Vector2 _inputVector;
@@ -103,10 +105,23 @@ public class PlayerController: MonoBehaviour
             Vector2 currentPos = Input.mousePosition;
             Vector2 delta = currentPos - _inputStartPosition;
             _inputVector = new Vector2(delta.x, delta.y).normalized;
+
+            if (Mathf.Abs(_inputVector.x) > 0.2f)
+            {
+                if (_inputVector.x > 0)
+                {
+                    anim.Play("RightMov_anim");
+                }
+                else
+                {
+                    anim.Play("LeftMov_anim");
+                }
+            }
         }
         else if (Input.GetMouseButtonUp(0))
         {
             _inputVector = Vector2.zero;
+            anim.Play("stationary_anim");
         }
         #else
         // Handle touch input for mobile devices
