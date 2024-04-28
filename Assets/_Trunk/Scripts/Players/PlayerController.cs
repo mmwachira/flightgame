@@ -4,9 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class PlayerInputController: MonoBehaviour 
+public class PlayerController: MonoBehaviour 
 {
     public TrackManager trackManager;
+
+    [Header("UI")]
+    public GameObject HUD;
+    public GameObject gameOverPanel;
 
     [Header("Character & Movements")]
     [SerializeField] private float _forwardSpeed;
@@ -21,11 +25,15 @@ public class PlayerInputController: MonoBehaviour
     private Vector2 _inputVector;
     private Vector2 _inputStartPosition;
 
+    [Header("Health")]
     public int maxHealth = 3;
 
     public int currentHealth;
     public Image[] heartIcons;
     protected int m_CurrentLife;
+
+    public static bool gameOver;
+    
 
     [Header("Controls")]
     public float upwardForce = 1f;
@@ -38,10 +46,14 @@ public class PlayerInputController: MonoBehaviour
 
         public void Start()
     {
+        Time.timeScale = 1;
+
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         currentHealth = maxHealth;
         _forwardSpeed = minSpeed;
+        gameOver = false;
+        HUD.SetActive(true);
         UpdateUI();
     }
 
@@ -49,6 +61,13 @@ public class PlayerInputController: MonoBehaviour
     {
         HandleInput();
         scaledSpeed = _forwardSpeed * Time.deltaTime;
+
+        if(gameOver)
+        {
+            Time.timeScale = 0;
+            HUD.SetActive(false);
+            gameOverPanel.SetActive(true);
+        }
     }
 
     
@@ -63,6 +82,7 @@ public class PlayerInputController: MonoBehaviour
             if(_forwardSpeed < maxSpeed)
             {
                 _forwardSpeed += _acceleration * Time.deltaTime;
+                //_maneuverSpeed += _acceleration * Time.deltaTime;
             }
             else
                 _forwardSpeed = maxSpeed;
@@ -127,6 +147,7 @@ public class PlayerInputController: MonoBehaviour
         if(currentHealth <= 0)
         {
             currentHealth = 0;
+            gameOver = true;
         }
         UpdateUI();
     }

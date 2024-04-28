@@ -5,7 +5,7 @@ using System.Linq;
 
 public class TrackManager : MonoBehaviour
 {
-    public PlayerInputController playerInputController;
+    public PlayerController playerController;
     static protected TrackManager s_Instance;
     [SerializeField] private GameObject[] sectionPrefab;
 
@@ -123,7 +123,7 @@ public class TrackManager : MonoBehaviour
         for (int i = 0; i < li_spawnedSections.Count; i++)
         {
 
-             if(playerTransform.position.z >= li_spawnedSections[i].transform.position.z + 250f * playerInputController.scaledSpeed)
+             if(playerTransform.position.z >= li_spawnedSections[i].transform.position.z + 250f * playerController.scaledSpeed)
              {
                  if (li_spawnedSections.Count > 0)
                  {
