@@ -8,11 +8,14 @@ public class Collectible : MonoBehaviour {
 
     [SerializeField] private int coins;
 
+    [SerializeField] private AudioSource coinCollectSound;
+
 
     void OnTriggerEnter(Collider collision)
     {
         if(collision.tag == "Collectibles")
         {
+            coinCollectSound.Play();
             coins += 1;
             Debug.Log("Picked up a collectible");
             coinText.GetComponent<TMP_Text>().text = "" + coins;

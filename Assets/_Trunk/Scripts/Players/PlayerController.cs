@@ -2,7 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 
+[RequireComponent(typeof(Rigidbody))]
 
 public class PlayerController: MonoBehaviour 
 {
@@ -10,7 +12,10 @@ public class PlayerController: MonoBehaviour
 
     [Header("UI")]
     public GameObject HUD;
+    public GameObject startPanel;
     public GameObject gameOverPanel;
+
+    public static bool _isGameStarted;
 
     [Header("Character & Movements")]
     [SerializeField] private float _forwardSpeed;
@@ -41,28 +46,48 @@ public class PlayerController: MonoBehaviour
     public float upwardForce = 1f;
     public float sidewaysForce = 5f;
 
-    public bool _IsMoving = true;
+    public bool _IsMoving = false;
     public float scaledSpeed;
 
+    
+    [Header("Sounds")]
+    [SerializeField] private AudioSource MenuMusic;
+    [SerializeField] private AudioSource BackgroundMusic;
     // Start is called before the first frame update
 
-        public void Start()
+    public void Start()
     {
-        Time.timeScale = 1;
+        _isGameStarted = false;
+        //Time.timeScale = 0;
+        startPanel.SetActive(true);
+        MenuMusic.Play();  
 
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-        currentHealth = maxHealth;
-        _forwardSpeed = minSpeed;
         gameOver = false;
-        HUD.SetActive(true);
-        UpdateUI();
+        
     }
 
     void Update()
     {
-        HandleInput();
-        scaledSpeed = _forwardSpeed * Time.deltaTime;
+        if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
+            {
+                _isGameStarted = true;
+                Time.timeScale = 1;
+                MenuMusic.Stop();
+                //Destroy(startPanel);
+                startPanel.SetActive(false);
+                
+                HUD.SetActive(true);
+                UpdateUI();
+                currentHealth = maxHealth;
+                _forwardSpeed = minSpeed;
+                scaledSpeed = _forwardSpeed * Time.deltaTime;
+                
+            }
+
+                HandleInput();
+     
 
         if(gameOver)
         {
@@ -72,12 +97,12 @@ public class PlayerController: MonoBehaviour
         }
     }
 
-    
-
     void FixedUpdate()
     {
-        if(_IsMoving)
+        if(!_isGameStarted)
+            return;
         {
+            //Debug.Log("Game state is: " + _isGameStarted);
             _rigidbody.velocity = transform.forward * _forwardSpeed + new Vector3(_inputVector.x * _maneuverSpeed, _inputVector.y * _maneuverSpeed, 0);
             
             // Increase Speed
@@ -142,6 +167,7 @@ public class PlayerController: MonoBehaviour
                 _inputVector = Vector2.zero;
             }
         }
+
         #endif
     }
     void OnTriggerEnter(Collider collision) 
@@ -180,6 +206,12 @@ public class PlayerController: MonoBehaviour
             }
         }
 
+    }
+
+    public IEnumerator playBackgroundMusic()
+    {
+        BackgroundMusic.Play();
+        yield return new WaitForSeconds(0.2f);
     }
     
 }

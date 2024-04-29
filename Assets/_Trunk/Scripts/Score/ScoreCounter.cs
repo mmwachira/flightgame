@@ -12,7 +12,7 @@ public class ScoreCounter : MonoBehaviour
 
     void Update()
     {
-        if(adding0is == false)
+        if(PlayerController._isGameStarted == true && adding0is == false)
         {
             adding0is = true;
             StartCoroutine(Adding0is());
