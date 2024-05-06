@@ -8,6 +8,8 @@ public class TrackManager : MonoBehaviour
     public PlayerController playerController;
     static protected TrackManager s_Instance;
     [SerializeField] private GameObject[] sectionPrefab;
+    private int previousSectionIndex = -1;
+    private GameObject previousSection;
 
     private float sectionSpawnInterval;
     private float sectionDestroyInterval;
@@ -68,7 +70,6 @@ public class TrackManager : MonoBehaviour
 
         // Spawn new sections
 
-        
             while(_spawnedSections < SafeSections)
             {
                 SpawnNewSection();
@@ -78,21 +79,27 @@ public class TrackManager : MonoBehaviour
 
         // Check and destroy past sections
         DestroyPastSections();
-
-        
+  
     }
 
     public void SpawnInitialSections()
     {
+                do
+                {
+                    secNum = Random.Range(0, 3);
+                }
+                while (secNum == previousSectionIndex);
+
                 _spawnedSectionNameCount++;
 
-                secNum = Random.Range(0,2);
+                //secNum = Random.Range(0,2);
                 GameObject newSection = Instantiate(sectionPrefab[secNum], new Vector3(0, 0, sectionSpawnDistance), Quaternion.identity);
                 newSection.name = $"Section {_spawnedSectionNameCount}";
                 newSection.transform.SetParent(_levelSegmentsContainer);
 
                 sectionSpawnDistance += 50;
                 li_spawnedSections.Add(newSection);
+                previousSectionIndex = secNum;
     }
 
     // Spawning new random sections once player distance is greater than the spawning distance for the next section 
@@ -101,8 +108,14 @@ public class TrackManager : MonoBehaviour
 
             for(int i = 0; i < DesiredSectionsToSpawn; i++)
             {
+                do
+                {
+                    secNum = Random.Range(0,3);
+                }
+                while (secNum == previousSectionIndex);
+
                 _spawnedSectionNameCount++;
-                secNum = Random.Range(0,2);
+                //secNum = Random.Range(0,2);
 
                 GameObject newSection = Instantiate(sectionPrefab[secNum], new Vector3(0, 0, nextSectionDistance), Quaternion.identity);
                 newSection.name = $"Section {_spawnedSectionNameCount}";
@@ -112,6 +125,8 @@ public class TrackManager : MonoBehaviour
                 li_spawnedSections.Add(newSection);
 
                 _spawnedSections++;
+
+                previousSectionIndex = secNum;
             }
 
 
