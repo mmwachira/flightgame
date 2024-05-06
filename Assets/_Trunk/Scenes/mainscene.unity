@@ -16239,6 +16239,11 @@ PrefabInstance:
       objectReference: {fileID: 1439388581}
     - target: {fileID: 7922791963739161262, guid: d28898c2c4e9ce5419ea8d2cc6c0f265,
         type: 3}
+      propertyPath: BackgroundMusic
+      value: 
+      objectReference: {fileID: 345667787}
+    - target: {fileID: 7922791963739161262, guid: d28898c2c4e9ce5419ea8d2cc6c0f265,
+        type: 3}
       propertyPath: heartIcons.Array.data[0]
       value: 
       objectReference: {fileID: 1414249400}

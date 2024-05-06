@@ -46,18 +46,18 @@ public class PlayerController: MonoBehaviour
     public float upwardForce = 1f;
     public float sidewaysForce = 5f;
 
-    public bool _IsMoving = false;
+    public bool _IsMoving;
     public float scaledSpeed;
 
     
     [Header("Sounds")]
     [SerializeField] private AudioSource MenuMusic;
     [SerializeField] private AudioSource BackgroundMusic;
-    // Start is called before the first frame update
 
     public void Start()
     {
         _isGameStarted = false;
+        _IsMoving = false;
         //Time.timeScale = 0;
         startPanel.SetActive(true);
         MenuMusic.Play();  
@@ -65,6 +65,9 @@ public class PlayerController: MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         gameOver = false;
+        currentHealth = maxHealth;
+        _forwardSpeed = minSpeed;
+        scaledSpeed = _forwardSpeed * Time.deltaTime;
         
     }
 
@@ -73,20 +76,18 @@ public class PlayerController: MonoBehaviour
         if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
             {
                 _isGameStarted = true;
-                Time.timeScale = 1;
+                _IsMoving = true;
+                //Time.timeScale = 1;
                 MenuMusic.Stop();
                 //Destroy(startPanel);
                 startPanel.SetActive(false);
                 
-                HUD.SetActive(true);
-                UpdateUI();
-                currentHealth = maxHealth;
-                _forwardSpeed = minSpeed;
-                scaledSpeed = _forwardSpeed * Time.deltaTime;
-                
+                HUD.SetActive(true);  
             }
+            
+            UpdateUI();
 
-                HandleInput();
+            HandleInput();
      
 
         if(gameOver)
@@ -206,12 +207,6 @@ public class PlayerController: MonoBehaviour
             }
         }
 
-    }
-
-    public IEnumerator playBackgroundMusic()
-    {
-        BackgroundMusic.Play();
-        yield return new WaitForSeconds(0.2f);
     }
     
 }

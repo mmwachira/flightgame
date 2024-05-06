@@ -67,6 +67,7 @@ public class TrackManager : MonoBehaviour
     {
 
         // Spawn new sections
+
         
             while(_spawnedSections < SafeSections)
             {
@@ -123,7 +124,7 @@ public class TrackManager : MonoBehaviour
         for (int i = 0; i < li_spawnedSections.Count; i++)
         {
 
-             if(playerTransform.position.z >= li_spawnedSections[i].transform.position.z + 250f * playerController.scaledSpeed)
+             if(playerTransform.position.z > li_spawnedSections[i].transform.position.z + (260f * playerController.scaledSpeed))
              {
                  if (li_spawnedSections.Count > 0)
                  {
