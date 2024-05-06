@@ -53,12 +53,12 @@ public class PlayerController: MonoBehaviour
     [Header("Sounds")]
     [SerializeField] private AudioSource MenuMusic;
     [SerializeField] private AudioSource BackgroundMusic;
+    private bool _isBackgroundMusicStarted;
 
     public void Start()
     {
         _isGameStarted = false;
         _IsMoving = false;
-        //Time.timeScale = 0;
         startPanel.SetActive(true);
         MenuMusic.Play();  
 
@@ -73,22 +73,19 @@ public class PlayerController: MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
+        if (!_isGameStarted && Input.GetMouseButtonDown(0) || Input.touchCount > 0)
             {
-                _isGameStarted = true;
-                _IsMoving = true;
-                //Time.timeScale = 1;
-                MenuMusic.Stop();
-                //Destroy(startPanel);
-                startPanel.SetActive(false);
-                
-                HUD.SetActive(true);  
+                StartGame(); 
             }
-            
-            UpdateUI();
 
-            HandleInput();
-     
+        if (_isGameStarted && !_isBackgroundMusicStarted)
+            {
+                StartBackgroundMusic();
+            }
+
+        UpdateUI();
+
+        HandleInput();
 
         if(gameOver)
         {
@@ -99,7 +96,7 @@ public class PlayerController: MonoBehaviour
     }
 
     void FixedUpdate()
-    {
+    {   
         if(!_isGameStarted)
             return;
         {
@@ -116,6 +113,22 @@ public class PlayerController: MonoBehaviour
                 _forwardSpeed = maxSpeed;
             
         }
+    }
+
+    private void StartGame()
+    {
+        _isGameStarted = true;
+        _IsMoving = true;
+        _isBackgroundMusicStarted = false;
+        MenuMusic.Stop();
+        startPanel.SetActive(false);     
+        HUD.SetActive(true); 
+    }
+
+    private void StartBackgroundMusic()
+    {
+        BackgroundMusic.Play();
+        _isBackgroundMusicStarted = true;
     }
 
     private void HandleInput()
