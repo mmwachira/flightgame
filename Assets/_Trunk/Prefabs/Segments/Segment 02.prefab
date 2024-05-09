@@ -127,6 +127,7 @@ MonoBehaviour:
   _possibleObstacles:
   - {fileID: 8833036366488757041, guid: b72300881530b314499f8819c315b719, type: 3}
   - {fileID: 8833036366488757041, guid: a88df59bd8bf78346b74dbf5397ae3a3, type: 3}
+  - {fileID: 8833036366488757041, guid: 119cb575243aa274184ffd906c6adee7, type: 3}
   _obstaclePositions:
   - 0.4
   - 0.8
