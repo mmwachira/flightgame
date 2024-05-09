@@ -30,12 +30,12 @@ public class ManagerLevel : MonoBehaviour
     private bool _isGameplay;
     
     private const int CollectablePoolSize = 200;
-    private const int MaxSegmentCount = 12;
+    private const int MaxSegmentCount = 10;
     private const float StartingSegmentDistance = 2f;
-    private const float SegmentRemovalDistance = -60f;
+    private const float SegmentRemovalDistance = -40f;
     private const float CenterResetThreshold = 10000f;
-    public const int ObstacleLayer = 6; // Change it according to layer setup
-    public static readonly int ObstacleLayerMask = 1 << ObstacleLayer;
+    private const int ObstacleLayer = 6; // Change it according to layer setup
+    private static readonly int ObstacleLayerMask = 1 << ObstacleLayer;
 
     void Awake()
     {
@@ -115,8 +115,6 @@ public class ManagerLevel : MonoBehaviour
             _spawnedTrackSegments--;
         }
 
-        Transform characterTransform = _playerController.transform;
-
         _trackSegmentsSpawn[0].GetPointAtInWorldUnit(_segmentRunDistance, out var currentPos, out var currentRot);
 
         // Floating origin implementation
@@ -135,11 +133,8 @@ public class ManagerLevel : MonoBehaviour
             {
                 _trackSegmentsToRemove[i].transform.position -= currentPos;
             }
-
-            // Recalculate current world position based on the moved world
-            _trackSegmentsSpawn[0].GetPointAtInWorldUnit(_segmentRunDistance, out currentPos, out currentRot);
-            //characterTransform.rotation = currentRot;
-            characterTransform.position = new Vector3(characterTransform.position.x, characterTransform.position.y, currentPos.z);
+            Transform characterTransform = _playerController.transform;
+            characterTransform.position = new Vector3(characterTransform.position.x, characterTransform.position.y, characterTransform.position.z - currentPos.z);
         }
 
 
