@@ -30,9 +30,9 @@ public class ManagerLevel : MonoBehaviour
     private bool _isGameplay;
     
     private const int CollectablePoolSize = 200;
-    private const int MaxSegmentCount = 10;
+    private const int MaxSegmentCount = 12;
     private const float StartingSegmentDistance = 2f;
-    private const float SegmentRemovalDistance = -15f;
+    private const float SegmentRemovalDistance = -35f;
     private const float CenterResetThreshold = 10000f;
     public const int ObstacleLayer = 6; // Change it according to layer setup
     public static readonly int ObstacleLayerMask = 1 << ObstacleLayer;
