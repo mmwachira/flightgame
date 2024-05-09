@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4217498704593279484}
   m_Layer: 0
   m_Name: Coin3 (1)
-  m_TagString: Collectibles
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 5603607712996116210}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Collectibles
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 896665878381358852}
   m_Layer: 0
   m_Name: Coin2
-  m_TagString: Collectibles
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 8750495032465892711}
   m_Layer: 0
   m_Name: Coin3
-  m_TagString: Collectibles
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

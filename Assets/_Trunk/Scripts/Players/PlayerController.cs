@@ -1,168 +1,92 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 
 [RequireComponent(typeof(Rigidbody))]
-
-public class PlayerController: MonoBehaviour 
+public class PlayerController : MonoBehaviour
 {
-    public TrackManager trackManager;
-
-    [Header("UI")]
-    public GameObject HUD;
-    public GameObject startPanel;
-    public GameObject gameOverPanel;
-
-    public static bool _isGameStarted;
-
-    [Header("Character & Movements")]
+    [Header("Character & Movements")] 
     [SerializeField] private float _forwardSpeed;
-    private const float _acceleration = 0.2f;
     [SerializeField] private float _maneuverSpeed = 5f;
-    private const float minSpeed = 5.0f;
-    private const float maxSpeed = 45f;
-    [SerializeField] private float laneChangeSpeed = 1.0f;
-
-    public Animator anim;
+    [SerializeField] private float _acceleration = 0.2f;
+    [SerializeField] private float _minSpeed = 5f;
+    [SerializeField] private float _maxSpeed = 20f;
+    [SerializeField] Animator _animator;
 
     private Rigidbody _rigidbody;
-
     private Vector2 _inputVector;
     private Vector2 _inputStartPosition;
+    private bool _isMoving;
+    private int _currentHealth;
 
-    [Header("Health")]
-    public int maxHealth = 3;
-
-    public int currentHealth;
-    public Image[] heartIcons;
-    protected int m_CurrentLife;
-
-    public static bool gameOver;
-    
-
-    [Header("Controls")]
-    public float upwardForce = 1f;
-    public float sidewaysForce = 5f;
-
-    public bool _IsMoving;
-    public float scaledSpeed;
-
-    
-    [Header("Sounds")]
-    [SerializeField] private AudioSource MenuMusic;
-    [SerializeField] private AudioSource BackgroundMusic;
-    private bool _isBackgroundMusicStarted;
+    private const int MaxHealth = 3;
+    private const string TagObstacle = "Obstacle";
+    private const string TagCollectable = "Collectable";
 
     public void Start()
     {
-        _isGameStarted = false;
-        _IsMoving = false;
-        startPanel.SetActive(true);
-        MenuMusic.Play();  
-
         _rigidbody = GetComponent<Rigidbody>();
-        _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-        gameOver = false;
-        currentHealth = maxHealth;
-        _forwardSpeed = minSpeed;
-        scaledSpeed = _forwardSpeed * Time.deltaTime;
-        
+    }
+
+    public void Setup()
+    {
+        _isMoving = false;
+        _currentHealth = MaxHealth;
+        _forwardSpeed = _minSpeed;
     }
 
     void Update()
     {
-        if (!_isGameStarted && Input.GetMouseButtonDown(0) || Input.touchCount > 0)
-            {
-                StartGame(); 
-            }
-
-        if (_isGameStarted && !_isBackgroundMusicStarted)
-            {
-                StartBackgroundMusic();
-            }
-
-        UpdateUI();
+        if (!_isMoving) return;
 
         HandleInput();
 
-        if(gameOver)
-        {
-            Time.timeScale = 0;
-            HUD.SetActive(false);
-            gameOverPanel.SetActive(true);
-        }
+        //TODO: We should also check the results of increasing _maneuverSpeed with some proportion to the _forwardSpeed so the reaction of the plane is higher too
+        if (_forwardSpeed < _maxSpeed)
+            _forwardSpeed += _acceleration * Time.deltaTime;
+        else
+            _forwardSpeed = _maxSpeed;
     }
 
     void FixedUpdate()
-    {   
-        if(!_isGameStarted)
-            return;
-        {
-            //Debug.Log("Game state is: " + _isGameStarted);
-            _rigidbody.velocity = transform.forward * _forwardSpeed + new Vector3(_inputVector.x * _maneuverSpeed, _inputVector.y * _maneuverSpeed, 0);
-            
-            // Increase Speed
-            if(_forwardSpeed < maxSpeed)
-            {
-                _forwardSpeed += _acceleration * Time.deltaTime;
-                //_maneuverSpeed += _acceleration * Time.deltaTime;
-            }
-            else
-                _forwardSpeed = maxSpeed;
-            
-        }
+    {
+        if (!_isMoving) return;
+    
+        _rigidbody.velocity = transform.forward * _forwardSpeed + new Vector3(_inputVector.x * _maneuverSpeed, _inputVector.y * _maneuverSpeed, 0);
     }
 
-    private void StartGame()
+    public void StartMoving()
     {
-        _isGameStarted = true;
-        _IsMoving = true;
-        _isBackgroundMusicStarted = false;
-        MenuMusic.Stop();
-        startPanel.SetActive(false);     
-        HUD.SetActive(true); 
+        _isMoving = true;
     }
 
-    private void StartBackgroundMusic()
+    public void StopMoving()
     {
-        BackgroundMusic.Play();
-        _isBackgroundMusicStarted = true;
+        _isMoving = false;
     }
 
     private void HandleInput()
     {
-        // Handle input for PC
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
             _inputStartPosition = Input.mousePosition;
         }
         else if (Input.GetMouseButton(0))
         {
-            Vector2 currentPos = Input.mousePosition;
-            Vector2 delta = currentPos - _inputStartPosition;
+            Vector2 currentPosition = Input.mousePosition;
+            Vector2 delta = currentPosition - _inputStartPosition;
             _inputVector = new Vector2(delta.x, delta.y).normalized;
 
             if (Mathf.Abs(_inputVector.x) > 0.2f)
             {
-                if (_inputVector.x > 0)
-                {
-                    anim.Play("RightMov_anim");
-                }
-                else
-                {
-                    anim.Play("LeftMov_anim");
-                }
+                _animator.Play(_inputVector.x > 0 ? "RightMov_anim" : "LeftMov_anim");
             }
         }
         else if (Input.GetMouseButtonUp(0))
         {
             _inputVector = Vector2.zero;
-            anim.Play("stationary_anim");
+            _animator.Play("stationary_anim");
         }
-        #else
+#else
         // Handle touch input for mobile devices
         if (Input.touchCount > 0)
         {
@@ -181,45 +105,29 @@ public class PlayerController: MonoBehaviour
                 _inputVector = Vector2.zero;
             }
         }
-
-        #endif
+#endif
     }
-    void OnTriggerEnter(Collider collision) 
+
+    void OnTriggerEnter(Collider collision)
     {
-        if(collision.tag == "Obstacle")
+        if (collision.CompareTag(TagObstacle))
         {
-            Debug.Log("Obstacle hit");
-            //_IsMoving = false;
-            TakeDamage(1);
+            UpdateHealth(-1);
+        }
+        else if (collision.CompareTag(TagCollectable))
+        {
+            ManagerLevel.Instance.CollectItem(collision.transform);
             
-            
         }
-        
-    }
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        if(currentHealth <= 0)
-        {
-            currentHealth = 0;
-            gameOver = true;
-        }
-        UpdateUI();
-    }
-
-    void UpdateUI()
-    {
-        for (int i = 0; i < heartIcons.Length; i++)
-        {
-            if(i < currentHealth)
-            {
-                heartIcons[i].enabled = true;
-            }
-            else{
-                heartIcons[i].enabled = false;
-            }
-        }
-
     }
     
+    private void UpdateHealth(int value)
+    {
+        _currentHealth = Mathf.Clamp(_currentHealth + value, 0, 3);
+        ManagerUI.Instance.UpdateLivesDisplay(_currentHealth);
+        if (_currentHealth < 1)
+        {
+            ManagerGame.Instance.GameOver();
+        }
+    }
 }

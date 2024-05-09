@@ -1,84 +1,84 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-
-/// <summary>
-/// This defines a "piece" of the track. This is attached to the prefab and contains data such as what obstacles can spawn on it.
-/// It also defines places on the track where obstacles can spawn. The prefab is placed into a ThemeData list.
-/// </summary>
 public class TrackSegment : MonoBehaviour
 {
-    public Transform pathParent;
-    public TrackManager manager;
+    [SerializeField] private Transform _markerRoot;
+    [SerializeField] private GameObject[] _possibleObstacles;
+    [SerializeField] private float[] _obstaclePositions;
 
-	public Transform objectRoot;
-	public Transform collectibleTransform;
-
-    //public AssetReference[] possibleObstacles; 
-
-    [HideInInspector]
-    public float[] obstaclePositions;
-
-    public float worldLength { get { return m_WorldLength; } }
-
-    protected float m_WorldLength;
+    public GameObject[] PossibleObstacles => _possibleObstacles;
+    public float[] ObstaclePositions => _obstaclePositions;
+    public float SegmentLength => _segmentLength;
+    public Transform ContainerObstacles => _containerObstacles;
+    public Transform ContainerCollectables => _containerCollectables;
+    
+    private float _segmentLength;
+    private Transform _containerObstacles;
+    private Transform _containerCollectables;
 
     void OnEnable()
     {
-        UpdateWorldLength();
+        CalculateLength();
 
-		GameObject obj = new GameObject("ObjectRoot");
-		obj.transform.SetParent(transform);
-		objectRoot = obj.transform;
+        GameObject obj = new GameObject("ContainerObstacles");
+        obj.transform.SetParent(transform);
+        _containerObstacles = obj.transform;
 
-		obj = new GameObject("Collectibles");
-		obj.transform.SetParent(objectRoot);
-		collectibleTransform = obj.transform;
+        obj = new GameObject("ContainerCollectables");
+        obj.transform.SetParent(transform);
+        _containerCollectables = obj.transform;
+    }
+
+    private void CalculateLength()
+    {
+        _segmentLength = 0;
+
+        for (int i = 1; i < _markerRoot.childCount; ++i)
+        {
+            Transform orig = _markerRoot.GetChild(i - 1);
+            Transform end = _markerRoot.GetChild(i);
+
+            Vector3 vec = end.position - orig.position;
+            _segmentLength += vec.magnitude;
+        }
     }
 
     // Same as GetPointAt but using an interpolation parameter in world units instead of 0 to 1.
     public void GetPointAtInWorldUnit(float wt, out Vector3 pos, out Quaternion rot)
     {
-        float t = wt / m_WorldLength;
+        float t = wt / _segmentLength;
         GetPointAt(t, out pos, out rot);
     }
 
-
-	// Interpolation parameter t is clamped between 0 and 1.
-	public void GetPointAt(float t, out Vector3 pos, out Quaternion rot)
+    // Interpolation parameter t is clamped between 0 and 1.
+    public void GetPointAt(float t, out Vector3 pos, out Quaternion rot)
     {
         float clampedT = Mathf.Clamp01(t);
-        float scaledT = (pathParent.childCount - 1) * clampedT;
+        float scaledT = (_markerRoot.childCount - 1) * clampedT;
         int index = Mathf.FloorToInt(scaledT);
         float segmentT = scaledT - index;
 
-        Transform orig = pathParent.GetChild(index);
-        if (index == pathParent.childCount - 1)
+        Transform orig = _markerRoot.GetChild(index);
+        if (index == _markerRoot.childCount - 1)
         {
             pos = orig.position;
             rot = orig.rotation;
             return;
         }
 
-        Transform target = pathParent.GetChild(index + 1);
+        Transform target = _markerRoot.GetChild(index + 1);
 
         pos = Vector3.Lerp(orig.position, target.position, segmentT);
         rot = Quaternion.Lerp(orig.rotation, target.rotation, segmentT);
     }
 
-    protected void UpdateWorldLength()
+    public void Cleanup()
     {
-        m_WorldLength = 0;
-
-        for (int i = 1; i < pathParent.childCount; ++i)
+        while (_containerCollectables.childCount > 0)
         {
-            Transform orig = pathParent.GetChild(i - 1);
-            Transform end = pathParent.GetChild(i);
-
-            Vector3 vec = end.position - orig.position;
-            m_WorldLength += vec.magnitude;
+            Transform t = _containerCollectables.GetChild(0);
+            ManagerLevel.Instance.RecyclePoolElement(t);
         }
+        Destroy(gameObject);
     }
 }

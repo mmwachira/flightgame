@@ -8,7 +8,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.FD7A1EDD" = "ref=\"Assets/Layer Lab/Scripts/PanelView.cs\""
+	"last_search.FD7A1EDD" = "ref=\"Assets/_Trunk/Scripts/Tracks/TrackSegment.cs\""
 	"OpenInspectorPreview.FD7A1EDD" = "0"
 	"currentGroup.FD7A1EDD" = "all"
 	"last_search.E8DA15E5" = ""
