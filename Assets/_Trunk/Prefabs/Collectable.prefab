@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5281226564130791401}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -92,7 +92,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2960437519111299049}
-  - component: {fileID: 6707290312821351473}
   - component: {fileID: 5156035711478287537}
   - component: {fileID: 1756421157676826957}
   m_Layer: 0
@@ -118,18 +117,6 @@ Transform:
   - {fileID: 4756222562926527827}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6707290312821351473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5440355533483076313}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f4d33ad5c89ef046b8579ee661c78d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5156035711478287537
 MonoBehaviour:
   m_ObjectHideFlags: 0
