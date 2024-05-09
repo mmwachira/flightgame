@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     private const int MaxHealth = 3;
     private const string TagObstacle = "Obstacle";
     private const string TagCollectable = "Collectable";
+    
+    private static readonly int MoveXHash = Animator.StringToHash("MoveX");
+    private static readonly int MoveYHash = Animator.StringToHash("MoveY");
 
     public void Start()
     {
@@ -76,16 +79,10 @@ public class PlayerController : MonoBehaviour
             Vector2 currentPosition = Input.mousePosition;
             Vector2 delta = currentPosition - _inputStartPosition;
             _inputVector = new Vector2(delta.x, delta.y).normalized;
-
-            if (Mathf.Abs(_inputVector.x) > 0.2f)
-            {
-                _animator.Play(_inputVector.x > 0 ? "RightMov_anim" : "LeftMov_anim");
-            }
         }
         else if (Input.GetMouseButtonUp(0))
         {
             _inputVector = Vector2.zero;
-            _animator.Play("stationary_anim");
         }
 #else
         // Handle touch input for mobile devices
@@ -107,6 +104,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 #endif
+        _animator.SetFloat(MoveXHash, _inputVector.x);
+        _animator.SetFloat(MoveYHash, _inputVector.y);
     }
 
     void OnTriggerEnter(Collider collision)
