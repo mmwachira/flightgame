@@ -32,7 +32,7 @@ public class ManagerLevel : MonoBehaviour
     private const int CollectablePoolSize = 200;
     private const int MaxSegmentCount = 12;
     private const float StartingSegmentDistance = 2f;
-    private const float SegmentRemovalDistance = -35f;
+    private const float SegmentRemovalDistance = -60f;
     private const float CenterResetThreshold = 10000f;
     public const int ObstacleLayer = 6; // Change it according to layer setup
     public static readonly int ObstacleLayerMask = 1 << ObstacleLayer;
@@ -138,7 +138,7 @@ public class ManagerLevel : MonoBehaviour
 
             // Recalculate current world position based on the moved world
             _trackSegmentsSpawn[0].GetPointAtInWorldUnit(_segmentRunDistance, out currentPos, out currentRot);
-            characterTransform.rotation = currentRot;
+            //characterTransform.rotation = currentRot;
             characterTransform.position = new Vector3(characterTransform.position.x, characterTransform.position.y, currentPos.z);
         }
 
