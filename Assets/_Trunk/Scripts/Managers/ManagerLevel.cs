@@ -4,6 +4,8 @@ using System.Collections.Generic;
 public class ManagerLevel : MonoBehaviour
 {
     public static ManagerLevel Instance { get; private set; }
+
+    public float LaneOffset => _laneOffset;
     
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private FlyingCollectable _collectableTemplate;
@@ -56,15 +58,15 @@ public class ManagerLevel : MonoBehaviour
         _collectablesPool = new PoolByPrefab(_levelContainer);
         _collectablesPool.AutoExpand = false;
         _collectablesPool.AddPrefab(_collectableTemplate, CollectablePoolSize);
-        
-        _segmentRunDistance = StartingSegmentDistance;
-        _collectedCoins = 0;
-        ManagerUI.Instance.Reset();
-        _playerController.Setup();
     }
 
     public void StartGame()
     {
+        _segmentRunDistance = StartingSegmentDistance;
+        _totalRunDistance = 0;
+        _collectedCoins = 0;
+        ManagerUI.Instance.Reset();
+        _playerController.Setup();
         _isGameplay = true;
         _isGameOver = false;
         _previousPosition = _playerController.transform.position;

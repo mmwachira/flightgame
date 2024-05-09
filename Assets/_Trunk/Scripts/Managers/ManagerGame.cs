@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ManagerGame : MonoBehaviour
 {
@@ -17,27 +16,13 @@ public class ManagerGame : MonoBehaviour
         {
             Instance = this;
         }
-
         DontDestroyOnLoad(gameObject);
-    }
-
-    public void StartGame()
-    {
-        ManagerUI.Instance.ShowGameplayHUD();
-        ManagerLevel.Instance.StartGame();
-        ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicGameplay);
-    }
-
-    public void GameOver()
-    {
-        _gameOver = true;
     }
 
     public void Start()
     {
-        ManagerUI.Instance.ShowStartGameScreen();
+        ResetGame();
         ManagerLevel.Instance.Setup();
-        ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicMenu);
     }
 
     void Update()
@@ -49,10 +34,30 @@ public class ManagerGame : MonoBehaviour
             ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicMenu);
         }
     }
+
+    private void ResetGame()
+    {
+        _gameOver = false;
+        ManagerUI.Instance.ShowStartGameScreen();
+        ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicMenu); 
+    }
+
+    public void StartGame()
+    {
+        Time.timeScale = 1;
+        ManagerUI.Instance.ShowGameplayHUD();
+        ManagerLevel.Instance.StartGame();
+        ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicGameplay);
+    }
+
+    public void GameOver()
+    {
+        _gameOver = true;
+    }
     
     public void ReplayGame()
     {
-        SceneManager.LoadScene("mainscene");
+        ResetGame();
     }
 
     public void QuitGame()

@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         _isMoving = false;
         _currentHealth = MaxHealth;
         _forwardSpeed = _minSpeed;
+        ManagerUI.Instance.UpdateLivesDisplay(_currentHealth);
     }
 
     void Update()

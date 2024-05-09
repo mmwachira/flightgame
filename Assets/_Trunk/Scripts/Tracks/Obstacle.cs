@@ -20,7 +20,7 @@ public abstract class Obstacle : MonoBehaviour
 
         if (_impactedSound != null)
         {
-            //ManagerSounds.Instance.PlaySingle(_impactedSound, true);
+            ManagerSounds.Instance.PlaySingle(_impactedSound, true);
         }
     }
 }
