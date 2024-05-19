@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6538557106795987160}
   - component: {fileID: 4051799502307279203}
   - component: {fileID: 8548520494662025969}
+  - component: {fileID: 3376404532096040666}
   m_Layer: 6
   m_Name: Pillar01
   m_TagString: Obstacle
@@ -105,6 +106,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3139005, y: 5.0416627, z: 1.3188586}
   m_Center: {x: 0.0028207276, y: 2.4711747, z: -0.0006680811}
+--- !u!65 &3376404532096040666
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3486417981590936943}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1.15, y: 5.01, z: 1.14}
+  m_Center: {x: 0.002820728, y: 2.471175, z: -0.0006680811}
 --- !u!1 &3486417982773959996
 GameObject:
   m_ObjectHideFlags: 0
