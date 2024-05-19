@@ -8,6 +8,7 @@ public class ManagerUI : MonoBehaviour
     [SerializeField] private GameObject _gameplayHUD;
     [SerializeField] private GameObject _viewStartGame;
     [SerializeField] private GameObject _viewGameOver;
+    [SerializeField] private GameObject _viewMenu;
     
     [SerializeField] private GameObject _life01;
     [SerializeField] private GameObject _life02;
@@ -38,6 +39,7 @@ public class ManagerUI : MonoBehaviour
         ToggleHUD(false);
         _viewStartGame.SetActive(true);
         _viewGameOver.SetActive(false);
+        _viewMenu.SetActive(false);
     }
     
     public void ShowGameOverScreen()
@@ -45,6 +47,7 @@ public class ManagerUI : MonoBehaviour
         ToggleHUD(false);
         _viewStartGame.SetActive(false);
         _viewGameOver.SetActive(true);
+        _viewMenu.SetActive(false);
     }
 
     public void ShowGameplayHUD()
@@ -52,6 +55,15 @@ public class ManagerUI : MonoBehaviour
         ToggleHUD(true);
         _viewStartGame.SetActive(false);
         _viewGameOver.SetActive(false);
+        _viewMenu.SetActive(false);
+    }
+
+    public void ShowMenu()
+    {
+        ToggleHUD(false);
+        _viewStartGame.SetActive(false);
+        _viewGameOver.SetActive(false);
+        _viewMenu.SetActive(true);
     }
 
     public void UpdateLivesDisplay(int currentLives)

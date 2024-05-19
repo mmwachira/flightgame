@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag(TagObstacle))
         {
+            _forwardSpeed = _minSpeed;
             UpdateHealth(-1);
         }
         else if (collision.CompareTag(TagCollectable))
