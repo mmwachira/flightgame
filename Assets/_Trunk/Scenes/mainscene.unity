@@ -7399,6 +7399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1734771791366610255, guid: 4509a991a02cc6b44b302ff21fd467d7,
         type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734771791366610255, guid: 4509a991a02cc6b44b302ff21fd467d7,
+        type: 3}
       propertyPath: m_fontColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -7411,6 +7416,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734771791366610255, guid: 4509a991a02cc6b44b302ff21fd467d7,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1734771791366610255, guid: 4509a991a02cc6b44b302ff21fd467d7,
         type: 3}
@@ -7435,7 +7445,7 @@ PrefabInstance:
     - target: {fileID: 1873096049066547453, guid: 4509a991a02cc6b44b302ff21fd467d7,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.7
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 1873096049066547453, guid: 4509a991a02cc6b44b302ff21fd467d7,
         type: 3}

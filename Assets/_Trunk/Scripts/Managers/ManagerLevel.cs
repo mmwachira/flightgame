@@ -6,6 +6,7 @@ public class ManagerLevel : MonoBehaviour
     public static ManagerLevel Instance { get; private set; }
 
     public float LaneOffset => _laneOffset;
+    public float TotalRunDistance => _totalRunDistance;
     
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private FlyingCollectable _collectableTemplate;
@@ -21,7 +22,7 @@ public class ManagerLevel : MonoBehaviour
     private int _spawnedTrackSegments;
     private int _collectedCoins;
     private float _segmentRunDistance;
-    public float _totalRunDistance;
+    private float _totalRunDistance;
     
     private Vector3 _previousPosition;
     private Transform _levelContainer;
