@@ -3,6 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    static int s_HitHash = Animator.StringToHash("Hit");
+
     [Header("Character & Movements")] 
     [SerializeField] private float _forwardSpeed;
     [SerializeField] private float _maneuverSpeed = 5f;
@@ -16,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 _inputStartPosition;
     private bool _isMoving;
     private int _currentHealth;
+    private bool _isInvincible;
+    Collider m_Collider;
 
     private const int MaxHealth = 3;
     private const string TagObstacle = "Obstacle";
@@ -27,11 +31,13 @@ public class PlayerController : MonoBehaviour
     public void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        //m_Collider = GetComponent<Collider>();
     }
 
     public void Setup()
     {
         _isMoving = false;
+        _isInvincible = false;
         _currentHealth = MaxHealth;
         _forwardSpeed = _minSpeed;
         ManagerUI.Instance.UpdateLivesDisplay(_currentHealth);
@@ -112,6 +118,12 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag(TagObstacle))
         {
+            if (_isInvincible)
+            return;
+
+            //m_Collider.enabled = false;
+           //Debug.Log("Collider.enabled = " + m_Collider.enabled);
+
             _forwardSpeed = _minSpeed;
             UpdateHealth(-1);
         }

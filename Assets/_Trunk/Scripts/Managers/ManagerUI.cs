@@ -15,6 +15,7 @@ public class ManagerUI : MonoBehaviour
     [SerializeField] private GameObject _life03;
     [SerializeField] private TextMeshProUGUI _distance;
     [SerializeField] private TextMeshProUGUI _collected;
+    [SerializeField] private TextMeshProUGUI t_distance;
 
     void Awake()
     {
@@ -87,5 +88,10 @@ public class ManagerUI : MonoBehaviour
     public void UpdateCollected(int value)
     {
         _collected.text = value.ToString();
+    }
+
+    public void UpdateFinalScore(int value)
+    {
+        t_distance.text = "GAME OVER! YOUR SCORE WAS: " +value.ToString()+ ". WANT TO PLAY AGAIN?";
     }
 }

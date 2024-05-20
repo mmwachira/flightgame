@@ -76,6 +76,7 @@ public class ManagerGame : MonoBehaviour
     public void GameOver()
     {
         _gameOver = true;
+        ManagerUI.Instance.UpdateFinalScore((int)ManagerLevel.Instance._totalRunDistance);
     }
     
     public void ReplayGame()

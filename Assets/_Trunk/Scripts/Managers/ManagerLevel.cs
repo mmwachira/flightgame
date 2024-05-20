@@ -21,7 +21,7 @@ public class ManagerLevel : MonoBehaviour
     private int _spawnedTrackSegments;
     private int _collectedCoins;
     private float _segmentRunDistance;
-    private float _totalRunDistance;
+    public float _totalRunDistance;
     
     private Vector3 _previousPosition;
     private Transform _levelContainer;
