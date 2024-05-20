@@ -23,6 +23,7 @@ public class ManagerGame : MonoBehaviour
     public void Start()
     {
         ResetGame();
+        ManagerEducationalContent.Instance.LoadEducationalQuestions();
         ManagerLevel.Instance.Setup();
     }
 

@@ -1,0 +1,2498 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b0c553be8edd4682e9180fdd13e37, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier: 
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: FlightGame/question_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Self Awareness
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - What tells you that you're becoming angry?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_1_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Stomach ache
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Laughing
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Faster heartbeat
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - How do you know if a game is too easy?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_2_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - You feel bored
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - You can't win
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - You need help
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - "What physical sensation might indicate that you\u2019re feeling anxious?"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_3_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Butterflies in the stomach
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Heavy Breathing
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Clenched Fists
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - "How can you tell if you\u2019re feeling sad?"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Smiling
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_4_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Tears in your eyes
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Feeling energetic
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_5
+      TermType: 0
+      Description: 
+      Languages:
+      - How does your body react when you feel excited?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_5_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Sweaty palms
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Feeling tired
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Loss of appetite
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_6
+      TermType: 0
+      Description: 
+      Languages:
+      - "What physical signs indicate that you\u2019re feeling scared?"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_6_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Racing heartbeat
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_6_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Giggling
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_6_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Feeling cold
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_7
+      TermType: 0
+      Description: 
+      Languages:
+      - "What do you notice about your breathing when you\u2019re relaxed?"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_7_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Shallow breaths
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_7_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Deep, steady breaths
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_7_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Holding breath
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_8
+      TermType: 0
+      Description: 
+      Languages:
+      - "How do you know if you\u2019re feeling confident?"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_8_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Avoiding eye contact
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_8_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Standing tall
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_8_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Slouching
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_9
+      TermType: 0
+      Description: 
+      Languages:
+      - What physical sensations accompany feelings of joy?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_9_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Heavy heart
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_9_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Smiling
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_9_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Feeling dizzy
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_10
+      TermType: 0
+      Description: 
+      Languages:
+      - How do you recognize when you're feeling bored?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_10_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Heart racing
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_10_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Feeling restless
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_10_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Engaging in activities enthusiastically
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_11
+      TermType: 0
+      Description: 
+      Languages:
+      - What cues tell you that you're feeling curious?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_11_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Yawning
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_11_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Asking questions
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_11_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Feeling indifferent
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_12
+      TermType: 0
+      Description: 
+      Languages:
+      - How do you know if you're feeling proud of yourself?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_12_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Feeling ashamed
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_12_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Celebrating your achievements
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_12_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignoring compliments
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_13
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Feeling nervous leads to a faster heartbeat.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_13_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_13_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_14
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: When you''re happy, you find yourself smiling.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_14_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_14_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_15
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Feeling angry causes your muscles to tense up.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_15_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_15_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_16
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Feeling sad makes it hard to concentrate.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_16_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_16_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_17
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: When you''re excited, you might feel a rush of energy.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_17_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_17_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_18
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Feeling bored can sometimes lead to fidgeting or restlessness.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_18_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_18_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_19
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Feeling embarrassed can cause your face to turn red.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_19_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_19_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_20
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: When you''re feeling confident, you might find yourself standing
+        tall with your shoulders back.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_20_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_1_20_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Self Regulation
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - What's best to do when you're stressed?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Scream
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_1_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Exercise
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Blame others
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Before a test, you feel nervous. What helps?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_2_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Study
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Guess
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore it
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - When you're angry, what's a good way to calm down?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Yell at someone
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_3_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Take deep breaths
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Break something
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - What can you do if you're feeling overwhelmed?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Procrastinate
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_4_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Take a break and relax
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Keep working without breaks
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_5
+      TermType: 0
+      Description: 
+      Languages:
+      - What's a healthy way to deal with frustration?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_5_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Take deep breaths and count to ten
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Throw objects
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Blame others for the situation
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_6
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you calm yourself down when you're feeling anxious?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_6_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Engage in physical activity like jogging or yoga
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_6_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Eat a large meal
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_6_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Avoid talking to anyone
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_7
+      TermType: 0
+      Description: 
+      Languages:
+      - What's a constructive way to cope with disappointment?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_7_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Express your feelings through journaling or talking to someone you trust
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_7_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Bottle up your emotions and keep them to yourself
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_7_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Engage in reckless behaviour
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_8
+      TermType: 0
+      Description: 
+      Languages:
+      - When you're feeling overwhelmed, what can you do to regain control?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_8_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Break tasks into smaller, manageable steps
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_8_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Procrastinate and avoid responsibilities
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_8_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Give up on tasks altogether
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_9
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you manage your time effectively when faced with multiple tasks?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_9_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Prioritise tasks based on urgency and importance
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_9_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Start with the easiest tasks first
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_9_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Multitask without focusing on one task at a time
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_10
+      TermType: 0
+      Description: 
+      Languages:
+      - What's a healthy response to failure or setbacks?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_10_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Learn from mistakes and try again
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_10_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Blame others for your failures
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_10_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Give up and avoid similar situations in the future
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_11
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you regulate your emotions when feeling angry?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_11_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Practice relaxation techniques like deep breathing or meditation
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_11_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Engage in physical fights or arguments
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_11_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Suppress your anger and pretend everything is fine
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_12
+      TermType: 0
+      Description: 
+      Languages:
+      - What's an effective way to handle criticism or negative feedback?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_12_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Listen openly, consider the feedback, and respond constructively
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_12_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore the feedback and continue as usual
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_12_3
+      TermType: 0
+      Description: 
+      Languages:
+      - React defensively and argue against the feedback
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_13
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Taking deep breaths can help calm you down when you''re feeling
+        stressed.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_13_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_13_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_14
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Blaming others is a constructive way to deal with stress.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_14_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_14_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_15
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Ignoring your problems is an effective way to manage stress.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_15_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_15_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_16
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Taking a break and going for a walk can help when you''re
+        feeling overwhelmed.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_16_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_16_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_17
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Yelling or screaming is a healthy way to release anger.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_17_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_17_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_18
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Exercise can be an effective way to cope with stress and
+        anxiety.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_18_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_18_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_19
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Procrastinating and avoiding tasks is a helpful strategy
+        for managing workload.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_19_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_19_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_20
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Seeking support from friends or family can be beneficial
+        when you''re feeling stressed.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_20_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_20_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Motivation
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - What word means "trying again and again"?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Quitting
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_1_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Persistence
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Pausing
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Why set a goal?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - For fun
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - To relax
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_2_3_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - To achieve
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Why is it important to keep trying, even if you don't succeed at first?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Because failing once means you'll always fail
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_3_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Because it helps you learn and improve
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Because it doesn't matter if you fail
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - What can you do when you feel like giving up on something difficult?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_4_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Ask for help from someone you trust
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Quit and try something else
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Cry and complain
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_5
+      TermType: 0
+      Description: 
+      Languages:
+      - What's the benefit of setting goals for yourself?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Goals are boring and unnecessary
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_5_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Goals help you focus and achieve things
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Goals make you feel bad if you don't achieve them
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_6
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you stay motivated to finish a task or project?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_6_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Take frequent breaks and procrastinate
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_6_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Break the task into smaller steps and reward yourself for progress
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_6_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Give up if it's too hard
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_7
+      TermType: 0
+      Description: 
+      Languages:
+      - What can you do to encourage yourself when you feel discouraged?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_7_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Tell yourself you're not good enough
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_7_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Remind yourself of past successes and keep trying
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_7_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Blame others for your failures
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_8
+      TermType: 0
+      Description: 
+      Languages:
+      - Why is it important to believe in yourself?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_8_1
+      TermType: 0
+      Description: 
+      Languages:
+      - It's not important to believe in yourself
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_8_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Believing in yourself helps you overcome challenges and reach your goals
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_8_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Believing in yourself makes you arrogant
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_9
+      TermType: 0
+      Description: 
+      Languages:
+      - How does celebrating your achievements help with motivation?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_9_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Celebrating achievements is unnecessary
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_9_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Celebrating achievements boosts confidence and encourages you to keep going
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_9_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Celebrating achievements makes others feel bad
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_10
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Setting goals helps you stay focused and motivated.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_10_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_10_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_11
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Giving up when something is difficult is the best solution.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_11_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_11_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_12
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Celebrating small accomplishments can boost your motivation.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_12_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_12_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_13
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Asking for help when you''re struggling shows weakness and
+        lack of motivation.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_13_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_13_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_14
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Believing in yourself is not important for staying motivated.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_14_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_14_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_15
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Motivation means always feeling excited and never feeling
+        discouraged.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_15_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_15_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_16
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Taking breaks and resting when you''re tired helps recharge
+        your motivation.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_16_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_16_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_17
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Motivation is about never making mistakes or experiencing
+        setbacks.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_17_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_3_17_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Empathy
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - How to feel what another feels?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_1_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Empathise
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Argue
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - A friend fell down. You?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Laugh
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_2_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Help them up
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Walk away
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you show empathy towards a friend who's feeling sad?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore them and play with someone else
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_3_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Offer them a hug and ask if they want to talk
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Laugh at them for being sad
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - What can you do to understand how someone else is feeling?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore their feelings and focus on yourself
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_4_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Listen to them and imagine how you would feel in their situation
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Tell them to stop being so sensitive
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_5
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you help a classmate who's being bullied?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Join in with the bullies to avoid being targeted yourself
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_5_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Tell a teacher or adult about the situation and offer support to the classmate
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore the bullying and hope it stops on its own
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_6
+      TermType: 0
+      Description: 
+      Languages:
+      - What's a kind thing you can do for someone who's feeling left out?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_6_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Exclude them further to avoid drama
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_6_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Invite them to join in an activity or include them in a conversation
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_6_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Tell them it's their fault they're being left out
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_7
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you show empathy towards someone who's made a mistake?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_7_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Laugh at them and make fun of their mistake
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_7_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Offer support and understanding, and reassure them that mistakes happen
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_7_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Blame them for the mistake and criticise them
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_8
+      TermType: 0
+      Description: 
+      Languages:
+      - What's an empathetic response when someone shares their feelings with you?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_8_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore them and change the subject
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_8_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Listen attentively and validate their feelings by saying things like "I understand
+        how you feel"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_8_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Tell them to stop being so emotional
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_9
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you help a friend who's nervous about a test or presentation?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_9_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Tease them about being nervous
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_9_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Offer words of encouragement and help them practise or prepare
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_9_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore them and focus on your own worries
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_10
+      TermType: 0
+      Description: 
+      Languages:
+      - What's a way to show empathy towards someone who's lost a pet or loved one?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_10_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore their feelings because it's just a pet or person
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_10_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Offer condolences and be there to listen and support them during their grieving
+        process
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_10_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Tell them to stop being sad because it's annoying
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_11
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Empathy means understanding and sharing the feelings of others.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_11_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_11_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_12
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: It''s important to listen when someone is talking about their
+        feelings, even if you don''t understand why they feel that way.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_12_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_12_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_13
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Empathy means making fun of someone when they''re upset.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_13_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_13_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_14
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Showing empathy towards others can help build stronger friendships
+        and relationships.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_14_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_14_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_15
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Ignoring someone''s feelings is a good way to show empathy.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_15_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_15_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_16
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Empathy means putting yourself in someone else''s shoes and
+        imagining how they might feel.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_16_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_16_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_17
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: It''s okay to laugh at someone who''s feeling sad or upset.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_17_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_17_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_18
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Empathy involves showing kindness and understanding towards
+        others, especially when they''re going through a tough time.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_18_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_4_18_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5
+      TermType: 0
+      Description: 
+      Languages:
+      - Social Skills
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - How to join a group game?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Push in
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Wait quietly
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_1_3_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Ask to join
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Best way to share an idea?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Shout it
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Interrupt
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_2_3_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Take turns
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you politely ask for something you need from a friend?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Say "Give me that!"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_3_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Say "Please, may I borrow it?"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Take it without asking
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_4
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you show appreciation for someone's help or kindness?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore them
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_4_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Say "Thank you!"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Criticise their efforts
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_5
+      TermType: 0
+      Description: 
+      Languages:
+      - What's a good way to start a conversation with someone new?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore them and walk away
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_5_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Smile and say "Hi, my name is _____. What's yours?"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Interrupt their conversation and start talking about yourself
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_6
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you politely disagree with a friend without hurting their feelings?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_6_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Shout and argue
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_6_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Say "I understand your point, but I think differently."
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_6_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Laugh at them and call them names
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_7
+      TermType: 0
+      Description: 
+      Languages:
+      - What's an appropriate response when someone is talking to you?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_7_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore them and play with your phone
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_7_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Listen attentively and respond appropriately
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_7_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Interrupt them and start talking about yourself
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_8
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you include someone who is feeling left out?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_8_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore them
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_8_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Invite them to join your group or activity
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_8_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Laugh at them
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_9
+      TermType: 0
+      Description: 
+      Languages:
+      - What's a polite way to decline an invitation or request?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_9_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Say "No way!"
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_9_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Say "Thank you for asking, but I can't make it this time."
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_9_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore the invitation
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_10
+      TermType: 0
+      Description: 
+      Languages:
+      - How can you show empathy towards someone who is feeling sad or upset?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_10_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Laugh at them
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_10_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Offer a listening ear and comfort them
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_10_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Tell them to stop being so sensitive
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_11
+      TermType: 0
+      Description: 
+      Languages:
+      - What's a helpful way to offer assistance to a classmate who is struggling
+        with a task or assignment?
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_11_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignore them
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_11_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - Offer to help them and explain the concept patiently
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_11_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Tell them they're stupid for not understanding
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_12
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: It''s polite to interrupt someone when they''re speaking.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_12_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_12_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_13
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: It''s okay to exclude someone from a game or activity just
+        because you don''t like them.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_13_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_13_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_14
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Sharing toys and belongings with others is a friendly and
+        kind behaviour.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_14_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_14_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_15
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Apologising when you''ve hurt someone''s feelings is an important
+        part of being a good friend.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_15_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_15_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_16
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Making fun of someone''s appearance or abilities is a form
+        of bullying.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_16_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_16_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_17
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Offering to help a classmate with their homework shows kindness
+        and teamwork.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_17_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_17_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_18
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Listening attentively when someone is talking demonstrates
+        respect and consideration.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_18_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_18_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_19
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Ignoring someone who is feeling left out or lonely is a compassionate
+        response.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_19_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_19_2_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_20
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Saying "please" and "thank you" are important manners that
+        show appreciation and respect.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_20_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_20_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_21
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Sharing your snacks or treats with others is a generous and
+        friendly gesture.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_21_1_correct
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_5_21_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName: 
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    IgnoreDeviceLanguage: 0
+    _AllowUnloadingLanguages: 0
+    Google_WebServiceURL: https://script.google.com/macros/s/AKfycbyuHBWE02Awlx0_UU0rybCyqphLv_uL-QOqvnnO0VCy5b-sQXI9AcELgPpRe9JJhF7b/exec
+    Google_SpreadsheetKey: 1Cu76dEewRcDZNxv9EW4fqGJ5RJFr0-QOEZq5t-rizhk
+    Google_SpreadsheetName: I2Loc FlightGame Localization
+    Google_LastUpdatedVersion: 1716196957678
+    Google_Password: 1q2w3e4r5t
+    GoogleUpdateFrequency: 3
+    GoogleInEditorCheckFrequency: 2
+    GoogleUpdateSynchronization: 1
+    GoogleUpdateDelay: 0
+    Assets: []
+    Spreadsheet_LocalFileName: 
+    Spreadsheet_LocalCSVSeparator: ','
+    Spreadsheet_LocalCSVEncoding: utf-8
+    Spreadsheet_SpecializationAsRows: 1
+    Spreadsheet_SortRows: 1
