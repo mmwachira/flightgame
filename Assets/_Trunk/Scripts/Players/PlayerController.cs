@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -5,33 +6,45 @@ public class PlayerController : MonoBehaviour
 {
     static int s_HitHash = Animator.StringToHash("Hit");
 
-    [Header("Character & Movements")] 
+    [Header("Character & Movements")]
     [SerializeField] private float _forwardSpeed;
     [SerializeField] private float _maneuverSpeed = 5f;
     [SerializeField] private float _acceleration = 0.2f;
     [SerializeField] private float _minSpeed = 5f;
     [SerializeField] private float _maxSpeed = 20f;
     [SerializeField] Animator _animator;
+    [SerializeField] private ParticleSystem _collisionParticles;
+    [SerializeField] private Renderer _playerRenderer;
+    [SerializeField] private Color _flashColor;
+
 
     private Rigidbody _rigidbody;
+    private Collider[] _colliders;
+    private Color _originalColor;
+
     private Vector2 _inputVector;
     private Vector2 _inputStartPosition;
     private bool _isMoving;
     private int _currentHealth;
     private bool _isInvincible;
-    Collider m_Collider;
 
+    private const float invincibilityDuration = 3.0f;
+    private const int _flashCount = 5;
     private const int MaxHealth = 3;
     private const string TagObstacle = "Obstacle";
     private const string TagCollectable = "Collectable";
-    
+
     private static readonly int MoveXHash = Animator.StringToHash("MoveX");
     private static readonly int MoveYHash = Animator.StringToHash("MoveY");
 
     public void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        //m_Collider = GetComponent<Collider>();
+        _colliders = GetComponents<Collider>();
+        if (_playerRenderer != null)
+        {
+            _originalColor = _playerRenderer.material.color;
+        }
     }
 
     public void Setup()
@@ -59,7 +72,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if (!_isMoving) return;
-    
+
         _rigidbody.velocity = transform.forward * _forwardSpeed + new Vector3(_inputVector.x * _maneuverSpeed, _inputVector.y * _maneuverSpeed, 0);
     }
 
@@ -118,22 +131,19 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag(TagObstacle))
         {
-            if (_isInvincible)
-            return;
+            if (!_isInvincible)
+            {
+                HandleCollision();
+            }
 
-            //m_Collider.enabled = false;
-           //Debug.Log("Collider.enabled = " + m_Collider.enabled);
-
-            _forwardSpeed = _minSpeed;
-            UpdateHealth(-1);
         }
         else if (collision.CompareTag(TagCollectable))
         {
             ManagerLevel.Instance.CollectItem(collision.transform);
-            
+
         }
     }
-    
+
     private void UpdateHealth(int value)
     {
         _currentHealth = Mathf.Clamp(_currentHealth + value, 0, 3);
@@ -141,6 +151,54 @@ public class PlayerController : MonoBehaviour
         if (_currentHealth < 1)
         {
             ManagerGame.Instance.GameOver();
+        }
+    }
+
+    private void HandleCollision()
+    {
+        foreach (Collider collider in _colliders)
+        {
+            collider.enabled = false;
+        }
+
+        _isInvincible = true;
+
+        if (_collisionParticles != null)
+        {
+            _collisionParticles.Play();
+        }
+
+        _forwardSpeed = _minSpeed;
+        UpdateHealth(-1);
+
+        StartCoroutine(InvincibilityCoroutine());
+        StartCoroutine(FlashCoroutine());
+
+    }
+
+    private IEnumerator InvincibilityCoroutine()
+    {
+        yield return new WaitForSeconds(invincibilityDuration);
+
+        foreach (Collider collider in _colliders)
+        {
+            collider.enabled = true;
+        }
+
+        _isInvincible = false;
+    }
+
+    private IEnumerator FlashCoroutine()
+    {
+        for (int i = 0; i < _flashCount; i++)
+        {
+            if (_playerRenderer != null)
+            {
+                _playerRenderer.material.color = _flashColor;
+                yield return new WaitForSeconds(0.1f);
+                _playerRenderer.material.color = _originalColor;
+                yield return new WaitForSeconds(0.1f);
+            }
         }
     }
 }
