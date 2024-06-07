@@ -72,13 +72,24 @@ public class TrackSegment : MonoBehaviour
         rot = Quaternion.Lerp(orig.rotation, target.rotation, segmentT);
     }
 
-    public void Cleanup()
+    public void Cleanup(bool destroySegment = true)
     {
         while (_containerCollectables.childCount > 0)
         {
             Transform t = _containerCollectables.GetChild(0);
             ManagerLevel.Instance.RecyclePoolElement(t);
         }
-        Destroy(gameObject);
+
+        if (destroySegment)
+            Destroy(gameObject);
+    }
+
+    public void CleanObstaclesAndCollectables()
+    {
+        for (int i = _containerObstacles.childCount - 1; i >= 0; i--)
+        {
+            Destroy(_containerObstacles.GetChild(i).gameObject);
+        }
+        Cleanup(false);
     }
 }

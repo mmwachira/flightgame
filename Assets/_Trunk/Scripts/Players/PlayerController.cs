@@ -28,8 +28,7 @@ public class PlayerController : MonoBehaviour
     private int _currentHealth;
     private bool _isInvincible;
 
-    private const float invincibilityDuration = 3.0f;
-    private const int _flashCount = 5;
+    private const float InvincibilityDuration = 1.5f;
     private const int MaxHealth = 3;
     private const string TagObstacle = "Obstacle";
     private const string TagCollectable = "Collectable";
@@ -71,7 +70,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!_isMoving) return;
+        if (!_isMoving)
+        {
+            _rigidbody.velocity = Vector3.zero;
+            return;
+        }
 
         _rigidbody.velocity = transform.forward * _forwardSpeed + new Vector3(_inputVector.x * _maneuverSpeed, _inputVector.y * _maneuverSpeed, 0);
     }
@@ -151,16 +154,13 @@ public class PlayerController : MonoBehaviour
         if (_currentHealth < 1)
         {
             ManagerGame.Instance.GameOver();
+            return;
         }
+        StartCoroutine(InvincibilityAndFlashCoroutine());
     }
 
     private void HandleCollision()
     {
-        foreach (Collider collider in _colliders)
-        {
-            collider.enabled = false;
-        }
-
         _isInvincible = true;
 
         if (_collisionParticles != null)
@@ -170,35 +170,30 @@ public class PlayerController : MonoBehaviour
 
         _forwardSpeed = _minSpeed;
         UpdateHealth(-1);
-
-        StartCoroutine(InvincibilityCoroutine());
-        StartCoroutine(FlashCoroutine());
-
     }
 
-    private IEnumerator InvincibilityCoroutine()
+    private IEnumerator InvincibilityAndFlashCoroutine()
     {
-        yield return new WaitForSeconds(invincibilityDuration);
+        float flashInterval = 0.2f;
+        float elapsedTime = 0f;
+        WaitForSeconds delay = new WaitForSeconds(flashInterval);
 
-        foreach (Collider collider in _colliders)
-        {
-            collider.enabled = true;
-        }
-
-        _isInvincible = false;
-    }
-
-    private IEnumerator FlashCoroutine()
-    {
-        for (int i = 0; i < _flashCount; i++)
+        while (elapsedTime < InvincibilityDuration)
         {
             if (_playerRenderer != null)
             {
                 _playerRenderer.material.color = _flashColor;
-                yield return new WaitForSeconds(0.1f);
+                yield return delay;
                 _playerRenderer.material.color = _originalColor;
-                yield return new WaitForSeconds(0.1f);
+                yield return delay;
+                elapsedTime += flashInterval * 2;
             }
         }
+
+        if (_playerRenderer != null)
+        {
+            _playerRenderer.material.color = _originalColor; // Ensure it returns to the original color at the end
+        }
+        _isInvincible = false;
     }
 }

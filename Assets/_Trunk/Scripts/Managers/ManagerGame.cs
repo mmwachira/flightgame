@@ -31,7 +31,8 @@ public class ManagerGame : MonoBehaviour
     {
         if (_gameOver)
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
+            ManagerLevel.Instance.EndGame();
             ManagerUI.Instance.ShowGameOverScreen();
             ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicMenu);
         }

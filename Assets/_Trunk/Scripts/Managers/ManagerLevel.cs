@@ -88,10 +88,17 @@ public class ManagerLevel : MonoBehaviour
             SpawnNewSegment();
         }
         
+        if (_isGameOver)//Quick hack to clean first 3 segments after game over
+        {
+            _trackSegmentsSpawn[0].CleanObstaclesAndCollectables();
+            _trackSegmentsSpawn[1].CleanObstaclesAndCollectables();
+        }
+        
         if (!_isGameplay || _isGameOver)
         {
             return;
         }
+
 
         Vector3 currentPosition = _playerController.transform.position;
         float forwardDistance = currentPosition.z - _previousPosition.z;
