@@ -5,6 +5,7 @@ Builds
 Recordings
 Logs
 MemoryCaptures
+UserSettings
 Assets/AddressableAssetsData/link.xml
 Assets/AddressableAssetsData/link.xml.meta
 
@@ -18,7 +19,7 @@ obj/
 /*.csproj
 *.pidb
 *.suo
-/*.sln
+#/*.sln
 *.user
 *.unityproj
 *.booproj
