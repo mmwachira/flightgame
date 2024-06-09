@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class ManagerLevel : MonoBehaviour
@@ -7,12 +8,15 @@ public class ManagerLevel : MonoBehaviour
 
     public float LaneOffset => _laneOffset;
     public float TotalRunDistance => _totalRunDistance;
-    
+
+    public float CollectedCoins => _collectedCoins;
+    public PlayerController playerController => _playerController;
+
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private FlyingCollectable _collectableTemplate;
     [SerializeField] private List<TrackSegment> _trackSegmentsTemplates;
     [SerializeField] private float _laneOffset = 1.4f;
-    
+
     [SerializeField] private bool _randomizeY = true; // Whether to randomize Y position
     [SerializeField] private float _collectableYOffset = 2.0f; // Default Y offset
     [SerializeField] private Vector2 _yRandomizationRange = new Vector2(2.0f, 4.0f); // Y randomization range
@@ -21,15 +25,18 @@ public class ManagerLevel : MonoBehaviour
     private readonly List<TrackSegment> _trackSegmentsToRemove = new();
     private int _spawnedTrackSegments;
     private int _collectedCoins;
+    public int _option;
+    public string m_question;
     private float _segmentRunDistance;
     private float _totalRunDistance;
-    
+
     private Vector3 _previousPosition;
     private Transform _levelContainer;
     private PoolByPrefab _collectablesPool;
     private bool _isGameOver;
     private bool _isGameplay;
-    
+    private bool _isCorrect;
+
     private const int CollectablePoolSize = 200;
     private const int MaxSegmentCount = 10;
     private const float StartingSegmentDistance = 2f;
@@ -54,8 +61,8 @@ public class ManagerLevel : MonoBehaviour
     public void Setup()
     {
         GameObject obj = new GameObject("Level Segments");
-        _levelContainer = obj.transform; 
-        
+        _levelContainer = obj.transform;
+
         _collectablesPool = new PoolByPrefab(_levelContainer);
         _collectablesPool.AutoExpand = false;
         _collectablesPool.AddPrefab(_collectableTemplate, CollectablePoolSize);
@@ -72,6 +79,8 @@ public class ManagerLevel : MonoBehaviour
         _isGameOver = false;
         _previousPosition = _playerController.transform.position;
         _playerController.StartMoving();
+        StartCoroutine(ShowQuestions());
+
     }
 
     public void EndGame()
@@ -87,13 +96,13 @@ public class ManagerLevel : MonoBehaviour
         {
             SpawnNewSegment();
         }
-        
+
         if (_isGameOver)//Quick hack to clean first 3 segments after game over
         {
             _trackSegmentsSpawn[0].CleanObstaclesAndCollectables();
             _trackSegmentsSpawn[1].CleanObstaclesAndCollectables();
         }
-        
+
         if (!_isGameplay || _isGameOver)
         {
             return;
@@ -157,7 +166,7 @@ public class ManagerLevel : MonoBehaviour
             }
         }
     }
-    
+
     private void SpawnNewSegment()
     {
         int randomSegment = Random.Range(0, _trackSegmentsTemplates.Count);
@@ -185,14 +194,14 @@ public class ManagerLevel : MonoBehaviour
         newSegment.transform.position = pos;
         newSegment.transform.localScale = new Vector3((Random.value > 0.5f ? -1 : 1), 1, 1);
 
-        if (_spawnedTrackSegments > 1)//We spawn obstacles from the second segment onwards
+        if (_spawnedTrackSegments > 1) //We spawn obstacles from the second segment onwards
         {
             SpawnObstacle(newSegment);
         }
         _trackSegmentsSpawn.Add(newSegment);
         _spawnedTrackSegments++;
     }
-    
+
     private void SpawnObstacle(TrackSegment segment)
     {
         if (segment.PossibleObstacles.Length != 0)
@@ -205,7 +214,7 @@ public class ManagerLevel : MonoBehaviour
         }
         SpawnCollectables(segment);
     }
-    
+
     private void SpawnFromObjectInSegment(GameObject obj, TrackSegment segment, int posIndex)
     {
         if (obj != null)
@@ -265,7 +274,7 @@ public class ManagerLevel : MonoBehaviour
             currentWorldPosition += increment;
         }
     }
-    
+
     public void RecyclePoolElement(Transform item)
     {
         _collectablesPool.RecycleObject(item);
@@ -277,5 +286,20 @@ public class ManagerLevel : MonoBehaviour
         _collectedCoins++;
         ManagerUI.Instance.UpdateCollected(_collectedCoins);
         ManagerSounds.Instance.PlaySingle(ManagerSounds.Instance.SfxCollect, true);
+    }
+
+    private IEnumerator ShowQuestions()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(20f);
+            _playerController.StartSlowDown();
+            ManagerQuestions.Instance.AskQuestion();
+
+            yield return new WaitForSeconds(5f);
+            ManagerUI.Instance.UpdateAnswer();
+            playerController.ResumeMoving();
+        }
+
     }
 }
