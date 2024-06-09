@@ -6,8 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     static int s_HitHash = Animator.StringToHash("Hit");
 
+    public string tagOption => TagOption;
+
     [Header("Character & Movements")]
     [SerializeField] private float _forwardSpeed;
+    [SerializeField] private float _previousForwardSpeed;
     [SerializeField] private float _maneuverSpeed = 5f;
     [SerializeField] private float _acceleration = 0.2f;
     [SerializeField] private float _minSpeed = 5f;
@@ -21,17 +24,21 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _rigidbody;
     private Collider[] _colliders;
     private Color _originalColor;
+    private float _originalForwardSpeed;
 
     private Vector2 _inputVector;
     private Vector2 _inputStartPosition;
     private bool _isMoving;
     private int _currentHealth;
     private bool _isInvincible;
+    private bool isSlowingDown;
 
     private const float InvincibilityDuration = 1.5f;
+    private const float slowDownTime = 2f;
     private const int MaxHealth = 3;
     private const string TagObstacle = "Obstacle";
     private const string TagCollectable = "Collectable";
+    private const string TagOption = "Option";
 
     private static readonly int MoveXHash = Animator.StringToHash("MoveX");
     private static readonly int MoveYHash = Animator.StringToHash("MoveY");
@@ -44,6 +51,7 @@ public class PlayerController : MonoBehaviour
         {
             _originalColor = _playerRenderer.material.color;
         }
+        _originalForwardSpeed = _forwardSpeed;
     }
 
     public void Setup()
@@ -60,6 +68,11 @@ public class PlayerController : MonoBehaviour
         if (!_isMoving) return;
 
         HandleInput();
+
+        if (isSlowingDown)
+        {
+            return;
+        }
 
         //TODO: We should also check the results of increasing _maneuverSpeed with some proportion to the _forwardSpeed so the reaction of the plane is higher too
         if (_forwardSpeed < _maxSpeed)
@@ -82,6 +95,20 @@ public class PlayerController : MonoBehaviour
     public void StartMoving()
     {
         _isMoving = true;
+    }
+
+    public void ResumeMoving()
+    {
+        _isMoving = true;
+        StartCoroutine(AccelerationCoroutine(3.0f));
+        //_forwardSpeed = _previousForwardSpeed;
+    }
+
+    public void StartSlowDown()
+    {
+        _previousForwardSpeed = _forwardSpeed;
+        StartCoroutine(SlowDownCoroutine());
+
     }
 
     public void StopMoving()
@@ -145,6 +172,17 @@ public class PlayerController : MonoBehaviour
             ManagerLevel.Instance.CollectItem(collision.transform);
 
         }
+        else if (collision.CompareTag(TagOption))
+        {
+
+            AnswerRing answerRing = collision.GetComponent<AnswerRing>();
+            if (answerRing != null)
+            {
+                HandleAnswerRing(answerRing);
+            }
+
+        }
+
     }
 
     private void UpdateHealth(int value)
@@ -172,6 +210,17 @@ public class PlayerController : MonoBehaviour
         UpdateHealth(-1);
     }
 
+    void HandleAnswerRing(AnswerRing answerRing)
+    {
+        ManagerQuestions.Instance.CheckAnswer(answerRing.AnswerIndex);
+        if (answerRing.IsCorrect)
+        {
+            Destroy(answerRing.gameObject);
+        }
+
+
+    }
+
     private IEnumerator InvincibilityAndFlashCoroutine()
     {
         float flashInterval = 0.2f;
@@ -195,5 +244,40 @@ public class PlayerController : MonoBehaviour
             _playerRenderer.material.color = _originalColor; // Ensure it returns to the original color at the end
         }
         _isInvincible = false;
+    }
+
+    public IEnumerator SlowDownCoroutine()
+    {
+        isSlowingDown = true;
+        float s_elapsedTime = 0f;
+
+
+        while (s_elapsedTime < slowDownTime)
+        {
+            _forwardSpeed = Mathf.Lerp(_originalForwardSpeed, 0, s_elapsedTime / slowDownTime);
+            s_elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        _forwardSpeed = 0;
+        isSlowingDown = false;
+        _isMoving = false;
+
+        //ManagerQuestions.Instance.AskQuestion();
+
+    }
+
+    public IEnumerator AccelerationCoroutine(float accelerationTime)
+    {
+        float a_elapsedTime = 0f;
+
+        while (a_elapsedTime < accelerationTime)
+        {
+            _forwardSpeed = Mathf.Lerp(0, _previousForwardSpeed, a_elapsedTime / accelerationTime);
+            a_elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        _forwardSpeed = _previousForwardSpeed;
     }
 }

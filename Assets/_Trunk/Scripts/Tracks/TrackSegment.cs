@@ -11,7 +11,7 @@ public class TrackSegment : MonoBehaviour
     public float SegmentLength => _segmentLength;
     public Transform ContainerObstacles => _containerObstacles;
     public Transform ContainerCollectables => _containerCollectables;
-    
+
     private float _segmentLength;
     private Transform _containerObstacles;
     private Transform _containerCollectables;

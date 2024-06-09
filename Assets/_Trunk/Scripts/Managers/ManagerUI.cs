@@ -9,13 +9,15 @@ public class ManagerUI : MonoBehaviour
     [SerializeField] private GameObject _viewStartGame;
     [SerializeField] private GameObject _viewGameOver;
     [SerializeField] private GameObject _viewMenu;
-    
+    [SerializeField] private GameObject _viewQuestion;
+
     [SerializeField] private GameObject _life01;
     [SerializeField] private GameObject _life02;
     [SerializeField] private GameObject _life03;
     [SerializeField] private TextMeshProUGUI _distance;
     [SerializeField] private TextMeshProUGUI _collected;
     [SerializeField] private TextMeshProUGUI t_distance;
+    [SerializeField] private TextMeshProUGUI _question;
 
     void Awake()
     {
@@ -30,6 +32,7 @@ public class ManagerUI : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+
     public void ToggleHUD(bool showHUD)
     {
         _gameplayHUD.SetActive(showHUD);
@@ -41,14 +44,16 @@ public class ManagerUI : MonoBehaviour
         _viewStartGame.SetActive(true);
         _viewGameOver.SetActive(false);
         _viewMenu.SetActive(false);
+        _viewQuestion.SetActive(false);
     }
-    
+
     public void ShowGameOverScreen()
     {
         ToggleHUD(false);
         _viewStartGame.SetActive(false);
         _viewGameOver.SetActive(true);
         _viewMenu.SetActive(false);
+        _viewQuestion.SetActive(false);
     }
 
     public void ShowGameplayHUD()
@@ -57,6 +62,7 @@ public class ManagerUI : MonoBehaviour
         _viewStartGame.SetActive(false);
         _viewGameOver.SetActive(false);
         _viewMenu.SetActive(false);
+        _viewQuestion.SetActive(false);
     }
 
     public void ShowMenu()
@@ -65,6 +71,7 @@ public class ManagerUI : MonoBehaviour
         _viewStartGame.SetActive(false);
         _viewGameOver.SetActive(false);
         _viewMenu.SetActive(true);
+        _viewQuestion.SetActive(false);
     }
 
     public void UpdateLivesDisplay(int currentLives)
@@ -84,7 +91,7 @@ public class ManagerUI : MonoBehaviour
     {
         _distance.text = value.ToString();
     }
-    
+
     public void UpdateCollected(int value)
     {
         _collected.text = value.ToString();
@@ -92,6 +99,19 @@ public class ManagerUI : MonoBehaviour
 
     public void UpdateFinalScore(int value)
     {
-        t_distance.text = "GAME OVER! YOUR SCORE WAS: " +value.ToString()+ ". WANT TO PLAY AGAIN?";
+        t_distance.text = "GAME OVER! YOUR SCORE WAS: " + value.ToString() + ". WANT TO PLAY AGAIN?";
+    }
+
+    public void UpdateQuestion(Question question)
+    {
+        ToggleHUD(true);
+        _viewQuestion.SetActive(true);
+        _question.text = question.questionText;
+    }
+
+    public void UpdateAnswer()
+    {
+        ToggleHUD(true);
+        _viewQuestion.SetActive(false);
     }
 }
