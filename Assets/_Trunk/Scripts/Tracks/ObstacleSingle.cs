@@ -1,30 +1,34 @@
-﻿using UnityEngine;
+﻿using FlightGame.Managers;
+using UnityEngine;
 
-public class ObstacleSingle : Obstacle
+namespace FlightGame.Tracks
 {
-    protected const int k_MinObstacleCount = 1;
-    protected const int k_MaxObstacleCount = 2;
-    protected const int k_LeftMostLaneIndex = -1;
-    protected const int k_RightMostLaneIndex = 1;
-
-    public override void Spawn(TrackSegment segment, float t)
+    public class ObstacleSingle : Obstacle
     {
-        int count = Random.Range(k_MinObstacleCount, k_MaxObstacleCount + 1);
-        int startLane = Random.Range(k_LeftMostLaneIndex, k_RightMostLaneIndex + 1);
+        protected const int k_MinObstacleCount = 1;
+        protected const int k_MaxObstacleCount = 2;
+        protected const int k_LeftMostLaneIndex = -1;
+        protected const int k_RightMostLaneIndex = 1;
 
-        segment.GetPointAt(t, out var position, out var rotation);
-
-        for (int i = 0; i < count; ++i)
+        public override void Spawn(TrackSegment segment, float t)
         {
-            int lane = startLane + i;
-            lane = lane > k_RightMostLaneIndex ? k_LeftMostLaneIndex : lane;
+            int count = Random.Range(k_MinObstacleCount, k_MaxObstacleCount + 1);
+            int startLane = Random.Range(k_LeftMostLaneIndex, k_RightMostLaneIndex + 1);
 
-            GameObject obj = Instantiate(gameObject, position, rotation, segment.ContainerObstacles);
-            if (obj == null)
-                Debug.Log(gameObject.name);
-            else
+            segment.GetPointAt(t, out var position, out var rotation);
+
+            for (int i = 0; i < count; ++i)
             {
-                obj.transform.position += obj.transform.right * lane * ManagerLevel.Instance.LaneOffset;
+                int lane = startLane + i;
+                lane = lane > k_RightMostLaneIndex ? k_LeftMostLaneIndex : lane;
+
+                GameObject obj = Instantiate(gameObject, position, rotation, segment.ContainerObstacles);
+                if (obj == null)
+                    Debug.Log(gameObject.name);
+                else
+                {
+                    obj.transform.position += obj.transform.right * lane * ManagerLevel.Instance.LaneOffset;
+                }
             }
         }
     }

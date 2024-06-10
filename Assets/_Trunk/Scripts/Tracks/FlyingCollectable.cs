@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-public class FlyingCollectable : MonoBehaviour
+namespace FlightGame.Tracks
 {
-    //For when we create power ups to differentiate from normal collectable
+    public class FlyingCollectable : MonoBehaviour
+    {
+        //For when we create power ups to differentiate from normal collectable
+    }
 }

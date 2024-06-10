@@ -1,9 +1,12 @@
-﻿public class ObstacleFull : Obstacle
+﻿namespace FlightGame.Tracks
 {
-    public override void Spawn(TrackSegment segment, float t)
+    public class ObstacleFull : Obstacle
     {
-        segment.GetPointAt(t, out var position, out var rotation);
+        public override void Spawn(TrackSegment segment, float t)
+        {
+            segment.GetPointAt(t, out var position, out var rotation);
 
-        Instantiate(gameObject, position, rotation, segment.ContainerObstacles);
+            Instantiate(gameObject, position, rotation, segment.ContainerObstacles);
+        }
     }
 }

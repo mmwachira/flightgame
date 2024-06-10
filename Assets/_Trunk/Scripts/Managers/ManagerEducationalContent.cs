@@ -1,82 +1,86 @@
 ﻿using System.Collections.Generic;
+using FlightGame.Entities;
 using I2.Loc;
 using UnityEngine;
 
-public class ManagerEducationalContent : MonoBehaviour
+namespace FlightGame.Managers
 {
-    public static ManagerEducationalContent Instance { get; private set; }
-    
-    private readonly List<EducationalCategory> _questionCategories = new List<EducationalCategory>();
-    private const string FlightGameKey = "FlightGame/question_";
-    
-    void Awake()
+    public class ManagerEducationalContent : MonoBehaviour
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
-        DontDestroyOnLoad(gameObject);
-    }
+        public static ManagerEducationalContent Instance { get; private set; }
     
-    public void LoadEducationalQuestions()
-    {
-        _questionCategories.Clear();
-
-        int indexCategory = 0;
-        bool validCategory = true;
-        while (validCategory)
+        private readonly List<EducationalCategory> _questionCategories = new List<EducationalCategory>();
+        private const string FlightGameKey = "FlightGame/question_";
+    
+        void Awake()
         {
-            indexCategory++;
-            string key = FlightGameKey + indexCategory;
-            string localisation = LocalizationManager.GetTranslation(key);
-
-            validCategory = !string.IsNullOrEmpty(localisation);
-            if (validCategory)
+            if (Instance != null && Instance != this)
             {
-                EducationalCategory category = new EducationalCategory(indexCategory, key);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Instance = this;
+            }
+            DontDestroyOnLoad(gameObject);
+        }
+    
+        public void LoadEducationalQuestions()
+        {
+            _questionCategories.Clear();
 
-                int indexQuestion = 0;
-                bool validQuestion = true;
-                while (validQuestion)
+            int indexCategory = 0;
+            bool validCategory = true;
+            while (validCategory)
+            {
+                indexCategory++;
+                string key = FlightGameKey + indexCategory;
+                string localisation = LocalizationManager.GetTranslation(key);
+
+                validCategory = !string.IsNullOrEmpty(localisation);
+                if (validCategory)
                 {
-                    indexQuestion++;
-                    key = FlightGameKey + indexCategory + "_" + indexQuestion;
-                    localisation = LocalizationManager.GetTranslation(key);
+                    EducationalCategory category = new EducationalCategory(indexCategory, key);
 
-                    validQuestion = !string.IsNullOrEmpty(localisation);
-                    if (validQuestion)
+                    int indexQuestion = 0;
+                    bool validQuestion = true;
+                    while (validQuestion)
                     {
-                        EducationalQuestion question = new EducationalQuestion(indexCategory, indexQuestion, key);
+                        indexQuestion++;
+                        key = FlightGameKey + indexCategory + "_" + indexQuestion;
+                        localisation = LocalizationManager.GetTranslation(key);
 
-                        int indexAnswer = 0;
-                        bool validAnswer = true;
-                        while (validAnswer)
+                        validQuestion = !string.IsNullOrEmpty(localisation);
+                        if (validQuestion)
                         {
-                            indexAnswer++;
-                            string answerKey = key + "_" + indexAnswer;
-                            string answerLocalisation = LocalizationManager.GetTranslation(answerKey);
-                            string correctAnswerKey = answerKey + "_correct";
-                            string correctAnswerLocalisation = LocalizationManager.GetTranslation(correctAnswerKey);
+                            EducationalQuestion question = new EducationalQuestion(indexCategory, indexQuestion, key);
 
-                            validAnswer = !string.IsNullOrEmpty(answerLocalisation) || !string.IsNullOrEmpty(correctAnswerLocalisation);
-                            if (validAnswer)
+                            int indexAnswer = 0;
+                            bool validAnswer = true;
+                            while (validAnswer)
                             {
-                                bool isCorrect = !string.IsNullOrEmpty(correctAnswerLocalisation);
-                                string answerKeyToUse = isCorrect ? correctAnswerKey : answerKey;
-                                EducationalAnswer answer = new EducationalAnswer(answerKeyToUse, isCorrect);
-                                question.AddAnswer(answer);
+                                indexAnswer++;
+                                string answerKey = key + "_" + indexAnswer;
+                                string answerLocalisation = LocalizationManager.GetTranslation(answerKey);
+                                string correctAnswerKey = answerKey + "_correct";
+                                string correctAnswerLocalisation = LocalizationManager.GetTranslation(correctAnswerKey);
+
+                                validAnswer = !string.IsNullOrEmpty(answerLocalisation) || !string.IsNullOrEmpty(correctAnswerLocalisation);
+                                if (validAnswer)
+                                {
+                                    bool isCorrect = !string.IsNullOrEmpty(correctAnswerLocalisation);
+                                    string answerKeyToUse = isCorrect ? correctAnswerKey : answerKey;
+                                    EducationalAnswer answer = new EducationalAnswer(answerKeyToUse, isCorrect);
+                                    question.AddAnswer(answer);
+                                }
                             }
+
+                            category.AddQuestion(question);
                         }
-
-                        category.AddQuestion(question);
                     }
-                }
 
-                _questionCategories.Add(category);
+                    _questionCategories.Add(category);
+                }
             }
         }
     }

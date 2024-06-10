@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class AnswerRing : MonoBehaviour
+namespace FlightGame.Questions
 {
-    public int AnswerIndex { get; set; }
-    public bool IsCorrect { get; set; }
+    public class AnswerRing : MonoBehaviour
+    {
+        public int AnswerIndex { get; set; }
+        public bool IsCorrect { get; set; }
+    }
 }
