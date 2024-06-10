@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5603,6 +5603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a519ac45410372f4288dad70ea23d190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
   answerRings:
   - {fileID: 4998830499653171966, guid: 5074303ec8c126145ba9d151352e804d, type: 3}
   - {fileID: 3846196931011805352, guid: ab2c5eb17d9f76444a17075946f75ff9, type: 3}
@@ -6712,6 +6713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706787355660309660, guid: 9d5c41812abe1d64faeddbbfbdc6dd75,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4523554728666026912, guid: 9d5c41812abe1d64faeddbbfbdc6dd75,
         type: 3}

@@ -1,138 +1,142 @@
 using System.Collections;
+using FlightGame.Managers;
+using FlightGame.Questions;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-public class PlayerController : MonoBehaviour
+namespace FlightGame.Players
 {
-    static int s_HitHash = Animator.StringToHash("Hit");
-
-    public string tagOption => TagOption;
-
-    [Header("Character & Movements")]
-    [SerializeField] private float _forwardSpeed;
-    [SerializeField] private float _previousForwardSpeed;
-    [SerializeField] private float _maneuverSpeed = 5f;
-    [SerializeField] private float _acceleration = 0.2f;
-    [SerializeField] private float _minSpeed = 5f;
-    [SerializeField] private float _maxSpeed = 20f;
-    [SerializeField] Animator _animator;
-    [SerializeField] private ParticleSystem _collisionParticles;
-    [SerializeField] private Renderer _playerRenderer;
-    [SerializeField] private Color _flashColor;
-
-
-    private Rigidbody _rigidbody;
-    private Collider[] _colliders;
-    private Color _originalColor;
-    private float _originalForwardSpeed;
-
-    private Vector2 _inputVector;
-    private Vector2 _inputStartPosition;
-    private bool _isMoving;
-    private int _currentHealth;
-    private bool _isInvincible;
-    private bool isSlowingDown;
-
-    private const float InvincibilityDuration = 1.5f;
-    private const float slowDownTime = 2f;
-    private const int MaxHealth = 3;
-    private const string TagObstacle = "Obstacle";
-    private const string TagCollectable = "Collectable";
-    private const string TagOption = "Option";
-
-    private static readonly int MoveXHash = Animator.StringToHash("MoveX");
-    private static readonly int MoveYHash = Animator.StringToHash("MoveY");
-
-    public void Start()
+    [RequireComponent(typeof(Rigidbody))]
+    public class PlayerController : MonoBehaviour
     {
-        _rigidbody = GetComponent<Rigidbody>();
-        _colliders = GetComponents<Collider>();
-        if (_playerRenderer != null)
+        static int s_HitHash = Animator.StringToHash("Hit");
+
+        public string tagOption => TagOption;
+
+        [Header("Character & Movements")]
+        [SerializeField] private float _forwardSpeed;
+        [SerializeField] private float _previousForwardSpeed;
+        [SerializeField] private float _maneuverSpeed = 5f;
+        [SerializeField] private float _acceleration = 0.2f;
+        [SerializeField] private float _minSpeed = 5f;
+        [SerializeField] private float _maxSpeed = 20f;
+        [SerializeField] Animator _animator;
+        [SerializeField] private ParticleSystem _collisionParticles;
+        [SerializeField] private Renderer _playerRenderer;
+        [SerializeField] private Color _flashColor;
+
+
+        private Rigidbody _rigidbody;
+        private Collider[] _colliders;
+        private Color _originalColor;
+        private float _originalForwardSpeed;
+
+        private Vector2 _inputVector;
+        private Vector2 _inputStartPosition;
+        private bool _isMoving;
+        private int _currentHealth;
+        private bool _isInvincible;
+        private bool isSlowingDown;
+
+        private const float InvincibilityDuration = 1.5f;
+        private const float slowDownTime = 2f;
+        private const int MaxHealth = 3;
+        private const string TagObstacle = "Obstacle";
+        private const string TagCollectable = "Collectable";
+        private const string TagOption = "Option";
+
+        private static readonly int MoveXHash = Animator.StringToHash("MoveX");
+        private static readonly int MoveYHash = Animator.StringToHash("MoveY");
+
+        public void Start()
         {
-            _originalColor = _playerRenderer.material.color;
-        }
-        _originalForwardSpeed = _forwardSpeed;
-    }
-
-    public void Setup()
-    {
-        _isMoving = false;
-        _isInvincible = false;
-        _currentHealth = MaxHealth;
-        _forwardSpeed = _minSpeed;
-        ManagerUI.Instance.UpdateLivesDisplay(_currentHealth);
-    }
-
-    void Update()
-    {
-        if (!_isMoving) return;
-
-        HandleInput();
-
-        if (isSlowingDown)
-        {
-            return;
+            _rigidbody = GetComponent<Rigidbody>();
+            _colliders = GetComponents<Collider>();
+            if (_playerRenderer != null)
+            {
+                _originalColor = _playerRenderer.material.color;
+            }
+            _originalForwardSpeed = _forwardSpeed;
         }
 
-        //TODO: We should also check the results of increasing _maneuverSpeed with some proportion to the _forwardSpeed so the reaction of the plane is higher too
-        if (_forwardSpeed < _maxSpeed)
-            _forwardSpeed += _acceleration * Time.deltaTime;
-        else
-            _forwardSpeed = _maxSpeed;
-    }
-
-    void FixedUpdate()
-    {
-        if (!_isMoving)
+        public void Setup()
         {
-            _rigidbody.velocity = Vector3.zero;
-            return;
+            _isMoving = false;
+            _isInvincible = false;
+            _currentHealth = MaxHealth;
+            _forwardSpeed = _minSpeed;
+            ManagerUI.Instance.UpdateLivesDisplay(_currentHealth);
         }
 
-        _rigidbody.velocity = transform.forward * _forwardSpeed + new Vector3(_inputVector.x * _maneuverSpeed, _inputVector.y * _maneuverSpeed, 0);
-    }
+        void Update()
+        {
+            if (!_isMoving) return;
 
-    public void StartMoving()
-    {
-        _isMoving = true;
-    }
+            HandleInput();
 
-    public void ResumeMoving()
-    {
-        _isMoving = true;
-        StartCoroutine(AccelerationCoroutine(3.0f));
-        //_forwardSpeed = _previousForwardSpeed;
-    }
+            if (isSlowingDown)
+            {
+                return;
+            }
 
-    public void StartSlowDown()
-    {
-        _previousForwardSpeed = _forwardSpeed;
-        StartCoroutine(SlowDownCoroutine());
+            //TODO: We should also check the results of increasing _maneuverSpeed with some proportion to the _forwardSpeed so the reaction of the plane is higher too
+            if (_forwardSpeed < _maxSpeed)
+                _forwardSpeed += _acceleration * Time.deltaTime;
+            else
+                _forwardSpeed = _maxSpeed;
+        }
 
-    }
+        void FixedUpdate()
+        {
+            if (!_isMoving)
+            {
+                _rigidbody.velocity = Vector3.zero;
+                return;
+            }
 
-    public void StopMoving()
-    {
-        _isMoving = false;
-    }
+            _rigidbody.velocity = transform.forward * _forwardSpeed + new Vector3(_inputVector.x * _maneuverSpeed, _inputVector.y * _maneuverSpeed, 0);
+        }
 
-    private void HandleInput()
-    {
+        public void StartMoving()
+        {
+            _isMoving = true;
+        }
+
+        public void ResumeMoving()
+        {
+            _isMoving = true;
+            StartCoroutine(AccelerationCoroutine(3.0f));
+            //_forwardSpeed = _previousForwardSpeed;
+        }
+
+        public void StartSlowDown()
+        {
+            _previousForwardSpeed = _forwardSpeed;
+            StartCoroutine(SlowDownCoroutine());
+
+        }
+
+        public void StopMoving()
+        {
+            _isMoving = false;
+        }
+
+        private void HandleInput()
+        {
 #if UNITY_EDITOR
-        if (Input.GetMouseButtonDown(0))
-        {
-            _inputStartPosition = Input.mousePosition;
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            Vector2 currentPosition = Input.mousePosition;
-            Vector2 delta = currentPosition - _inputStartPosition;
-            _inputVector = new Vector2(delta.x, delta.y).normalized;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            _inputVector = Vector2.zero;
-        }
+            if (Input.GetMouseButtonDown(0))
+            {
+                _inputStartPosition = Input.mousePosition;
+            }
+            else if (Input.GetMouseButton(0))
+            {
+                Vector2 currentPosition = Input.mousePosition;
+                Vector2 delta = currentPosition - _inputStartPosition;
+                _inputVector = new Vector2(delta.x, delta.y).normalized;
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                _inputVector = Vector2.zero;
+            }
 #else
         // Handle touch input for mobile devices
         if (Input.touchCount > 0)
@@ -153,131 +157,132 @@ public class PlayerController : MonoBehaviour
             }
         }
 #endif
-        _animator.SetFloat(MoveXHash, _inputVector.x);
-        _animator.SetFloat(MoveYHash, _inputVector.y);
-    }
+            _animator.SetFloat(MoveXHash, _inputVector.x);
+            _animator.SetFloat(MoveYHash, _inputVector.y);
+        }
 
-    void OnTriggerEnter(Collider collision)
-    {
-        if (collision.CompareTag(TagObstacle))
+        void OnTriggerEnter(Collider collision)
         {
-            if (!_isInvincible)
+            if (collision.CompareTag(TagObstacle))
             {
-                HandleCollision();
+                if (!_isInvincible)
+                {
+                    HandleCollision();
+                }
+
+            }
+            else if (collision.CompareTag(TagCollectable))
+            {
+                ManagerLevel.Instance.CollectItem(collision.transform);
+
+            }
+            else if (collision.CompareTag(TagOption))
+            {
+
+                AnswerRing answerRing = collision.GetComponent<AnswerRing>();
+                if (answerRing != null)
+                {
+                    HandleAnswerRing(answerRing);
+                }
+
             }
 
         }
-        else if (collision.CompareTag(TagCollectable))
-        {
-            ManagerLevel.Instance.CollectItem(collision.transform);
 
-        }
-        else if (collision.CompareTag(TagOption))
+        private void UpdateHealth(int value)
         {
-
-            AnswerRing answerRing = collision.GetComponent<AnswerRing>();
-            if (answerRing != null)
+            _currentHealth = Mathf.Clamp(_currentHealth + value, 0, 3);
+            ManagerUI.Instance.UpdateLivesDisplay(_currentHealth);
+            if (_currentHealth < 1)
             {
-                HandleAnswerRing(answerRing);
+                ManagerGame.Instance.GameOver();
+                return;
+            }
+            StartCoroutine(InvincibilityAndFlashCoroutine());
+        }
+
+        private void HandleCollision()
+        {
+            _isInvincible = true;
+
+            if (_collisionParticles != null)
+            {
+                _collisionParticles.Play();
             }
 
+            _forwardSpeed = _minSpeed;
+            UpdateHealth(-1);
         }
 
-    }
-
-    private void UpdateHealth(int value)
-    {
-        _currentHealth = Mathf.Clamp(_currentHealth + value, 0, 3);
-        ManagerUI.Instance.UpdateLivesDisplay(_currentHealth);
-        if (_currentHealth < 1)
+        void HandleAnswerRing(AnswerRing answerRing)
         {
-            ManagerGame.Instance.GameOver();
-            return;
-        }
-        StartCoroutine(InvincibilityAndFlashCoroutine());
-    }
+            ManagerQuestions.Instance.CheckAnswer(answerRing.AnswerIndex);
+            if (answerRing.IsCorrect)
+            {
+                Destroy(answerRing.gameObject);
+            }
 
-    private void HandleCollision()
-    {
-        _isInvincible = true;
 
-        if (_collisionParticles != null)
-        {
-            _collisionParticles.Play();
         }
 
-        _forwardSpeed = _minSpeed;
-        UpdateHealth(-1);
-    }
-
-    void HandleAnswerRing(AnswerRing answerRing)
-    {
-        ManagerQuestions.Instance.CheckAnswer(answerRing.AnswerIndex);
-        if (answerRing.IsCorrect)
+        private IEnumerator InvincibilityAndFlashCoroutine()
         {
-            Destroy(answerRing.gameObject);
-        }
+            float flashInterval = 0.2f;
+            float elapsedTime = 0f;
+            WaitForSeconds delay = new WaitForSeconds(flashInterval);
 
+            while (elapsedTime < InvincibilityDuration)
+            {
+                if (_playerRenderer != null)
+                {
+                    _playerRenderer.material.color = _flashColor;
+                    yield return delay;
+                    _playerRenderer.material.color = _originalColor;
+                    yield return delay;
+                    elapsedTime += flashInterval * 2;
+                }
+            }
 
-    }
-
-    private IEnumerator InvincibilityAndFlashCoroutine()
-    {
-        float flashInterval = 0.2f;
-        float elapsedTime = 0f;
-        WaitForSeconds delay = new WaitForSeconds(flashInterval);
-
-        while (elapsedTime < InvincibilityDuration)
-        {
             if (_playerRenderer != null)
             {
-                _playerRenderer.material.color = _flashColor;
-                yield return delay;
-                _playerRenderer.material.color = _originalColor;
-                yield return delay;
-                elapsedTime += flashInterval * 2;
+                _playerRenderer.material.color = _originalColor; // Ensure it returns to the original color at the end
             }
+            _isInvincible = false;
         }
 
-        if (_playerRenderer != null)
+        public IEnumerator SlowDownCoroutine()
         {
-            _playerRenderer.material.color = _originalColor; // Ensure it returns to the original color at the end
+            isSlowingDown = true;
+            float s_elapsedTime = 0f;
+
+
+            while (s_elapsedTime < slowDownTime)
+            {
+                _forwardSpeed = Mathf.Lerp(_originalForwardSpeed, 0, s_elapsedTime / slowDownTime);
+                s_elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            _forwardSpeed = 0;
+            isSlowingDown = false;
+            _isMoving = false;
+
+            //ManagerQuestions.Instance.AskQuestion();
+
         }
-        _isInvincible = false;
-    }
 
-    public IEnumerator SlowDownCoroutine()
-    {
-        isSlowingDown = true;
-        float s_elapsedTime = 0f;
-
-
-        while (s_elapsedTime < slowDownTime)
+        public IEnumerator AccelerationCoroutine(float accelerationTime)
         {
-            _forwardSpeed = Mathf.Lerp(_originalForwardSpeed, 0, s_elapsedTime / slowDownTime);
-            s_elapsedTime += Time.deltaTime;
-            yield return null;
+            float a_elapsedTime = 0f;
+
+            while (a_elapsedTime < accelerationTime)
+            {
+                _forwardSpeed = Mathf.Lerp(0, _previousForwardSpeed, a_elapsedTime / accelerationTime);
+                a_elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            _forwardSpeed = _previousForwardSpeed;
         }
-
-        _forwardSpeed = 0;
-        isSlowingDown = false;
-        _isMoving = false;
-
-        //ManagerQuestions.Instance.AskQuestion();
-
-    }
-
-    public IEnumerator AccelerationCoroutine(float accelerationTime)
-    {
-        float a_elapsedTime = 0f;
-
-        while (a_elapsedTime < accelerationTime)
-        {
-            _forwardSpeed = Mathf.Lerp(0, _previousForwardSpeed, a_elapsedTime / accelerationTime);
-            a_elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        _forwardSpeed = _previousForwardSpeed;
     }
 }

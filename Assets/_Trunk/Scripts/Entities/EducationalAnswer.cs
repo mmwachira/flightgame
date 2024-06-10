@@ -1,11 +1,14 @@
-﻿public class EducationalAnswer
+﻿namespace FlightGame.Entities
 {
-    public string AnswerKey { get; private set; }
-    public bool IsCorrect { get; private set; }
-
-    public EducationalAnswer(string answerKey, bool isCorrect)
+    public class EducationalAnswer
     {
-        AnswerKey = answerKey;
-        IsCorrect = isCorrect;
+        public string AnswerKey { get; private set; }
+        public bool IsCorrect { get; private set; }
+
+        public EducationalAnswer(string answerKey, bool isCorrect)
+        {
+            AnswerKey = answerKey;
+            IsCorrect = isCorrect;
+        }
     }
 }

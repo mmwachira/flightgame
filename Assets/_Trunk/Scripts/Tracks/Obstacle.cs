@@ -1,26 +1,30 @@
-﻿using UnityEngine;
+﻿using FlightGame.Managers;
+using UnityEngine;
 
-public abstract class Obstacle : MonoBehaviour
+namespace FlightGame.Tracks
 {
-    public AudioClip _impactedSound;
-
-    public virtual void Setup()
+    public abstract class Obstacle : MonoBehaviour
     {
-    }
+        public AudioClip _impactedSound;
 
-    public abstract void Spawn(TrackSegment segment, float t);
-
-    public virtual void Impacted()
-    {
-        //Animation anim = GetComponentInChildren<Animation>();For when we add animations to obstacles hit
-        //if (anim != null)
-        //{
-        //    anim.Play();
-        //}
-
-        if (_impactedSound != null)
+        public virtual void Setup()
         {
-            ManagerSounds.Instance.PlaySingle(_impactedSound, true);
+        }
+
+        public abstract void Spawn(TrackSegment segment, float t);
+
+        public virtual void Impacted()
+        {
+            //Animation anim = GetComponentInChildren<Animation>();For when we add animations to obstacles hit
+            //if (anim != null)
+            //{
+            //    anim.Play();
+            //}
+
+            if (_impactedSound != null)
+            {
+                ManagerSounds.Instance.PlaySingle(_impactedSound, true);
+            }
         }
     }
 }
