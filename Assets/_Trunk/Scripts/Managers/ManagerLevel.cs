@@ -13,7 +13,7 @@ namespace FlightGame.Managers
 
         public float LaneOffset => _laneOffset;
         public float TotalRunDistance => _totalRunDistance;
-
+        public TrackSegment CurrentSegment => _currentTrackSegment;
         public float CollectedCoins => _collectedCoins;
         public PlayerController playerController => _playerController;
 
@@ -30,14 +30,14 @@ namespace FlightGame.Managers
         private readonly List<TrackSegment> _trackSegmentsToRemove = new();
         private int _spawnedTrackSegments;
         private int _collectedCoins;
-        public int _option;
-        public string m_question;
+        private int _currentScore;
         private float _segmentRunDistance;
         private float _totalRunDistance;
 
         private Vector3 _previousPosition;
         private Transform _levelContainer;
         private PoolByPrefab _collectablesPool;
+        private TrackSegment _currentTrackSegment;
         private bool _isGameOver;
         private bool _isGameplay;
         private bool _isCorrect;
@@ -76,6 +76,7 @@ namespace FlightGame.Managers
         public void StartGame()
         {
             _segmentRunDistance = StartingSegmentDistance;
+
             _totalRunDistance = 0;
             _collectedCoins = 0;
             ManagerUI.Instance.Reset();
@@ -84,6 +85,7 @@ namespace FlightGame.Managers
             _isGameOver = false;
             _previousPosition = _playerController.transform.position;
             _playerController.StartMoving();
+
             StartCoroutine(ShowQuestions());
 
         }
@@ -123,6 +125,7 @@ namespace FlightGame.Managers
                 _segmentRunDistance += forwardDistance;
                 _totalRunDistance += forwardDistance;
                 ManagerUI.Instance.UpdateDistance((int)_totalRunDistance);
+                _currentScore = (int)TotalRunDistance;
             }
 
             _previousPosition = currentPosition;
@@ -202,9 +205,11 @@ namespace FlightGame.Managers
             if (_spawnedTrackSegments > 1) //We spawn obstacles from the second segment onwards
             {
                 SpawnObstacle(newSegment);
+
             }
             _trackSegmentsSpawn.Add(newSegment);
             _spawnedTrackSegments++;
+            _currentTrackSegment = newSegment;
         }
 
         private void SpawnObstacle(TrackSegment segment)
@@ -217,6 +222,7 @@ namespace FlightGame.Managers
                     SpawnFromObjectInSegment(obstacle, segment, i);
                 }
             }
+
             SpawnCollectables(segment);
         }
 
@@ -280,6 +286,7 @@ namespace FlightGame.Managers
             }
         }
 
+
         public void RecyclePoolElement(Transform item)
         {
             _collectablesPool.RecycleObject(item);
@@ -297,9 +304,9 @@ namespace FlightGame.Managers
         {
             while (true)
             {
-                yield return new WaitForSeconds(20f);
+                yield return new WaitForSeconds(10f);
                 _playerController.StartSlowDown();
-                ManagerQuestions.Instance.AskQuestion();
+                ManagerQuestions.Instance.AskQuestion(CurrentSegment);
 
                 yield return new WaitForSeconds(5f);
                 ManagerUI.Instance.UpdateAnswer();

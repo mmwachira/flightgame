@@ -14,10 +14,12 @@ namespace FlightGame.Tracks
         public float SegmentLength => _segmentLength;
         public Transform ContainerObstacles => _containerObstacles;
         public Transform ContainerCollectables => _containerCollectables;
+        public Transform ContainerQuestions => _containerQuestions;
 
         private float _segmentLength;
         private Transform _containerObstacles;
         private Transform _containerCollectables;
+        private Transform _containerQuestions;
 
         void OnEnable()
         {
@@ -30,6 +32,10 @@ namespace FlightGame.Tracks
             obj = new GameObject("ContainerCollectables");
             obj.transform.SetParent(transform);
             _containerCollectables = obj.transform;
+
+            obj = new GameObject("ContainerQuestions");
+            obj.transform.SetParent(transform);
+            _containerQuestions = obj.transform;
         }
 
         private void CalculateLength()
