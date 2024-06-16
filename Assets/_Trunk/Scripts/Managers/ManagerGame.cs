@@ -6,8 +6,10 @@ namespace FlightGame.Managers
     {
         public static ManagerGame Instance { get; private set; }
 
+        private float _highScore = 0;
         private bool _gameOver;
         private bool _gamePaused;
+
 
         void Awake()
         {
@@ -33,7 +35,7 @@ namespace FlightGame.Managers
         {
             if (_gameOver)
             {
-                //Time.timeScale = 0;
+
                 ManagerLevel.Instance.EndGame();
                 ManagerUI.Instance.ShowGameOverScreen();
                 ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicMenu);
@@ -52,13 +54,14 @@ namespace FlightGame.Managers
             _gameOver = false;
             _gamePaused = false;
             ManagerUI.Instance.ShowStartGameScreen();
-            ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicMenu); 
+            ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicMenu);
         }
 
         public void StartGame()
         {
             Time.timeScale = 1;
             ManagerUI.Instance.ShowGameplayHUD();
+            ManagerUI.Instance.UpdateHighScore((int)_highScore);
             ManagerLevel.Instance.StartGame();
             ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicGameplay);
         }
@@ -73,19 +76,24 @@ namespace FlightGame.Managers
             _gamePaused = false;
             Time.timeScale = 1;
             ManagerUI.Instance.ShowGameplayHUD();
-        
+
 
         }
 
         public void GameOver()
         {
             _gameOver = true;
+            _highScore = ManagerLevel.Instance.m_Score;
             ManagerUI.Instance.UpdateFinalScore((int)ManagerLevel.Instance.TotalRunDistance);
+
         }
-    
+
         public void ReplayGame()
         {
+            //PlayerData.instance.InsertScore((int)ManagerLevel.Instance.m_Score);
+            //PlayerData.instance.Save();
             ResetGame();
+
         }
 
         public void QuitGame()

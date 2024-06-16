@@ -149,7 +149,6 @@ Transform:
   - {fileID: 6598709102549976994}
   - {fileID: 4357975129080516915}
   - {fileID: 5665469029924234176}
-  - {fileID: 5844843529100326417}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6392099970307871268
@@ -1221,6 +1220,7 @@ Transform:
   - {fileID: 3343014751065174054}
   - {fileID: 2216651484776860784}
   - {fileID: 9015757175839990324}
+  - {fileID: 5844843529100326417}
   m_Father: {fileID: 3010207621961227364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &551843402995690473
@@ -1231,10 +1231,19 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 169610174517216719}
     m_Modifications:
+    - target: {fileID: 3187465989970372, guid: 5079d986313fb994b9b1b05919eaef66, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1187102002385758528, guid: 5079d986313fb994b9b1b05919eaef66,
         type: 3}
       propertyPath: m_Name
       value: OakTree03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187102002385758528, guid: 5079d986313fb994b9b1b05919eaef66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1959838072336806906, guid: 5079d986313fb994b9b1b05919eaef66,
         type: 3}
@@ -1301,6 +1310,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2829884174372477757, guid: 5079d986313fb994b9b1b05919eaef66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308769287646123435, guid: 5079d986313fb994b9b1b05919eaef66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1329,6 +1348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff02d
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606400513933554907, guid: d253517fde7e7484fa165d4ac25ec3ac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4127358312351788641, guid: d253517fde7e7484fa165d4ac25ec3ac,
         type: 3}
@@ -1423,6 +1447,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff03c
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208331378931942672, guid: fb82ba3b96007de488aa68e84e82ce70,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1985817300187619242, guid: fb82ba3b96007de488aa68e84e82ce70,
         type: 3}
@@ -1528,6 +1557,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff03c
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208331378931942672, guid: fb82ba3b96007de488aa68e84e82ce70,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1985817300187619242, guid: fb82ba3b96007de488aa68e84e82ce70,
         type: 3}
@@ -1658,6 +1692,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock04
       objectReference: {fileID: 0}
+    - target: {fileID: 8427495891896139028, guid: dc732e75e4d437e4f9c6a38bcaa1603b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1677,10 +1716,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 169610174517216719}
     m_Modifications:
+    - target: {fileID: 2691485769002303879, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268682815576684683, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231654932301679378, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6149868613736674758, guid: d5a56c692aa62f940b7143e26cd75980,
         type: 3}
       propertyPath: m_Name
       value: OakTree01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149868613736674758, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6778876518873001852, guid: d5a56c692aa62f940b7143e26cd75980,
         type: 3}
@@ -1821,6 +1880,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boulder03
       objectReference: {fileID: 0}
+    - target: {fileID: 3048123815084509224, guid: 415651c5e216f044c96f1cd705d2eafd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647816802663789218, guid: 415651c5e216f044c96f1cd705d2eafd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348896799219179320, guid: 415651c5e216f044c96f1cd705d2eafd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1840,6 +1914,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 169610174517216719}
     m_Modifications:
+    - target: {fileID: 2661267049384279698, guid: 85b67c305e731644981723bb07cc1a46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3799578387175572401, guid: 85b67c305e731644981723bb07cc1a46,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1905,10 +1984,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4009742514275667461, guid: 85b67c305e731644981723bb07cc1a46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4607464743734237451, guid: 85b67c305e731644981723bb07cc1a46,
         type: 3}
       propertyPath: m_Name
       value: OakTree02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607464743734237451, guid: 85b67c305e731644981723bb07cc1a46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499631090099589562, guid: 85b67c305e731644981723bb07cc1a46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1927,12 +2021,17 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3010207621961227364}
+    m_TransformParent: {fileID: 169610174517216719}
     m_Modifications:
     - target: {fileID: 7060675872100921230, guid: 7f9b29968f2066c4a935f846fc547c74,
         type: 3}
       propertyPath: m_Name
       value: OakTreeBaseBroken01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060675872100921230, guid: 7f9b29968f2066c4a935f846fc547c74,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7689720336447665460, guid: 7f9b29968f2066c4a935f846fc547c74,
         type: 3}
@@ -2088,6 +2187,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ivy03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1993334653342647999, guid: 2530da3b6e8182d4a90104a5464bbf6c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2161,6 +2265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTreeBroken02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704963673128938473, guid: 23ac352ffe0f3f249999f2444b7bcbfa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2267,6 +2376,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff03b
       objectReference: {fileID: 0}
+    - target: {fileID: 2043282602493414459, guid: 885399cea1d1328448df82d9940a4d90,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2286,10 +2400,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 169610174517216719}
     m_Modifications:
+    - target: {fileID: 2691485769002303879, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268682815576684683, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231654932301679378, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6149868613736674758, guid: d5a56c692aa62f940b7143e26cd75980,
         type: 3}
       propertyPath: m_Name
       value: OakTree01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149868613736674758, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6778876518873001852, guid: d5a56c692aa62f940b7143e26cd75980,
         type: 3}
@@ -2445,6 +2579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ivy03
       objectReference: {fileID: 0}
+    - target: {fileID: 1993334653342647999, guid: 2530da3b6e8182d4a90104a5464bbf6c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2528,6 +2667,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pillar01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538801725421790185, guid: 29b1dd494f190f647bdfc68caed1a87f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2617,6 +2761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960844236708463733, guid: 52202b428c93675499f1d787e93be31b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2717,6 +2866,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff02c
       objectReference: {fileID: 0}
+    - target: {fileID: 6685722601213566458, guid: f963ce743045dbd469fb5eb55d796d3e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2740,6 +2894,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665002134388066620, guid: 54d9f8a7e45bf2b45bd950c3d6602823,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3436297088175674246, guid: 54d9f8a7e45bf2b45bd950c3d6602823,
         type: 3}
@@ -2815,6 +2974,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 169610174517216719}
     m_Modifications:
+    - target: {fileID: 2661267049384279698, guid: 85b67c305e731644981723bb07cc1a46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3799578387175572401, guid: 85b67c305e731644981723bb07cc1a46,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2880,10 +3044,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4009742514275667461, guid: 85b67c305e731644981723bb07cc1a46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4607464743734237451, guid: 85b67c305e731644981723bb07cc1a46,
         type: 3}
       propertyPath: m_Name
       value: OakTree02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607464743734237451, guid: 85b67c305e731644981723bb07cc1a46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499631090099589562, guid: 85b67c305e731644981723bb07cc1a46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2974,6 +3153,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff02f
       objectReference: {fileID: 0}
+    - target: {fileID: 3170954371187699811, guid: 9e31d6d9401ccb84999ae6527f00513a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2993,10 +3177,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 169610174517216719}
     m_Modifications:
+    - target: {fileID: 2691485769002303879, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268682815576684683, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231654932301679378, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6149868613736674758, guid: d5a56c692aa62f940b7143e26cd75980,
         type: 3}
       propertyPath: m_Name
       value: OakTree01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149868613736674758, guid: d5a56c692aa62f940b7143e26cd75980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6778876518873001852, guid: d5a56c692aa62f940b7143e26cd75980,
         type: 3}
@@ -3087,6 +3291,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTree04
       objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3151,6 +3360,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3231,6 +3455,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar01
       objectReference: {fileID: 0}
+    - target: {fileID: 8538801725421790185, guid: 29b1dd494f190f647bdfc68caed1a87f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3254,6 +3483,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff03e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465341210349653893, guid: 8b6b34df2f28997418415414ae23afc8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7841304524446340415, guid: 8b6b34df2f28997418415414ae23afc8,
         type: 3}

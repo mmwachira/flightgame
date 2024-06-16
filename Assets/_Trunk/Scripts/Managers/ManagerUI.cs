@@ -20,6 +20,7 @@ namespace FlightGame.Managers
         [SerializeField] private TextMeshProUGUI _distance;
         [SerializeField] private TextMeshProUGUI _collected;
         [SerializeField] private TextMeshProUGUI t_distance;
+        [SerializeField] private TextMeshProUGUI _highScore;
         [SerializeField] private TextMeshProUGUI _question;
 
         void Awake()
@@ -103,6 +104,11 @@ namespace FlightGame.Managers
         public void UpdateFinalScore(int value)
         {
             t_distance.text = "GAME OVER! YOUR SCORE WAS: " + value.ToString() + ". WANT TO PLAY AGAIN?";
+        }
+
+        public void UpdateHighScore(int value)
+        {
+            _highScore.text = "BEST: " + value.ToString();
         }
 
         public void UpdateQuestion(Question question)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using FlightGame.Players;
 using FlightGame.Tracks;
 using FlightGame.Utils;
+using UnityEditor.Experimental.RestService;
 using UnityEngine;
 
 namespace FlightGame.Managers
@@ -13,6 +14,7 @@ namespace FlightGame.Managers
 
         public float LaneOffset => _laneOffset;
         public float TotalRunDistance => _totalRunDistance;
+        public float m_Score => _currentScore;
         public TrackSegment CurrentSegment => _currentTrackSegment;
         public float CollectedCoins => _collectedCoins;
         public PlayerController playerController => _playerController;
@@ -68,8 +70,10 @@ namespace FlightGame.Managers
             GameObject obj = new GameObject("Level Segments");
             _levelContainer = obj.transform;
 
-            _collectablesPool = new PoolByPrefab(_levelContainer);
-            _collectablesPool.AutoExpand = false;
+            _collectablesPool = new PoolByPrefab(_levelContainer)
+            {
+                AutoExpand = false
+            };
             _collectablesPool.AddPrefab(_collectableTemplate, CollectablePoolSize);
         }
 
@@ -126,6 +130,7 @@ namespace FlightGame.Managers
                 _totalRunDistance += forwardDistance;
                 ManagerUI.Instance.UpdateDistance((int)_totalRunDistance);
                 _currentScore = (int)TotalRunDistance;
+                //ManagerUI.Instance.UpdateHighScore(_currentScore);
             }
 
             _previousPosition = currentPosition;
@@ -296,15 +301,16 @@ namespace FlightGame.Managers
         {
             RecyclePoolElement(item);
             _collectedCoins++;
+            //PlayerData.instance.coins += 1;
             ManagerUI.Instance.UpdateCollected(_collectedCoins);
             ManagerSounds.Instance.PlaySingle(ManagerSounds.Instance.SfxCollect, true);
         }
 
         private IEnumerator ShowQuestions()
         {
-            while (true)
+            while (!_isGameOver)
             {
-                yield return new WaitForSeconds(10f);
+                yield return new WaitForSeconds(20f);
                 _playerController.StartSlowDown();
                 ManagerQuestions.Instance.AskQuestion(CurrentSegment);
 

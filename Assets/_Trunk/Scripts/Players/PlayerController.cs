@@ -105,7 +105,7 @@ namespace FlightGame.Players
         {
             _isMoving = true;
             StartCoroutine(AccelerationCoroutine(3.0f));
-            //_forwardSpeed = _previousForwardSpeed;
+
         }
 
         public void StartSlowDown()
@@ -267,7 +267,7 @@ namespace FlightGame.Players
             isSlowingDown = false;
             _isMoving = false;
 
-            //ManagerQuestions.Instance.AskQuestion();
+
 
         }
 

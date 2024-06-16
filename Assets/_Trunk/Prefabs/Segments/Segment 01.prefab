@@ -1229,6 +1229,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff02d
       objectReference: {fileID: 0}
+    - target: {fileID: 3606400513933554907, guid: d253517fde7e7484fa165d4ac25ec3ac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4127358312351788641, guid: d253517fde7e7484fa165d4ac25ec3ac,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1323,6 +1328,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTree04 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1388,6 +1398,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1411,6 +1436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTree04 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
@@ -1477,6 +1507,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1500,6 +1545,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665002134388066620, guid: 54d9f8a7e45bf2b45bd950c3d6602823,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3436297088175674246, guid: 54d9f8a7e45bf2b45bd950c3d6602823,
         type: 3}
@@ -1575,6 +1625,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTree04 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1640,6 +1695,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1663,6 +1733,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTree04
+      objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
@@ -1729,6 +1804,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1752,6 +1842,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff03c
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208331378931942672, guid: fb82ba3b96007de488aa68e84e82ce70,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1985817300187619242, guid: fb82ba3b96007de488aa68e84e82ce70,
         type: 3}
@@ -1847,6 +1942,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTree04 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1912,6 +2012,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1935,6 +2050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTree04 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
@@ -2000,6 +2120,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2090,6 +2225,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff03b
       objectReference: {fileID: 0}
+    - target: {fileID: 2043282602493414459, guid: 885399cea1d1328448df82d9940a4d90,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2113,6 +2253,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTree04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
@@ -2179,6 +2324,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2202,6 +2362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTree04 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
@@ -2268,6 +2433,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2291,6 +2471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff02b
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166664226499686467, guid: 1b514a044dc270a42b5b595f63d66a61,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1980178945028074233, guid: 1b514a044dc270a42b5b595f63d66a61,
         type: 3}
@@ -2386,6 +2571,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OakTree04 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2451,6 +2641,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2474,6 +2679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OakTree04 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 559409505122904758, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 903177710818537484, guid: 7836fe73991d47f438b48060514f50a8,
         type: 3}
@@ -2539,6 +2749,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684950697254292312, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505368703914525992, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423327183768551598, guid: 7836fe73991d47f438b48060514f50a8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2633,6 +2858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff02c
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685722601213566458, guid: f963ce743045dbd469fb5eb55d796d3e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

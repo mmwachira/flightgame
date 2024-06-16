@@ -67,7 +67,7 @@ namespace FlightGame.Managers
                         new Vector3(0, 1.89f, 0.02f), // Central lane
                         new Vector3(0, 0, 2.2f),  // Left lane
                         new Vector3(0, 0, -2.2f),  // Right lane
-                        new Vector3(0, -1.89f, 0f) //Bottom position
+                        //new Vector3(0, -1.89f, 0) //Bottom position
                     };
 
 
