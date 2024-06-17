@@ -43,6 +43,7 @@ namespace FlightGame.Players
         private const int MaxHealth = 3;
         private const string TagObstacle = "Obstacle";
         private const string TagCollectable = "Collectable";
+        private const string TagQuestion = "Question";
         private const string TagOption = "Option";
 
         private static readonly int MoveXHash = Animator.StringToHash("MoveX");
@@ -180,17 +181,19 @@ namespace FlightGame.Players
 
 
             }
+            else if (collision.CompareTag(TagQuestion))
+            {
+                //Slowmo
+                ManagerTime.Instance.DoSlowMotion();
+            }
             else if (collision.CompareTag(TagOption))
             {
-
                 AnswerRing answerRing = collision.GetComponent<AnswerRing>();
                 if (answerRing != null)
                 {
                     HandleAnswerRing(answerRing);
                 }
-
             }
-
         }
 
         private void UpdateHealth(int value)

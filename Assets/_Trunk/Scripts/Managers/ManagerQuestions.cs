@@ -190,8 +190,9 @@ namespace FlightGame.Managers
                     answerText.text = answers[i];
 
                     AnswerRing answerRing = segment.ContainerQuestions.gameObject.AddComponent<AnswerRing>();
-                    answerRing.AnswerIndex = i;
-                    answerRing.IsCorrect = i == _correctAnswerIndex;
+                    answerRing.Setup(i, answers[i], i == _correctAnswerIndex);
+                    // answerRing.AnswerIndex = i;
+                    // answerRing.IsCorrect = i == _correctAnswerIndex;
 
 
                 }
