@@ -61,6 +61,7 @@ namespace FlightGame.Managers
         {
             Time.timeScale = 1;
             ManagerUI.Instance.ShowGameplayHUD();
+            PlayerData.Create();
             ManagerUI.Instance.UpdateHighScore((int)_highScore);
             ManagerLevel.Instance.StartGame();
             ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicGameplay);

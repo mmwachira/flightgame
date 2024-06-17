@@ -1,6 +1,7 @@
 using System.Collections;
 using FlightGame.Managers;
 using FlightGame.Questions;
+using FlightGame.Tracks;
 using UnityEngine;
 
 namespace FlightGame.Players
@@ -173,7 +174,12 @@ namespace FlightGame.Players
             }
             else if (collision.CompareTag(TagCollectable))
             {
-                ManagerLevel.Instance.CollectItem(collision.transform);
+                FlyingCollectable collectible = collision.GetComponent<FlyingCollectable>();
+                if (collectible != null)
+                {
+                    ManagerLevel.Instance.CollectItem(collision.transform, collectible.amount);
+                }
+
 
             }
             else if (collision.CompareTag(TagOption))

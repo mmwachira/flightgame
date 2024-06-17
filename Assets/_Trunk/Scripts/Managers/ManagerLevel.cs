@@ -297,12 +297,15 @@ namespace FlightGame.Managers
             _collectablesPool.RecycleObject(item);
         }
 
-        public void CollectItem(Transform item)
+        public void CollectItem(Transform item, int amount)
         {
+
             RecyclePoolElement(item);
+            //_collectedCoins += amount;
+            //PlayerData.instance.AddCoins(amount);
             _collectedCoins++;
-            //PlayerData.instance.coins += 1;
             ManagerUI.Instance.UpdateCollected(_collectedCoins);
+
             ManagerSounds.Instance.PlaySingle(ManagerSounds.Instance.SfxCollect, true);
         }
 

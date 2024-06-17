@@ -76,6 +76,12 @@ public class PlayerData
         characterAccessories.Add(name);
     }
 
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+        Save();
+    }
+
 
     // High Score management
 
