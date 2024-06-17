@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9f5edb2dc174f004aaaaff465681dd44, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.34952718, g: 0.9728329, b: 1.1289741, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6811,6 +6811,52 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1758646285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1758646287}
+  - component: {fileID: 1758646286}
+  m_Layer: 0
+  m_Name: ManagerTime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1758646286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758646285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db93d99f0ded43568464275752eaac76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slowdownFactor: 0.1
+  _slowdownLength: 6
+--- !u!4 &1758646287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758646285}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1760644496 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8642891783232778664, guid: 56edbdf1ac6ae514689bfd2e9239ead1,
@@ -7826,6 +7872,12 @@ PrefabInstance:
       propertyPath: _playerController
       value: 
       objectReference: {fileID: 1130997487}
+    - target: {fileID: 8170071754239193008, guid: 27a699ffd5dca5344b3308a548f53404,
+        type: 3}
+      propertyPath: _ringQuestionsTemplate
+      value: 
+      objectReference: {fileID: 8013166987147876310, guid: be44627be6d65744d8628336ba6d7575,
+        type: 3}
     - target: {fileID: 8170071754239193008, guid: 27a699ffd5dca5344b3308a548f53404,
         type: 3}
       propertyPath: _answerRings.Array.size
@@ -9035,3 +9087,4 @@ SceneRoots:
   - {fileID: 4558635111919522515}
   - {fileID: 8015913665996240747}
   - {fileID: 2645636920293211193}
+  - {fileID: 1758646287}
