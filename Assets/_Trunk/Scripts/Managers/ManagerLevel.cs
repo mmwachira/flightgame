@@ -130,7 +130,7 @@ namespace FlightGame.Managers
                 _totalRunDistance += forwardDistance;
                 ManagerUI.Instance.UpdateDistance((int)_totalRunDistance);
                 _currentScore = (int)TotalRunDistance;
-                //ManagerUI.Instance.UpdateHighScore(_currentScore);
+
             }
 
             _previousPosition = currentPosition;
@@ -297,12 +297,11 @@ namespace FlightGame.Managers
             _collectablesPool.RecycleObject(item);
         }
 
-        public void CollectItem(Transform item, int amount)
+        public void CollectItem(Transform item)
         {
 
             RecyclePoolElement(item);
-            //_collectedCoins += amount;
-            //PlayerData.instance.AddCoins(amount);
+            PlayerData.instance.coins += 1;
             _collectedCoins++;
             ManagerUI.Instance.UpdateCollected(_collectedCoins);
 

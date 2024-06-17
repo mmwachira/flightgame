@@ -15,7 +15,7 @@ namespace FlightGame.Managers
         public string[] answers => _answer;
 
         [SerializeField] private GameObject[] answerRings;
-        [SerializeField] private float _ringSpawnDistance = 0.5f; // Distance ahead of the player to spawn rings
+        [SerializeField] private float _ringSpawnDistance = 10f; // Distance ahead of the player to spawn rings
         [SerializeField] private float _ringSpacing = 0.5f; // Spacing between rings
         [SerializeField] private float _laneOffset = 1.4f;
         private string[] _answer;

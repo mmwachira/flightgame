@@ -174,11 +174,9 @@ namespace FlightGame.Players
             }
             else if (collision.CompareTag(TagCollectable))
             {
-                FlyingCollectable collectible = collision.GetComponent<FlyingCollectable>();
-                if (collectible != null)
-                {
-                    ManagerLevel.Instance.CollectItem(collision.transform, collectible.amount);
-                }
+
+                ManagerLevel.Instance.CollectItem(collision.transform);
+
 
 
             }

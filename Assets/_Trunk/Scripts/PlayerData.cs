@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
+using FlightGame.Managers;
+
 #if UNITY_ANALYTICS
 using UnityEngine.Analytics;
 #endif
@@ -43,7 +45,7 @@ public class PlayerData
     public int usedTheme;                                           // Currently used theme.
     public List<HighscoreEntry> highscores = new List<HighscoreEntry>();
 
-    public string previousName = "Trash Cat";
+    public string previousName = "Player1";
 
     public bool licenceAccepted;
     public bool tutorialDone;
@@ -76,11 +78,6 @@ public class PlayerData
         characterAccessories.Add(name);
     }
 
-    public void AddCoins(int amount)
-    {
-        coins += amount;
-        Save();
-    }
 
 
     // High Score management
@@ -98,12 +95,12 @@ public class PlayerData
         return index < 0 ? (~index) : index;
     }
 
-    public void InsertScore(int score)
+    public void InsertScore(int score, string name)
     {
         HighscoreEntry entry = new HighscoreEntry
         {
-            score = score
-            //entry.name = name;
+            score = score,
+            name = name,
         };
 
 

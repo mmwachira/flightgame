@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a519ac45410372f4288dad70ea23d190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerController: {fileID: 0}
   answerRings:
   - {fileID: 0}
-  currentQuestion: 
+  _ringSpawnDistance: 20
+  _ringSpacing: 0.5
+  _laneOffset: 1.4

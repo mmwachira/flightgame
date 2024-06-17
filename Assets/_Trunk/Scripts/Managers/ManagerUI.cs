@@ -11,6 +11,7 @@ namespace FlightGame.Managers
         [SerializeField] private GameObject _gameplayHUD;
         [SerializeField] private GameObject _viewStartGame;
         [SerializeField] private GameObject _viewGameOver;
+        [SerializeField] private GameObject _viewLeaderBoard;
         [SerializeField] private GameObject _viewMenu;
         [SerializeField] private GameObject _viewQuestion;
 
@@ -56,6 +57,7 @@ namespace FlightGame.Managers
             ToggleHUD(false);
             _viewStartGame.SetActive(false);
             _viewGameOver.SetActive(true);
+            _viewLeaderBoard.SetActive(true);
             _viewMenu.SetActive(false);
             _viewQuestion.SetActive(false);
         }
@@ -108,6 +110,7 @@ namespace FlightGame.Managers
 
         public void UpdateHighScore(int value)
         {
+
             _highScore.text = "BEST: " + value.ToString();
         }
 
