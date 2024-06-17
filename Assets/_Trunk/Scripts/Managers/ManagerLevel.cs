@@ -5,6 +5,7 @@ using FlightGame.Tracks;
 using FlightGame.Utils;
 using UnityEditor.Experimental.RestService;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace FlightGame.Managers
 {
@@ -28,9 +29,12 @@ namespace FlightGame.Managers
         [SerializeField] private float _collectableYOffset = 2.0f; // Default Y offset
         [SerializeField] private Vector2 _yRandomizationRange = new Vector2(2.0f, 4.0f); // Y randomization range
 
+        [SerializeField] private GameObject _ringQuestionsTemplate;
+            
         private readonly List<TrackSegment> _trackSegmentsSpawn = new();
         private readonly List<TrackSegment> _trackSegmentsToRemove = new();
         private int _spawnedTrackSegments;
+        private int _totalSpawnedTrackSegments;
         private int _collectedCoins;
         private int _currentScore;
         private float _segmentRunDistance;
@@ -43,7 +47,10 @@ namespace FlightGame.Managers
         private bool _isGameOver;
         private bool _isGameplay;
         private bool _isCorrect;
-
+        private int _questionSpawnedCount;
+        private int _nextQuestionSpawnSegment;
+        
+        private const int QuestionSpawnOffset = 2;
         private const int CollectablePoolSize = 200;
         private const int MaxSegmentCount = 10;
         private const float StartingSegmentDistance = 2f;
@@ -63,6 +70,7 @@ namespace FlightGame.Managers
                 Instance = this;
             }
             DontDestroyOnLoad(gameObject);
+            _nextQuestionSpawnSegment = QuestionSpawnOffset;
         }
 
         public void Setup()
@@ -80,7 +88,6 @@ namespace FlightGame.Managers
         public void StartGame()
         {
             _segmentRunDistance = StartingSegmentDistance;
-
             _totalRunDistance = 0;
             _collectedCoins = 0;
             ManagerUI.Instance.Reset();
@@ -90,7 +97,7 @@ namespace FlightGame.Managers
             _previousPosition = _playerController.transform.position;
             _playerController.StartMoving();
 
-            StartCoroutine(ShowQuestions());
+            //StartCoroutine(ShowQuestions());
 
         }
 
@@ -130,7 +137,7 @@ namespace FlightGame.Managers
                 _totalRunDistance += forwardDistance;
                 ManagerUI.Instance.UpdateDistance((int)_totalRunDistance);
                 _currentScore = (int)TotalRunDistance;
-                //ManagerUI.Instance.UpdateHighScore(_currentScore);
+
             }
 
             _previousPosition = currentPosition;
@@ -205,7 +212,7 @@ namespace FlightGame.Managers
 
             Vector3 pos = currentExitPoint + (newSegment.transform.position - entryPoint);
             newSegment.transform.position = pos;
-            newSegment.transform.localScale = new Vector3((Random.value > 0.5f ? -1 : 1), 1, 1);
+            //newSegment.transform.localScale = new Vector3((Random.value > 0.5f ? -1 : 1), 1, 1);//TODO: Need to fix the text alignment of the questions later, for now disabling the flipping
 
             if (_spawnedTrackSegments > 1) //We spawn obstacles from the second segment onwards
             {
@@ -214,6 +221,7 @@ namespace FlightGame.Managers
             }
             _trackSegmentsSpawn.Add(newSegment);
             _spawnedTrackSegments++;
+            _totalSpawnedTrackSegments++;
             _currentTrackSegment = newSegment;
         }
 
@@ -223,7 +231,18 @@ namespace FlightGame.Managers
             {
                 for (int i = 0; i < segment.ObstaclePositions.Length; ++i)
                 {
-                    GameObject obstacle = segment.PossibleObstacles[Random.Range(0, segment.PossibleObstacles.Length)];
+                    GameObject obstacle;
+                    if (_totalSpawnedTrackSegments == _nextQuestionSpawnSegment)
+                    {
+                        obstacle = _ringQuestionsTemplate;
+                        _questionSpawnedCount++;
+                        _nextQuestionSpawnSegment = QuestionSpawnOffset * (1 + _questionSpawnedCount);
+                    }
+                    else
+                    {
+                        obstacle = segment.PossibleObstacles[Random.Range(0, segment.PossibleObstacles.Length)];
+                    }
+
                     SpawnFromObjectInSegment(obstacle, segment, i);
                 }
             }
@@ -291,18 +310,16 @@ namespace FlightGame.Managers
             }
         }
 
-
         public void RecyclePoolElement(Transform item)
         {
             _collectablesPool.RecycleObject(item);
         }
 
-        public void CollectItem(Transform item, int amount)
+        public void CollectItem(Transform item)
         {
 
             RecyclePoolElement(item);
-            //_collectedCoins += amount;
-            //PlayerData.instance.AddCoins(amount);
+            PlayerData.instance.coins += 1;
             _collectedCoins++;
             ManagerUI.Instance.UpdateCollected(_collectedCoins);
 

@@ -6,6 +6,6 @@ public class HighscoreUI : MonoBehaviour
 {
     public TMP_Text number;
     public TMP_Text playerName;
-    public InputField inputName;
+    public TMP_InputField inputName;
     public TMP_Text score;
 }

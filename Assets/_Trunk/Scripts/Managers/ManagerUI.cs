@@ -11,6 +11,7 @@ namespace FlightGame.Managers
         [SerializeField] private GameObject _gameplayHUD;
         [SerializeField] private GameObject _viewStartGame;
         [SerializeField] private GameObject _viewGameOver;
+        [SerializeField] private GameObject _viewLeaderBoard;
         [SerializeField] private GameObject _viewMenu;
         [SerializeField] private GameObject _viewQuestion;
 
@@ -19,6 +20,7 @@ namespace FlightGame.Managers
         [SerializeField] private GameObject _life03;
         [SerializeField] private TextMeshProUGUI _distance;
         [SerializeField] private TextMeshProUGUI _collected;
+        [SerializeField] private TextMeshProUGUI _coinsAvailable;
         [SerializeField] private TextMeshProUGUI t_distance;
         [SerializeField] private TextMeshProUGUI _highScore;
         [SerializeField] private TextMeshProUGUI _question;
@@ -56,6 +58,7 @@ namespace FlightGame.Managers
             ToggleHUD(false);
             _viewStartGame.SetActive(false);
             _viewGameOver.SetActive(true);
+            _viewLeaderBoard.SetActive(true);
             _viewMenu.SetActive(false);
             _viewQuestion.SetActive(false);
         }
@@ -108,6 +111,7 @@ namespace FlightGame.Managers
 
         public void UpdateHighScore(int value)
         {
+
             _highScore.text = "BEST: " + value.ToString();
         }
 
@@ -122,6 +126,11 @@ namespace FlightGame.Managers
         {
             ToggleHUD(true);
             _viewQuestion.SetActive(false);
+        }
+
+        public void ViewCoins()
+        {
+            _coinsAvailable.text = ManagerLevel.Instance.CollectedCoins.ToString();
         }
     }
 }

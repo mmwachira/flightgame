@@ -27,7 +27,7 @@ namespace FlightGame.Players
 
 
         private Rigidbody _rigidbody;
-        private Collider[] _colliders;
+
         private Color _originalColor;
         private float _originalForwardSpeed;
 
@@ -43,6 +43,7 @@ namespace FlightGame.Players
         private const int MaxHealth = 3;
         private const string TagObstacle = "Obstacle";
         private const string TagCollectable = "Collectable";
+        private const string TagQuestion = "Question";
         private const string TagOption = "Option";
 
         private static readonly int MoveXHash = Animator.StringToHash("MoveX");
@@ -51,7 +52,7 @@ namespace FlightGame.Players
         public void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
-            _colliders = GetComponents<Collider>();
+
             if (_playerRenderer != null)
             {
                 _originalColor = _playerRenderer.material.color;
@@ -174,25 +175,25 @@ namespace FlightGame.Players
             }
             else if (collision.CompareTag(TagCollectable))
             {
-                FlyingCollectable collectible = collision.GetComponent<FlyingCollectable>();
-                if (collectible != null)
-                {
-                    ManagerLevel.Instance.CollectItem(collision.transform, collectible.amount);
-                }
+
+                ManagerLevel.Instance.CollectItem(collision.transform);
+
 
 
             }
+            else if (collision.CompareTag(TagQuestion))
+            {
+                //Slowmo
+                ManagerTime.Instance.DoSlowMotion();
+            }
             else if (collision.CompareTag(TagOption))
             {
-
                 AnswerRing answerRing = collision.GetComponent<AnswerRing>();
                 if (answerRing != null)
                 {
                     HandleAnswerRing(answerRing);
                 }
-
             }
-
         }
 
         private void UpdateHealth(int value)
@@ -241,6 +242,7 @@ namespace FlightGame.Players
             {
                 if (_playerRenderer != null)
                 {
+                    _originalColor = _playerRenderer.material.color;
                     _playerRenderer.material.color = _flashColor;
                     yield return delay;
                     _playerRenderer.material.color = _originalColor;

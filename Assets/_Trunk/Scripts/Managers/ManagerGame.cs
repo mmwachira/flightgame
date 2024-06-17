@@ -6,7 +6,10 @@ namespace FlightGame.Managers
     {
         public static ManagerGame Instance { get; private set; }
 
+        [SerializeField] private LeaderBoard miniLeaderboard;
         private float _highScore = 0;
+
+
         private bool _gameOver;
         private bool _gamePaused;
 
@@ -26,6 +29,7 @@ namespace FlightGame.Managers
 
         public void Start()
         {
+            PlayerData.Create();
             ResetGame();
             ManagerEducationalContent.Instance.LoadEducationalQuestions();
             ManagerLevel.Instance.Setup();
@@ -35,7 +39,7 @@ namespace FlightGame.Managers
         {
             if (_gameOver)
             {
-
+                Time.timeScale = 0;
                 ManagerLevel.Instance.EndGame();
                 ManagerUI.Instance.ShowGameOverScreen();
                 ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicMenu);
@@ -44,7 +48,7 @@ namespace FlightGame.Managers
             if (_gamePaused)
             {
                 Time.timeScale = 0;
-                ManagerUI.Instance.ShowMenu();
+                //ManagerUI.Instance.ShowMenu();
 
             }
         }
@@ -61,7 +65,6 @@ namespace FlightGame.Managers
         {
             Time.timeScale = 1;
             ManagerUI.Instance.ShowGameplayHUD();
-            PlayerData.Create();
             ManagerUI.Instance.UpdateHighScore((int)_highScore);
             ManagerLevel.Instance.StartGame();
             ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicGameplay);
@@ -84,6 +87,21 @@ namespace FlightGame.Managers
         public void GameOver()
         {
             _gameOver = true;
+
+            miniLeaderboard.playerEntry.inputName.text = PlayerData.instance.previousName;
+            miniLeaderboard.playerEntry.score.text = ManagerLevel.Instance.m_Score.ToString();
+            miniLeaderboard.Populate();
+
+            if (miniLeaderboard.playerEntry.inputName.text == "")
+            {
+                miniLeaderboard.playerEntry.inputName.text = "Flight Game";
+            }
+            else
+            {
+                PlayerData.instance.previousName = miniLeaderboard.playerEntry.inputName.text;
+            }
+
+            PlayerData.instance.InsertScore((int)ManagerLevel.Instance.m_Score, miniLeaderboard.playerEntry.inputName.text);
             _highScore = ManagerLevel.Instance.m_Score;
             ManagerUI.Instance.UpdateFinalScore((int)ManagerLevel.Instance.TotalRunDistance);
 
@@ -91,8 +109,7 @@ namespace FlightGame.Managers
 
         public void ReplayGame()
         {
-            //PlayerData.instance.InsertScore((int)ManagerLevel.Instance.m_Score);
-            //PlayerData.instance.Save();
+
             ResetGame();
 
         }

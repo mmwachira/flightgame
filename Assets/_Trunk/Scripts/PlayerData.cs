@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
+using FlightGame.Managers;
+
 #if UNITY_ANALYTICS
 using UnityEngine.Analytics;
 #endif
@@ -43,7 +45,7 @@ public class PlayerData
     public int usedTheme;                                           // Currently used theme.
     public List<HighscoreEntry> highscores = new List<HighscoreEntry>();
 
-    public string previousName = "Trash Cat";
+    public string previousName = "Player1";
 
     public bool licenceAccepted;
     public bool tutorialDone;
@@ -76,11 +78,6 @@ public class PlayerData
         characterAccessories.Add(name);
     }
 
-    public void AddCoins(int amount)
-    {
-        coins += amount;
-        Save();
-    }
 
 
     // High Score management
@@ -98,12 +95,12 @@ public class PlayerData
         return index < 0 ? (~index) : index;
     }
 
-    public void InsertScore(int score)
+    public void InsertScore(int score, string name)
     {
         HighscoreEntry entry = new HighscoreEntry
         {
-            score = score
-            //entry.name = name;
+            score = score,
+            name = name,
         };
 
 
@@ -153,7 +150,7 @@ public class PlayerData
         m_Instance.coins = 0;
         m_Instance.premium = 0;
 
-        m_Instance.characters.Add("Trash Cat");
+        m_Instance.characters.Add("Player1");
         m_Instance.themes.Add("Day");
 
         m_Instance.ftueLevel = 0;
@@ -331,25 +328,3 @@ public class PlayerData
 
 
 }
-
-// Helper class to cheat in the editor for test purpose
-#if UNITY_EDITOR
-public class PlayerDataEditor : Editor
-{
-    [MenuItem("Trash Dash Debug/Clear Save")]
-    static public void ClearSave()
-    {
-        File.Delete(Application.persistentDataPath + "/save.bin");
-    }
-
-    [MenuItem("Trash Dash Debug/Give 1000000 fishbones and 1000 premium")]
-    static public void GiveCoins()
-    {
-        PlayerData.instance.coins += 1000000;
-        PlayerData.instance.premium += 1000;
-        PlayerData.instance.Save();
-    }
-
-
-}
-#endif

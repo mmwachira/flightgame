@@ -28,35 +28,35 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - What tells you that you're becoming angry?
+      - Can you feel anger in your body?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_1_1_1_correct
+    - Term: FlightGame/question_1_1_1
       TermType: 0
       Description: 
       Languages:
-      - Stomach ache
+      - No, you can't feel it
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_1_1_2
+    - Term: FlightGame/question_1_1_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Laughing
+      - Yes, you can feel it in your body
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_1_3
       TermType: 0
       Description: 
       Languages:
-      - Faster heartbeat
+      - I don't understand how I get angry
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_2
       TermType: 0
       Description: 
       Languages:
-      - How do you know if a game is too easy?
+      - How do you know if a game isn't hard enough for you?
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_2_1_correct
@@ -84,28 +84,28 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "What physical sensation might indicate that you\u2019re feeling anxious?"
+      - How can your body tell you when you're feeling worried?
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_3_1_correct
       TermType: 0
       Description: 
       Languages:
-      - Butterflies in the stomach
+      - Your tummy feels funny, like when you're on a swing
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_3_2
       TermType: 0
       Description: 
       Languages:
-      - Heavy Breathing
+      - You breathe really fast, like after running
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_3_3
       TermType: 0
       Description: 
       Languages:
-      - Clenched Fists
+      - Your hands make tight balls, like when you're holding something really hard
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_4
@@ -140,14 +140,14 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - How does your body react when you feel excited?
+      - What could happen in your body when you feel excited?
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_5_1_correct
       TermType: 0
       Description: 
       Languages:
-      - Sweaty palms
+      - Tummy feels funny
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_5_2
@@ -161,56 +161,56 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Loss of appetite
+      - You feel nothing when excited
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_6
       TermType: 0
       Description: 
       Languages:
-      - "What physical signs indicate that you\u2019re feeling scared?"
+      - How can you tell when you are scared?
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_6_1_correct
       TermType: 0
       Description: 
       Languages:
-      - Racing heartbeat
+      - Your heart beats really fast
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_6_2
       TermType: 0
       Description: 
       Languages:
-      - Giggling
+      - You start laughing
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_6_3
       TermType: 0
       Description: 
       Languages:
-      - Feeling cold
+      - You feel sleepy
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_7
       TermType: 0
       Description: 
       Languages:
-      - "What do you notice about your breathing when you\u2019re relaxed?"
+      - How do you breathe when you are relaxed?
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_7_1
       TermType: 0
       Description: 
       Languages:
-      - Shallow breaths
+      - Short, quick breaths
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_7_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Deep, steady breaths
+      - Slow, deep breaths
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_7_3
@@ -224,28 +224,28 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "How do you know if you\u2019re feeling confident?"
+      - How can you tell if you feel good about yourself and ready to do your best?
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_8_1
       TermType: 0
       Description: 
       Languages:
-      - Avoiding eye contact
+      - You look down and don't look at people in the eye
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_8_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Standing tall
+      - You stand up straight with your shoulders back
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_8_3
       TermType: 0
       Description: 
       Languages:
-      - Slouching
+      - You bend over and hunch your shoulders
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_9
@@ -364,7 +364,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'True or False: Feeling nervous leads to a faster heartbeat.'
+      - 'True or False: Feeling nervous may lead to a faster heartbeat.'
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_13_1_correct
@@ -406,7 +406,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'True or False: Feeling angry causes your muscles to tense up.'
+      - 'True or False: Feeling angry can cause your muscles to tense up.'
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_15_1_correct
@@ -427,7 +427,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'True or False: Feeling sad makes it hard to concentrate.'
+      - 'True or False: Feeling sad makes it hard to focus.'
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_16_1_correct
@@ -448,7 +448,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'True or False: When you''re excited, you might feel a rush of energy.'
+      - 'True or False: When you''re excited, you might feel a lot of energy.'
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_17_1_correct
@@ -490,7 +490,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'True or False: Feeling embarrassed can cause your face to turn red.'
+      - 'True or False: When you''re feeling confident, you might find yourself standing
+        tall with your shoulders back.'
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_19_1_correct
@@ -501,28 +502,6 @@ MonoBehaviour:
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_19_2
-      TermType: 0
-      Description: 
-      Languages:
-      - false
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_1_20
-      TermType: 0
-      Description: 
-      Languages:
-      - 'True or False: When you''re feeling confident, you might find yourself standing
-        tall with your shoulders back.'
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_1_20_1_correct
-      TermType: 0
-      Description: 
-      Languages:
-      - true
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_1_20_2
       TermType: 0
       Description: 
       Languages:
@@ -540,354 +519,347 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - What's best to do when you're stressed?
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_1_1
-      TermType: 0
-      Description: 
-      Languages:
-      - Scream
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_1_2_correct
-      TermType: 0
-      Description: 
-      Languages:
-      - Exercise
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_1_3
-      TermType: 0
-      Description: 
-      Languages:
-      - Blame others
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_2
-      TermType: 0
-      Description: 
-      Languages:
       - Before a test, you feel nervous. What helps?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_2_1_correct
+    - Term: FlightGame/question_2_1_1_correct
       TermType: 0
       Description: 
       Languages:
       - Study
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_2_2
+    - Term: FlightGame/question_2_1_2
       TermType: 0
       Description: 
       Languages:
       - Guess
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_2_3
+    - Term: FlightGame/question_2_1_3
       TermType: 0
       Description: 
       Languages:
       - Ignore it
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_3
+    - Term: FlightGame/question_2_2
       TermType: 0
       Description: 
       Languages:
       - When you're angry, what's a good way to calm down?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_3_1
+    - Term: FlightGame/question_2_2_1
       TermType: 0
       Description: 
       Languages:
       - Yell at someone
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_3_2_correct
+    - Term: FlightGame/question_2_2_2_correct
       TermType: 0
       Description: 
       Languages:
       - Take deep breaths
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_3_3
+    - Term: FlightGame/question_2_2_3
       TermType: 0
       Description: 
       Languages:
       - Break something
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_4
+    - Term: FlightGame/question_2_3
       TermType: 0
       Description: 
       Languages:
       - What can you do if you're feeling overwhelmed?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_4_1
+    - Term: FlightGame/question_2_3_1
       TermType: 0
       Description: 
       Languages:
       - Procrastinate
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_4_2_correct
+    - Term: FlightGame/question_2_3_2_correct
       TermType: 0
       Description: 
       Languages:
       - Take a break and relax
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_4_3
+    - Term: FlightGame/question_2_3_3
       TermType: 0
       Description: 
       Languages:
       - Keep working without breaks
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_5
+    - Term: FlightGame/question_2_4
       TermType: 0
       Description: 
       Languages:
       - What's a healthy way to deal with frustration?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_5_1_correct
+    - Term: FlightGame/question_2_4_1_correct
       TermType: 0
       Description: 
       Languages:
       - Take deep breaths and count to ten
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_5_2
+    - Term: FlightGame/question_2_4_2
       TermType: 0
       Description: 
       Languages:
       - Throw objects
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_5_3
+    - Term: FlightGame/question_2_4_3
       TermType: 0
       Description: 
       Languages:
       - Blame others for the situation
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_6
+    - Term: FlightGame/question_2_5
       TermType: 0
       Description: 
       Languages:
       - How can you calm yourself down when you're feeling anxious?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_6_1_correct
+    - Term: FlightGame/question_2_5_1_correct
       TermType: 0
       Description: 
       Languages:
       - Engage in physical activity like jogging or yoga
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_6_2
+    - Term: FlightGame/question_2_5_2
       TermType: 0
       Description: 
       Languages:
       - Eat a large meal
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_6_3
+    - Term: FlightGame/question_2_5_3
       TermType: 0
       Description: 
       Languages:
       - Avoid talking to anyone
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_7
+    - Term: FlightGame/question_2_6
       TermType: 0
       Description: 
       Languages:
-      - What's a constructive way to cope with disappointment?
+      - What's a good way to cope with disappointment?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_7_1_correct
+    - Term: FlightGame/question_2_6_1_correct
       TermType: 0
       Description: 
       Languages:
       - Express your feelings through journaling or talking to someone you trust
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_7_2
+    - Term: FlightGame/question_2_6_2
       TermType: 0
       Description: 
       Languages:
-      - Bottle up your emotions and keep them to yourself
+      - Keep your emotions to yourself
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_7_3
+    - Term: FlightGame/question_2_6_3
       TermType: 0
       Description: 
       Languages:
       - Engage in reckless behaviour
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_8
+    - Term: FlightGame/question_2_7
       TermType: 0
       Description: 
       Languages:
       - When you're feeling overwhelmed, what can you do to regain control?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_8_1_correct
+    - Term: FlightGame/question_2_7_1_correct
       TermType: 0
       Description: 
       Languages:
       - Break tasks into smaller, manageable steps
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_8_2
+    - Term: FlightGame/question_2_7_2
       TermType: 0
       Description: 
       Languages:
       - Procrastinate and avoid responsibilities
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_8_3
+    - Term: FlightGame/question_2_7_3
       TermType: 0
       Description: 
       Languages:
       - Give up on tasks altogether
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_9
+    - Term: FlightGame/question_2_8
       TermType: 0
       Description: 
       Languages:
       - How can you manage your time effectively when faced with multiple tasks?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_9_1_correct
+    - Term: FlightGame/question_2_8_1_correct
       TermType: 0
       Description: 
       Languages:
       - Prioritise tasks based on urgency and importance
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_9_2
+    - Term: FlightGame/question_2_8_2
       TermType: 0
       Description: 
       Languages:
       - Start with the easiest tasks first
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_9_3
+    - Term: FlightGame/question_2_8_3
       TermType: 0
       Description: 
       Languages:
       - Multitask without focusing on one task at a time
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_10
+    - Term: FlightGame/question_2_9
       TermType: 0
       Description: 
       Languages:
       - What's a healthy response to failure or setbacks?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_10_1_correct
+    - Term: FlightGame/question_2_9_1_correct
       TermType: 0
       Description: 
       Languages:
       - Learn from mistakes and try again
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_10_2
+    - Term: FlightGame/question_2_9_2
       TermType: 0
       Description: 
       Languages:
       - Blame others for your failures
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_10_3
+    - Term: FlightGame/question_2_9_3
       TermType: 0
       Description: 
       Languages:
       - Give up and avoid similar situations in the future
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_11
+    - Term: FlightGame/question_2_10
       TermType: 0
       Description: 
       Languages:
       - How can you regulate your emotions when feeling angry?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_11_1_correct
+    - Term: FlightGame/question_2_10_1_correct
       TermType: 0
       Description: 
       Languages:
       - Practice relaxation techniques like deep breathing or meditation
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_11_2
+    - Term: FlightGame/question_2_10_2
       TermType: 0
       Description: 
       Languages:
       - Engage in physical fights or arguments
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_11_3
+    - Term: FlightGame/question_2_10_3
       TermType: 0
       Description: 
       Languages:
       - Suppress your anger and pretend everything is fine
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_12
+    - Term: FlightGame/question_2_11
       TermType: 0
       Description: 
       Languages:
       - What's an effective way to handle criticism or negative feedback?
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_12_1_correct
+    - Term: FlightGame/question_2_11_1_correct
       TermType: 0
       Description: 
       Languages:
       - Listen openly, consider the feedback, and respond constructively
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_12_2
+    - Term: FlightGame/question_2_11_2
       TermType: 0
       Description: 
       Languages:
       - Ignore the feedback and continue as usual
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_12_3
+    - Term: FlightGame/question_2_11_3
       TermType: 0
       Description: 
       Languages:
       - React defensively and argue against the feedback
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_13
+    - Term: FlightGame/question_2_12
       TermType: 0
       Description: 
       Languages:
-      - 'True or False: Taking deep breaths can help calm you down when you''re feeling
-        stressed.'
+      - 'True or False: Taking a break and going for a walk can help when you''re
+        feeling overwhelmed.'
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_13_1_correct
+    - Term: FlightGame/question_2_12_1_correct
       TermType: 0
       Description: 
       Languages:
       - true
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_13_2
+    - Term: FlightGame/question_2_12_2
+      TermType: 0
+      Description: 
+      Languages:
+      - false
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_13
+      TermType: 0
+      Description: 
+      Languages:
+      - 'True or False: Yelling or screaming is a healthy way to release anger.'
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_13_1
+      TermType: 0
+      Description: 
+      Languages:
+      - true
+      Flags: 00
+      Languages_Touch: []
+    - Term: FlightGame/question_2_13_2_correct
       TermType: 0
       Description: 
       Languages:
@@ -898,7 +870,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'True or False: Blaming others is a constructive way to deal with stress.'
+      - 'True or False: Avoiding tasks is a helpful strategy for managing a lot of
+        work.'
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_14_1
@@ -919,126 +892,18 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'True or False: Ignoring your problems is an effective way to manage stress.'
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_15_1
-      TermType: 0
-      Description: 
-      Languages:
-      - true
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_15_2_correct
-      TermType: 0
-      Description: 
-      Languages:
-      - false
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_16
-      TermType: 0
-      Description: 
-      Languages:
-      - 'True or False: Taking a break and going for a walk can help when you''re
-        feeling overwhelmed.'
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_16_1_correct
-      TermType: 0
-      Description: 
-      Languages:
-      - true
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_16_2
-      TermType: 0
-      Description: 
-      Languages:
-      - false
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_17
-      TermType: 0
-      Description: 
-      Languages:
-      - 'True or False: Yelling or screaming is a healthy way to release anger.'
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_17_1
-      TermType: 0
-      Description: 
-      Languages:
-      - true
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_17_2_correct
-      TermType: 0
-      Description: 
-      Languages:
-      - false
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_18
-      TermType: 0
-      Description: 
-      Languages:
-      - 'True or False: Exercise can be an effective way to cope with stress and
-        anxiety.'
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_18_1_correct
-      TermType: 0
-      Description: 
-      Languages:
-      - true
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_18_2
-      TermType: 0
-      Description: 
-      Languages:
-      - false
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_19
-      TermType: 0
-      Description: 
-      Languages:
-      - 'True or False: Procrastinating and avoiding tasks is a helpful strategy
-        for managing workload.'
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_19_1
-      TermType: 0
-      Description: 
-      Languages:
-      - true
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_19_2_correct
-      TermType: 0
-      Description: 
-      Languages:
-      - false
-      Flags: 00
-      Languages_Touch: []
-    - Term: FlightGame/question_2_20
-      TermType: 0
-      Description: 
-      Languages:
       - 'True or False: Seeking support from friends or family can be beneficial
-        when you''re feeling stressed.'
+        when you''re feeling overhwelmed.'
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_20_1_correct
+    - Term: FlightGame/question_2_15_1_correct
       TermType: 0
       Description: 
       Languages:
       - true
       Flags: 00
       Languages_Touch: []
-    - Term: FlightGame/question_2_20_2
+    - Term: FlightGame/question_2_15_2
       TermType: 0
       Description: 
       Languages:
@@ -1203,7 +1068,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Take frequent breaks and procrastinate
+      - Take frequent breaks and avoid doing the task or project
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_6_2_correct
@@ -1634,7 +1499,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Exclude them further to avoid drama
+      - Not include them to avoid drama
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_6_2_correct
@@ -2278,8 +2143,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'True or False: It''s okay to exclude someone from a game or activity just
-        because you don''t like them.'
+      - 'True or False: It''s okay to not inlcude someone from a game or activity
+        just because you don''t like them.'
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_13_1
@@ -2388,15 +2253,15 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'True or False: Listening attentively when someone is talking demonstrates
-        respect and consideration.'
+      - 'True or False: Listening attentively when someone is talking shows respect
+        and consideration.'
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_18_1_correct
       TermType: 0
       Description: 
       Languages:
-      - true
+      - ' '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_18_2
@@ -2472,6 +2337,2390 @@ MonoBehaviour:
       - false
       Flags: 00
       Languages_Touch: []
+    - Term: Trivia examples/none_1_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Happiness makes you smile
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - A person can feel only one emotion at a time
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - If someone is proud of themselves, they are usually feeling this emotion
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Disgust
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Sadness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Happiness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Anger
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Someone who is feeling happiness is usually?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Relaxed
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Worried
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Frustrated
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_1_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Smiling
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - It is not OK to feel sad
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - One thing can make you feel several emotions
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Which one of these emotions creates the most positive feeling?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_2_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Sadness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_2_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Disgust
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_2_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Anger
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_2_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Happiness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Sadness can make you stronger
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 'If you are thinking that you are in danger, you are most probably feeling:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Happy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Sad
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Fear
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Disgusted
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - All people have fears
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - It is OK to feel fear sometimes
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - What makes you undestand your feelings better?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Learning more about emotions
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignoring emotions
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Worrying about emotions
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Accepting emotions
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_5
+      TermType: 0
+      Description: 
+      Languages:
+      - 'When you''re afraid of something, the emotion you feel is usually:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Disgust
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Fear
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Happiness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_3_5_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Surprise
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - This emotion can make you feel uncomfortable
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Anger
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Disgust
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Fear
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Sadness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - If you get mad at something, you are feeling
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Angry
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Sad
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Disgusted
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Scared
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - It is OK to be agressive when you are feeling angry
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - If you are angry, it is OK to be disrespectful toward others
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_5
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these things can happen when you get angry?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Heart beats faster
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Muscles become more tense
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Feeling relaxed
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_4_5_4
+      TermType: 0
+      Description: 
+      Languages:
+      - You get hungry
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Is it true that everyone is experiencing emotions the same way?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - What do you feel when something smells or tastes gross?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_5_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Happiness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_5_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Fear
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_5_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Disgust
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_5_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Sadness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - If something looks nasty to you then everyone else should feel disgusted
+        as well
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_1_5_4
+      TermType: 0
+      Description: 
+      Languages:
+      - The most disgusting food for you can be someone else's favourite meal
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Good night sleep makes you feel:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Tired
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Energised
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Lazy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Fatigued
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Good night sleep helps your body to:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Rest
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Grow
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Get stronger
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Develop
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 'The chemical that makes you sleepy is called:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Melatonin
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Serotonin
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Protein
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamin
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - 'You should sleep at least:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 4 hours a day
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - 5 hours a day
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 8 hours a day
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - 10 hours a day
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_5
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these items you should avoid using before bedtime?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Toothbrush
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Phone or tablet
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Blanket
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_1_5_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Book
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Food gives you
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Knowledge
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Fatigue
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Wisdom
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Energy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - How many different fruits and vegetables should you eat per day?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 1
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - 2
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 3
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - 5
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Food is made of components called:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Melatonin
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Calories
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Nutrients
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Pasta
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Food gives you energy, which is measured in
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Kilograms
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Calories
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Meters
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Tonnes
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_5
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Which of these is not a major food component (gives you the least energy):'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamin
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Carbohydrates
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Protein
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_5_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Fat
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_6
+      TermType: 0
+      Description: 
+      Languages:
+      - 'This food component gives you quick energy:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_6_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Protein
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_6_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Fat
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_6_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_6_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Carbohydrates
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_7
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Pasta and bread consist mainly of:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_7_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Carbohydrates
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_7_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Protein
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_7_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_7_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamins
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_8
+      TermType: 0
+      Description: 
+      Languages:
+      - Which food component helps build muscle and repair injuries?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_8_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_8_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Fat
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_8_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Protein
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_8_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Juice
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_9
+      TermType: 0
+      Description: 
+      Languages:
+      - This food component gives you most energy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_9_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_9_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Fat
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_9_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Carbohydrates
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_9_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Minerals
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_10
+      TermType: 0
+      Description: 
+      Languages:
+      - Meat and fish are a source of
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_10_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Protein
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_10_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_10_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Carbohydrates
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_10_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamins
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_11
+      TermType: 0
+      Description: 
+      Languages:
+      - There are some great foods for getting vitamins. But which vitamin you can
+        get from the Sun?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_11_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamin A
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_11_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamin B
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_11_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamin C
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_11_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamin D
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_12
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these foods contain healthy sugars?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_12_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Chocolate
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_12_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Soft drinks
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_12_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Fruits
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_12_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Cereals
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_13
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Eating too much cake, cholocate and cookies is not good as they contain
+        a lot of:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_13_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Sugar
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_13_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Salt
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_13_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamins
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_2_13_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Thirst indicates that you are '
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Tired
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Happy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Hungry
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Dehydrated
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - When you're dehydrated, your body needs more
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Food
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Fluid
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Sleep
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Energy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - How many glasses of water should you drink every day to stay hydrated?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 1
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - 2
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 6
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - 15
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these drinks is best for your body
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Juice
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Soft drinks
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Coffee
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_5
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these is not a symptom of dehydration?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Fatigue
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Headache
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Thirst
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_5_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Hunger
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_6
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these drinks can damage your teeth?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_6_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_6_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Soft drinks
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_6_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Milk
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_6_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Coffee
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_7
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these drinks is the best to quench your thirst?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_7_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Soft drinks
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_7_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Juice
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_7_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_7_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Tea
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_8
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these drinks does not contain caffeine?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_8_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Coffee
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_8_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Energy drinks
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_8_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Soft drinks
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_8_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_9
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Soft drinks are not healthy as they contain a lot of:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_9_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_9_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Salt
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_9_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Sugar
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_3_9_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamins
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - How much physical activity should every child do per day?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 15 minutes
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - 20 minutes
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 45 minutes
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - 60 minutes
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these is not considered as physical activity?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Running
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Dancing
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Walking
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Sitting
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Which of these is not true about exercise? Exercise makes you:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Stronger
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Lazier
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Healthier
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Happier
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Children should do physical activity:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Every day
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Two times per week
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Three times per week
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Once a month
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_5
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these activities makes you stronger?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Checking social media
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Watching TV
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Doing sport
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_5_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Eating candy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_6
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Exercise is great for your:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_6_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Brain
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_6_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Concentration skills
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_6_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Heart
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_6_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Muscles
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_7
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Exercise helps get rid of:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_7_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Unhealthy fat
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_7_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamins
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_7_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Strength
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_7_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Energy
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_8
+      TermType: 0
+      Description: 
+      Languages:
+      - 'You should stop exercising if you:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_8_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Sweat
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_8_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Feel pain in your chest
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_8_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Feel out of breath
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_8_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Run too fast
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_9
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Exercise releases a chemical that makes you feel good. It is called:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_9_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Endorphin
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_9_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Melatonin
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_9_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Protein
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_4_9_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Vitamin
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Keeping your body clean means you have good:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Grades
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Hygiene
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Appetite '
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Humor
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Washing your hands regularly helps you stay away from:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Illness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Germs
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Bad dreams
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Cavities
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Good hygiene makes you feel:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Better
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Healthier
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Sick
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Sad
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_4
+      TermType: 0
+      Description: 
+      Languages:
+      - When is it especially important to wash hands?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Before bedtime
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - After waking up
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Before eating
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - After using the toilet
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_5
+      TermType: 0
+      Description: 
+      Languages:
+      - How many times per day should you brush your teeth?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_5_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 0
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_5_2
+      TermType: 0
+      Description: 
+      Languages:
+      - 1
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_5_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 2
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_5_4
+      TermType: 0
+      Description: 
+      Languages:
+      - 5
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_6
+      TermType: 0
+      Description: 
+      Languages:
+      - Good hygiene is important to protect yourself from contagious diseases that
+        are caused by
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_6_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Bacteria
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_6_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Viruses
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_6_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Parasites
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_6_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Fungi
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_7
+      TermType: 0
+      Description: 
+      Languages:
+      - 'The main symptoms of flu include:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_7_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Cough
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_7_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Runny nose
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_7_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Sore throat
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_7_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Nosebleed
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_8
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Which of these foods can cause cavaties:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_8_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Fruit
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_8_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Vegetable
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_8_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Sweets
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_8_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Soup
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_9
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Brushing your teeth helps avoid getting:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_9_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Tired
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_9_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Old
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_9_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Cavaties
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_9_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Plaque
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_10
+      TermType: 0
+      Description: 
+      Languages:
+      - During flu season it is very important to
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_10_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Stay home if you're ill
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_10_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Wash hands regularly with soap
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_10_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Avoid crowded places if you can
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_10_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Avoid touching your face, mouth and eyes
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_11
+      TermType: 0
+      Description: 
+      Languages:
+      - During flu season it is very important to wash hands regularly with soap
+        and water
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_12
+      TermType: 0
+      Description: 
+      Languages:
+      - It is important to cover your mouth with your arm when sneezing or coughing
+        because it spread germs that can cause illness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_13
+      TermType: 0
+      Description: 
+      Languages:
+      - Flu spreads mainly through
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_13_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Bad food
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_13_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Rain drops
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_13_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Small droplets
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_2_5_13_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Pets
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_1_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Strong emotions are exhausting for the body and mind
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_1_2
+      TermType: 0
+      Description: 
+      Languages:
+      - You can stop emotions from getting exhausting
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_1_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Which might be the bodily hints when someone is starting to get angry?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_1_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Sweating
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_1_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Falling asleep
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_1_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Blushing
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_1_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Rapid heartbeat
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_1_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Negative emotions can be good in some situations
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_1
+      TermType: 0
+      Description: 
+      Languages:
+      - When you don't have motivation you should do nothing
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_2
+      TermType: 0
+      Description: 
+      Languages:
+      - It is possible that someone else can help you find motivation
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Motivation makes us act. How to find motivation if you don't feel like doing
+        anything?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Do nothing
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Set a goal
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Talk about it
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Push yourself to start
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_4
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Motivation:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Causes laziness '
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Can be found in foods
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Is a type of vitamin
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_2_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Makes us do things
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - You can always work on your weaknesses and you can turn a weakness into a
+        strength
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - All humans do silly things and are clumsy sometimes
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Knowing your strengths and weaknesses and accepting yourself the way you
+        are is called:'
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Self-conscious
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Selflessness
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Self-acceptance
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Self-sacrifice
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Which of these skills can you improve with practise?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Singing
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Drawing
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Reading
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_3_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Dancing
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_4_1
+      TermType: 0
+      Description: 
+      Languages:
+      - It's not possible to change attitude toward problems
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_4_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Avoiding thinking about the problem helps solve it
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_4_3
+      TermType: 0
+      Description: 
+      Languages:
+      - What should you do before you attempt to solve a problem?
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_4_3_1
+      TermType: 0
+      Description: 
+      Languages:
+      - Specify what the problem is about
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_4_3_2
+      TermType: 0
+      Description: 
+      Languages:
+      - Don't even think about it
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_4_3_3
+      TermType: 0
+      Description: 
+      Languages:
+      - Think of all possible ways to solve it
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_4_3_4
+      TermType: 0
+      Description: 
+      Languages:
+      - Ask for advice
+      Flags: 00
+      Languages_Touch: []
+    - Term: Trivia examples/none_3_4_4
+      TermType: 0
+      Description: 
+      Languages:
+      - If solution for the problem causes negative consequences to someone else
+        then it is still acceptable to use that solution because at least you got
+        the problem solved.
+      Flags: 00
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 
@@ -2484,7 +4733,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbyuHBWE02Awlx0_UU0rybCyqphLv_uL-QOqvnnO0VCy5b-sQXI9AcELgPpRe9JJhF7b/exec
     Google_SpreadsheetKey: 1Cu76dEewRcDZNxv9EW4fqGJ5RJFr0-QOEZq5t-rizhk
     Google_SpreadsheetName: I2Loc FlightGame Localization
-    Google_LastUpdatedVersion: 1716196957678
+    Google_LastUpdatedVersion: 1716380133110
     Google_Password: 1q2w3e4r5t
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

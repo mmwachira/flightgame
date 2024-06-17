@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using FlightGame.Entities;
 using I2.Loc;
 using UnityEngine;
@@ -82,6 +83,16 @@ namespace FlightGame.Managers
                     _questionCategories.Add(category);
                 }
             }
+        }
+        
+        public void ResetAllQuestions()
+        {
+            _questionCategories.ForEach(c => c.Questions.ForEach(q => q.AlreadyAsked = false));
+        }
+
+        public List<EducationalQuestion> GetAvailableQuestions()
+        {
+            return new List<EducationalQuestion>(_questionCategories.SelectMany(c => c.Questions.Where(q => !q.AlreadyAsked)));
         }
     }
 }

@@ -7,6 +7,7 @@ namespace FlightGame.Entities
         public int CategoryNumber { get; private set; }
         public int Number { get; private set; }
         public string QuestionKey { get; private set; }
+        public bool AlreadyAsked { get; set; }
         public List<EducationalAnswer> Answers { get; private set; }
 
         public EducationalQuestion(int categoryNumber, int number, string questionKey)
