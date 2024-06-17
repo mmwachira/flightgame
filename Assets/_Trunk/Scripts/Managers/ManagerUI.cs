@@ -20,6 +20,7 @@ namespace FlightGame.Managers
         [SerializeField] private GameObject _life03;
         [SerializeField] private TextMeshProUGUI _distance;
         [SerializeField] private TextMeshProUGUI _collected;
+        [SerializeField] private TextMeshProUGUI _coinsAvailable;
         [SerializeField] private TextMeshProUGUI t_distance;
         [SerializeField] private TextMeshProUGUI _highScore;
         [SerializeField] private TextMeshProUGUI _question;
@@ -125,6 +126,11 @@ namespace FlightGame.Managers
         {
             ToggleHUD(true);
             _viewQuestion.SetActive(false);
+        }
+
+        public void ViewCoins()
+        {
+            _coinsAvailable.text = ManagerLevel.Instance.CollectedCoins.ToString();
         }
     }
 }

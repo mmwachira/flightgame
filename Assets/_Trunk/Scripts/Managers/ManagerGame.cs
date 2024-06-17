@@ -39,7 +39,7 @@ namespace FlightGame.Managers
         {
             if (_gameOver)
             {
-
+                Time.timeScale = 0;
                 ManagerLevel.Instance.EndGame();
                 ManagerUI.Instance.ShowGameOverScreen();
                 ManagerSounds.Instance.PlayMusic(ManagerSounds.Instance.MusicMenu);
@@ -48,7 +48,7 @@ namespace FlightGame.Managers
             if (_gamePaused)
             {
                 Time.timeScale = 0;
-                ManagerUI.Instance.ShowMenu();
+                //ManagerUI.Instance.ShowMenu();
 
             }
         }
@@ -109,8 +109,7 @@ namespace FlightGame.Managers
 
         public void ReplayGame()
         {
-            //PlayerData.instance.InsertScore((int)ManagerLevel.Instance.m_Score);
-            //PlayerData.instance.Save();
+
             ResetGame();
 
         }

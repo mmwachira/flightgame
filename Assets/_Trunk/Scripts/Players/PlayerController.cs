@@ -27,7 +27,7 @@ namespace FlightGame.Players
 
 
         private Rigidbody _rigidbody;
-        private Collider[] _colliders;
+
         private Color _originalColor;
         private float _originalForwardSpeed;
 
@@ -51,7 +51,7 @@ namespace FlightGame.Players
         public void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
-            _colliders = GetComponents<Collider>();
+
             if (_playerRenderer != null)
             {
                 _originalColor = _playerRenderer.material.color;
@@ -239,6 +239,7 @@ namespace FlightGame.Players
             {
                 if (_playerRenderer != null)
                 {
+                    _originalColor = _playerRenderer.material.color;
                     _playerRenderer.material.color = _flashColor;
                     yield return delay;
                     _playerRenderer.material.color = _originalColor;

@@ -150,7 +150,7 @@ public class PlayerData
         m_Instance.coins = 0;
         m_Instance.premium = 0;
 
-        m_Instance.characters.Add("Trash Cat");
+        m_Instance.characters.Add("Player1");
         m_Instance.themes.Add("Day");
 
         m_Instance.ftueLevel = 0;
@@ -328,25 +328,3 @@ public class PlayerData
 
 
 }
-
-// Helper class to cheat in the editor for test purpose
-#if UNITY_EDITOR
-public class PlayerDataEditor : Editor
-{
-    [MenuItem("Trash Dash Debug/Clear Save")]
-    static public void ClearSave()
-    {
-        File.Delete(Application.persistentDataPath + "/save.bin");
-    }
-
-    [MenuItem("Trash Dash Debug/Give 1000000 fishbones and 1000 premium")]
-    static public void GiveCoins()
-    {
-        PlayerData.instance.coins += 1000000;
-        PlayerData.instance.premium += 1000;
-        PlayerData.instance.Save();
-    }
-
-
-}
-#endif
