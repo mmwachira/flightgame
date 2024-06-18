@@ -13,6 +13,7 @@ namespace FlightGame.Managers
     {
         public static ManagerLevel Instance { get; private set; }
 
+        public bool IsGameplay => _isGameplay;
         public float LaneOffset => _laneOffset;
         public float TotalRunDistance => _totalRunDistance;
         public float m_Score => _currentScore;
@@ -30,7 +31,7 @@ namespace FlightGame.Managers
         [SerializeField] private Vector2 _yRandomizationRange = new Vector2(2.0f, 4.0f); // Y randomization range
 
         [SerializeField] private GameObject _ringQuestionsTemplate;
-            
+
         private readonly List<TrackSegment> _trackSegmentsSpawn = new();
         private readonly List<TrackSegment> _trackSegmentsToRemove = new();
         private int _spawnedTrackSegments;
@@ -49,10 +50,10 @@ namespace FlightGame.Managers
         private bool _isCorrect;
         private int _questionSpawnedCount;
         private int _nextQuestionSpawnSegment;
-        
+
         private const int QuestionSpawnOffset = 2;
         private const int CollectablePoolSize = 200;
-        private const int MaxSegmentCount = 10;
+        private const int MaxSegmentCount = 8;
         private const float StartingSegmentDistance = 2f;
         private const float SegmentRemovalDistance = -40f;
         private const float CenterResetThreshold = 10000f;
@@ -335,7 +336,7 @@ namespace FlightGame.Managers
                 ManagerQuestions.Instance.AskQuestion(CurrentSegment);
 
                 yield return new WaitForSeconds(5f);
-                ManagerUI.Instance.UpdateAnswer();
+                //ManagerUI.Instance.UpdateAnswer();
                 playerController.ResumeMoving();
             }
 

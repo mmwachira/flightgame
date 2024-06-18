@@ -26,7 +26,6 @@ namespace FlightGame.Managers
         private int _currentQuestionId;
         private int _correctAnswerIndex;
 
-        private Transform _levelContainer;
         private PlayerController _playerController;
         private GameObject ringPrefab;
 
@@ -50,7 +49,6 @@ namespace FlightGame.Managers
         void Start()
         {
             _playerController = ManagerLevel.Instance.playerController;
-            _levelContainer = ManagerLevel.Instance.transform;
 
             _questions = new List<Question>
        {
@@ -111,7 +109,7 @@ namespace FlightGame.Managers
         {
             Question question = _questions[questionId];
             _correctAnswerIndex = question.correctAnswerIndex; //Store the correct answer index
-            ManagerUI.Instance.UpdateQuestion(question);
+            //ManagerUI.Instance.UpdateQuestion(question);
 
             //Position the rings randomly
             PositionAnswerRings(segment, question.answers);
@@ -133,14 +131,7 @@ namespace FlightGame.Managers
             Transform[] ringTransforms = ringPrefab.GetComponentsInChildren<Transform>();
             List<Transform> rings = new List<Transform>();
             List<TMP_Text> answerTexts = new List<TMP_Text>();
-            //Transform[] rings = ringPrefab.GetComponentsInChildren<Transform>();
-            //Transform[] rings = segment.ContainerQuestions.GetComponentsInChildren<Transform>();
 
-            //TMP_Text[] answerTexts = ringPrefab.GetComponentsInChildren<TMP_Text>();
-            //TMP_Text[] answerTexts = segment.ContainerQuestions.GetComponentsInChildren<TMP_Text>();
-
-            //Debug.Log($"Number of answer texts found: {answerTexts.Length}");
-            //Debug.Log($"Number of answers: {answers.Length}");
             foreach (var ring in ringTransforms)
             {
                 if (ring.name.StartsWith("Ring"))

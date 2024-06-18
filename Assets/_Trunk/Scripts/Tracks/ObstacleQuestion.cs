@@ -20,7 +20,7 @@ namespace FlightGame.Tracks
         readonly Quaternion _defaultRotQuaternion = Quaternion.Euler(0f, 90f, 0f);
 
         private EducationalQuestion _questionData;
-        
+
         public override void Setup()
         {
             List<EducationalQuestion> availableQuestions = ManagerEducationalContent.Instance.GetAvailableQuestions();
@@ -32,6 +32,13 @@ namespace FlightGame.Tracks
             _questionData = availableQuestions[Random.Range(0, availableQuestions.Count)];
             if (_questionData.Answers.NotNullOrEmpty())
             {
+                //if (ManagerLevel.Instance.IsGameplay)
+                //{
+                //    ManagerUI.Instance.UpdateQuestion();
+                //    ManagerUI.Instance.question.text = LocalizationManager.GetTranslation(_questionData.QuestionKey);
+
+                //}
+
                 _question.text = LocalizationManager.GetTranslation(_questionData.QuestionKey);
                 _ringOne.Setup(0, _questionData.Answers[0].AnswerKey, _questionData.Answers[0].IsCorrect);
                 if (_questionData.Answers.Count > 1)
@@ -54,7 +61,7 @@ namespace FlightGame.Tracks
             {
                 desiredRotation = _defaultRotQuaternion * Quaternion.Euler(0f, 180f, 0f);
             }
-            
+
             // Instantiate the object
             segment.GetPointAt(t, out var position, out var rotation);
             Vector3 finalPos = position;

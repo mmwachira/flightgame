@@ -1,4 +1,5 @@
 ﻿using FlightGame.Questions;
+using FlightGame.Tracks;
 using TMPro;
 using UnityEngine;
 
@@ -8,16 +9,20 @@ namespace FlightGame.Managers
     {
         public static ManagerUI Instance { get; private set; }
 
+        public TextMeshProUGUI question => _question;
+
         [SerializeField] private GameObject _gameplayHUD;
         [SerializeField] private GameObject _viewStartGame;
         [SerializeField] private GameObject _viewGameOver;
         [SerializeField] private GameObject _viewLeaderBoard;
         [SerializeField] private GameObject _viewMenu;
         [SerializeField] private GameObject _viewQuestion;
+        [SerializeField] private GameObject _viewMessage;
 
         [SerializeField] private GameObject _life01;
         [SerializeField] private GameObject _life02;
         [SerializeField] private GameObject _life03;
+        [SerializeField] private TextMeshProUGUI _message;
         [SerializeField] private TextMeshProUGUI _distance;
         [SerializeField] private TextMeshProUGUI _collected;
         [SerializeField] private TextMeshProUGUI _coinsAvailable;
@@ -70,6 +75,7 @@ namespace FlightGame.Managers
             _viewGameOver.SetActive(false);
             _viewMenu.SetActive(false);
             _viewQuestion.SetActive(false);
+            _viewMessage.SetActive(false);
         }
 
         public void ShowMenu()
@@ -115,16 +121,18 @@ namespace FlightGame.Managers
             _highScore.text = "BEST: " + value.ToString();
         }
 
-        public void UpdateQuestion(Question question)
+        public void UpdateQuestion()
         {
             ToggleHUD(true);
             _viewQuestion.SetActive(true);
-            _question.text = question.questionText;
+            //_question.text = question.questionText;
         }
 
-        public void UpdateAnswer()
+        public void UpdateAnswer(string answer_message)
         {
             ToggleHUD(true);
+            _viewMessage.SetActive(true);
+            _message.text = answer_message;
             _viewQuestion.SetActive(false);
         }
 

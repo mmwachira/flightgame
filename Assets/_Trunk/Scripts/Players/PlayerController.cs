@@ -16,6 +16,8 @@ namespace FlightGame.Players
         [Header("Character & Movements")]
         [SerializeField] private float _forwardSpeed;
         [SerializeField] private float _previousForwardSpeed;
+        private float originalTimeScale;
+        private float _originalForwardSpeed;
         [SerializeField] private float _maneuverSpeed = 5f;
         [SerializeField] private float _acceleration = 0.2f;
         [SerializeField] private float _minSpeed = 5f;
@@ -29,7 +31,7 @@ namespace FlightGame.Players
         private Rigidbody _rigidbody;
 
         private Color _originalColor;
-        private float _originalForwardSpeed;
+
 
         private Vector2 _inputVector;
         private Vector2 _inputStartPosition;
@@ -106,13 +108,13 @@ namespace FlightGame.Players
         public void ResumeMoving()
         {
             _isMoving = true;
-            StartCoroutine(AccelerationCoroutine(3.0f));
+            StartCoroutine(AccelerationCoroutine(2.0f));
 
         }
 
         public void StartSlowDown()
         {
-            _previousForwardSpeed = _forwardSpeed;
+            _previousForwardSpeed = _originalForwardSpeed;
             StartCoroutine(SlowDownCoroutine());
 
         }
@@ -184,7 +186,10 @@ namespace FlightGame.Players
             else if (collision.CompareTag(TagQuestion))
             {
                 //Slowmo
-                ManagerTime.Instance.DoSlowMotion();
+                //ManagerTime.Instance.DoSlowMotion();
+                //StartSlowDown();
+                ManagerTime.Instance.StartSlowMotion(0.09f);
+
             }
             else if (collision.CompareTag(TagOption))
             {
@@ -193,6 +198,7 @@ namespace FlightGame.Players
                 {
                     HandleAnswerRing(answerRing);
                 }
+                //ManagerUI.Instance.ShowGameplayHUD();
             }
         }
 
@@ -226,8 +232,14 @@ namespace FlightGame.Players
             ManagerQuestions.Instance.CheckAnswer(answerRing.AnswerIndex);
             if (answerRing.IsCorrect)
             {
+                ManagerUI.Instance.UpdateAnswer("Correct! +10");
                 Destroy(answerRing.gameObject);
             }
+            else
+            {
+                ManagerUI.Instance.UpdateAnswer("Wrong! Try again.");
+            }
+
 
 
         }
@@ -260,14 +272,18 @@ namespace FlightGame.Players
 
         public IEnumerator SlowDownCoroutine()
         {
+
             isSlowingDown = true;
             float s_elapsedTime = 0f;
+            originalTimeScale = Time.timeScale;
 
 
             while (s_elapsedTime < slowDownTime)
             {
+
                 _forwardSpeed = Mathf.Lerp(_originalForwardSpeed, 0, s_elapsedTime / slowDownTime);
                 s_elapsedTime += Time.deltaTime;
+
                 yield return null;
             }
 
@@ -275,7 +291,8 @@ namespace FlightGame.Players
             isSlowingDown = false;
             _isMoving = false;
 
-
+            yield return new WaitForSeconds(5f);
+            ResumeMoving();
 
         }
 
@@ -285,12 +302,15 @@ namespace FlightGame.Players
 
             while (a_elapsedTime < accelerationTime)
             {
+
                 _forwardSpeed = Mathf.Lerp(0, _previousForwardSpeed, a_elapsedTime / accelerationTime);
                 a_elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
-            _forwardSpeed = _previousForwardSpeed;
+
+            //_forwardSpeed = _previousForwardSpeed;
         }
+
     }
 }
