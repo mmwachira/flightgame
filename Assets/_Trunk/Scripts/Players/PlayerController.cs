@@ -20,7 +20,7 @@ namespace FlightGame.Players
         private float originalTimeScale;
         private float _originalForwardSpeed;
         [SerializeField] private float _maneuverSpeed = 5f;
-        [SerializeField] private float _acceleration = 0.2f;
+        [SerializeField] private float _acceleration = 0.1f;
         [SerializeField] private float _minSpeed = 5f;
         [SerializeField] private float _maxSpeed = 20f;
         [SerializeField] Animator _animator;
