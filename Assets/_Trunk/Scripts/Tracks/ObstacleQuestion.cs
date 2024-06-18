@@ -20,6 +20,7 @@ namespace FlightGame.Tracks
         readonly Quaternion _defaultRotQuaternion = Quaternion.Euler(0f, 90f, 0f);
 
         private EducationalQuestion _questionData;
+        public EducationalQuestion QuestionData => _questionData;
 
         public override void Setup()
         {

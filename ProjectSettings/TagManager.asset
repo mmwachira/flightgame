@@ -8,6 +8,7 @@ TagManager:
   - Collectable
   - Option
   - Question
+  - QuestionHide
   layers:
   - Default
   - TransparentFX
