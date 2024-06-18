@@ -32,12 +32,12 @@ namespace FlightGame.Tracks
             _questionData = availableQuestions[Random.Range(0, availableQuestions.Count)];
             if (_questionData.Answers.NotNullOrEmpty())
             {
-                //if (ManagerLevel.Instance.IsGameplay)
-                //{
-                //    ManagerUI.Instance.UpdateQuestion();
-                //    ManagerUI.Instance.question.text = LocalizationManager.GetTranslation(_questionData.QuestionKey);
 
-                //}
+                //ManagerUI.Instance.UpdateQuestion();
+
+                //ManagerUI.Instance.question.text = LocalizationManager.GetTranslation(_questionData.QuestionKey);
+
+
 
                 _question.text = LocalizationManager.GetTranslation(_questionData.QuestionKey);
                 _ringOne.Setup(0, _questionData.Answers[0].AnswerKey, _questionData.Answers[0].IsCorrect);

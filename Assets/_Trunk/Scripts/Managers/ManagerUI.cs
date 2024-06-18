@@ -125,6 +125,7 @@ namespace FlightGame.Managers
         {
             ToggleHUD(true);
             _viewQuestion.SetActive(true);
+            _viewMessage.SetActive(false);
             //_question.text = question.questionText;
         }
 

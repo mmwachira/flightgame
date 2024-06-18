@@ -187,7 +187,8 @@ namespace FlightGame.Players
             {
                 //Slowmo
                 //ManagerTime.Instance.DoSlowMotion();
-                //StartSlowDown();
+
+                ManagerUI.Instance.UpdateQuestion();
                 ManagerTime.Instance.StartSlowMotion(0.09f);
 
             }
@@ -198,7 +199,7 @@ namespace FlightGame.Players
                 {
                     HandleAnswerRing(answerRing);
                 }
-                //ManagerUI.Instance.ShowGameplayHUD();
+
             }
         }
 
@@ -233,6 +234,7 @@ namespace FlightGame.Players
             if (answerRing.IsCorrect)
             {
                 ManagerUI.Instance.UpdateAnswer("Correct! +10");
+                ManagerLevel.Instance.AddCollectedCoins(10);
                 Destroy(answerRing.gameObject);
             }
             else
@@ -243,6 +245,8 @@ namespace FlightGame.Players
 
 
         }
+
+
 
         private IEnumerator InvincibilityAndFlashCoroutine()
         {

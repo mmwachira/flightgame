@@ -327,6 +327,12 @@ namespace FlightGame.Managers
             ManagerSounds.Instance.PlaySingle(ManagerSounds.Instance.SfxCollect, true);
         }
 
+        public void AddCollectedCoins(int amount)
+        {
+            _collectedCoins += amount;
+            ManagerUI.Instance.UpdateCollected(_collectedCoins);
+        }
+
         private IEnumerator ShowQuestions()
         {
             while (!_isGameOver)
