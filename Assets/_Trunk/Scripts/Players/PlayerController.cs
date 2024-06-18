@@ -233,8 +233,8 @@ namespace FlightGame.Players
             ManagerQuestions.Instance.CheckAnswer(answerRing.AnswerIndex);
             if (answerRing.IsCorrect)
             {
-                ManagerUI.Instance.UpdateAnswer("Correct! +10");
-                ManagerLevel.Instance.AddCollectedCoins(10);
+                ManagerUI.Instance.UpdateAnswer("Correct! +3");
+                ManagerLevel.Instance.AddCollectedCoins(1);
                 Destroy(answerRing.gameObject);
             }
             else
