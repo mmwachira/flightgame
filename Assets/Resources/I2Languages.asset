@@ -35,21 +35,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - No, you can't feel it
+      - No
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_1_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Yes, you can feel it in your body
+      - Yes
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_1_3
       TermType: 0
       Description: 
       Languages:
-      - I don't understand how I get angry
+      - Don't understand
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_2
@@ -63,21 +63,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - You feel bored
+      - ' Bored'
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_2_2
       TermType: 0
       Description: 
       Languages:
-      - You can't win
+      - Can't win
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_2_3
       TermType: 0
       Description: 
       Languages:
-      - You need help
+      - Need help
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_3
@@ -91,21 +91,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Your tummy feels funny, like when you're on a swing
+      - Tummy feels funny
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_3_2
       TermType: 0
       Description: 
       Languages:
-      - You breathe really fast, like after running
+      - Fast breathing
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_3_3
       TermType: 0
       Description: 
       Languages:
-      - Your hands make tight balls, like when you're holding something really hard
+      - Tight hands
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_4
@@ -126,14 +126,14 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Tears in your eyes
+      - 'Tears '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_4_3
       TermType: 0
       Description: 
       Languages:
-      - Feeling energetic
+      - Energetic
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_5
@@ -161,7 +161,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - You feel nothing when excited
+      - 'Nothing '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_6
@@ -175,21 +175,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Your heart beats really fast
+      - Heart beats fast
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_6_2
       TermType: 0
       Description: 
       Languages:
-      - You start laughing
+      - Laughing
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_6_3
       TermType: 0
       Description: 
       Languages:
-      - You feel sleepy
+      - Feeling Sleepy
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_7
@@ -231,21 +231,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - You look down and don't look at people in the eye
+      - Look down
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_8_2_correct
       TermType: 0
       Description: 
       Languages:
-      - You stand up straight with your shoulders back
+      - Stand tall
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_8_3
       TermType: 0
       Description: 
       Languages:
-      - You bend over and hunch your shoulders
+      - Bend your shoulders
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_9
@@ -301,7 +301,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Engaging in activities enthusiastically
+      - Enthusiastic
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_1_11
@@ -589,14 +589,14 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Take a break and relax
+      - Take a break
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_3_3
       TermType: 0
       Description: 
       Languages:
-      - Keep working without breaks
+      - Keep working
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_4
@@ -610,7 +610,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Take deep breaths and count to ten
+      - 'Deep breaths '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_4_2
@@ -624,7 +624,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Blame others for the situation
+      - 'Blame others '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_5
@@ -638,21 +638,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Engage in physical activity like jogging or yoga
+      - Exercise
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_5_2
       TermType: 0
       Description: 
       Languages:
-      - Eat a large meal
+      - 'Eat '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_5_3
       TermType: 0
       Description: 
       Languages:
-      - Avoid talking to anyone
+      - 'Avoid talking '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_6
@@ -666,21 +666,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Express your feelings through journaling or talking to someone you trust
+      - Talk to someone
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_6_2
       TermType: 0
       Description: 
       Languages:
-      - Keep your emotions to yourself
+      - 'Hide emotions '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_6_3
       TermType: 0
       Description: 
       Languages:
-      - Engage in reckless behaviour
+      - Reckless behaviour
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_7
@@ -694,21 +694,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Break tasks into smaller, manageable steps
+      - Break tasks down
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_7_2
       TermType: 0
       Description: 
       Languages:
-      - Procrastinate and avoid responsibilities
+      - Avoid responsibilities
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_7_3
       TermType: 0
       Description: 
       Languages:
-      - Give up on tasks altogether
+      - 'Give up '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_8
@@ -722,21 +722,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Prioritise tasks based on urgency and importance
+      - Prioritise important tasks
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_8_2
       TermType: 0
       Description: 
       Languages:
-      - Start with the easiest tasks first
+      - Easy tasks first
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_8_3
       TermType: 0
       Description: 
       Languages:
-      - Multitask without focusing on one task at a time
+      - 'Multitask '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_9
@@ -750,21 +750,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Learn from mistakes and try again
+      - Learn and try again
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_9_2
       TermType: 0
       Description: 
       Languages:
-      - Blame others for your failures
+      - 'Blame others '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_9_3
       TermType: 0
       Description: 
       Languages:
-      - Give up and avoid similar situations in the future
+      - 'Give up '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_10
@@ -778,21 +778,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Practice relaxation techniques like deep breathing or meditation
+      - Deep breathing/meditation
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_10_2
       TermType: 0
       Description: 
       Languages:
-      - Engage in physical fights or arguments
+      - Fight
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_10_3
       TermType: 0
       Description: 
       Languages:
-      - Suppress your anger and pretend everything is fine
+      - Hide your anger
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_11
@@ -806,21 +806,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Listen openly, consider the feedback, and respond constructively
+      - Listen openly
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_11_2
       TermType: 0
       Description: 
       Languages:
-      - Ignore the feedback and continue as usual
+      - Ignore the feedback
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_11_3
       TermType: 0
       Description: 
       Languages:
-      - React defensively and argue against the feedback
+      - 'React defensively '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_2_12
@@ -984,21 +984,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Because failing once means you'll always fail
+      - You will keep failing
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_3_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Because it helps you learn and improve
+      - Learn and improve
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_3_3
       TermType: 0
       Description: 
       Languages:
-      - Because it doesn't matter if you fail
+      - It doesn't matter if you fail
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_4
@@ -1012,14 +1012,14 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Ask for help from someone you trust
+      - 'Ask for help '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_4_2
       TermType: 0
       Description: 
       Languages:
-      - Quit and try something else
+      - 'Quit '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_4_3
@@ -1040,21 +1040,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Goals are boring and unnecessary
+      - They are boring
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_5_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Goals help you focus and achieve things
+      - Help you focus
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_5_3
       TermType: 0
       Description: 
       Languages:
-      - Goals make you feel bad if you don't achieve them
+      - 'Make you feel bad '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_6
@@ -1068,21 +1068,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Take frequent breaks and avoid doing the task or project
+      - 'Take breaks and avoid '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_6_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Break the task into smaller steps and reward yourself for progress
+      - 'Break down task and reward '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_6_3
       TermType: 0
       Description: 
       Languages:
-      - Give up if it's too hard
+      - 'Give up '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_7
@@ -1096,21 +1096,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Tell yourself you're not good enough
+      - Belittle yourself
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_7_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Remind yourself of past successes and keep trying
+      - 'Remember past successes '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_7_3
       TermType: 0
       Description: 
       Languages:
-      - Blame others for your failures
+      - Blame others
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_8
@@ -1124,21 +1124,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - It's not important to believe in yourself
+      - Not important
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_8_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Believing in yourself helps you overcome challenges and reach your goals
+      - 'Overcome challenges '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_8_3
       TermType: 0
       Description: 
       Languages:
-      - Believing in yourself makes you arrogant
+      - Makes you arrogant
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_9
@@ -1152,21 +1152,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Celebrating achievements is unnecessary
+      - It is unnecessary
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_9_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Celebrating achievements boosts confidence and encourages you to keep going
+      - 'Boosts confidence '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_9_3
       TermType: 0
       Description: 
       Languages:
-      - Celebrating achievements makes others feel bad
+      - Makes others feel bad
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_3_10
@@ -1415,21 +1415,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Ignore them and play with someone else
+      - 'Ignore them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_3_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Offer them a hug and ask if they want to talk
+      - Hug them
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_3_3
       TermType: 0
       Description: 
       Languages:
-      - Laugh at them for being sad
+      - Laugh
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_4
@@ -1443,21 +1443,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Ignore their feelings and focus on yourself
+      - 'Ignore their feelings '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_4_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Listen to them and imagine how you would feel in their situation
+      - 'Listen to them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_4_3
       TermType: 0
       Description: 
       Languages:
-      - Tell them to stop being so sensitive
+      - Avoid them
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_5
@@ -1471,21 +1471,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Join in with the bullies to avoid being targeted yourself
+      - Join the bullies
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_5_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Tell a teacher or adult about the situation and offer support to the classmate
+      - Tell a teacher
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_5_3
       TermType: 0
       Description: 
       Languages:
-      - Ignore the bullying and hope it stops on its own
+      - Ignore the bullying
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_6
@@ -1499,21 +1499,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Not include them to avoid drama
+      - 'Not include them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_6_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Invite them to join in an activity or include them in a conversation
+      - 'Invite them to join in '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_6_3
       TermType: 0
       Description: 
       Languages:
-      - Tell them it's their fault they're being left out
+      - Blame them
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_7
@@ -1527,21 +1527,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Laugh at them and make fun of their mistake
+      - 'Laugh '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_7_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Offer support and understanding, and reassure them that mistakes happen
+      - 'Offer support '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_7_3
       TermType: 0
       Description: 
       Languages:
-      - Blame them for the mistake and criticise them
+      - 'Blame them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_8
@@ -1555,22 +1555,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Ignore them and change the subject
+      - 'Ignore them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_8_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Listen attentively and validate their feelings by saying things like "I understand
-        how you feel"
+      - 'Listen attentively '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_8_3
       TermType: 0
       Description: 
       Languages:
-      - Tell them to stop being so emotional
+      - Avoid them
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_9
@@ -1584,21 +1583,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Tease them about being nervous
+      - Tease them
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_9_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Offer words of encouragement and help them practise or prepare
+      - Encourage them
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_9_3
       TermType: 0
       Description: 
       Languages:
-      - Ignore them and focus on your own worries
+      - 'Ignore them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_10
@@ -1612,22 +1611,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Ignore their feelings because it's just a pet or person
+      - Ignore their feelings
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_10_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Offer condolences and be there to listen and support them during their grieving
-        process
+      - Offer condolences
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_10_3
       TermType: 0
       Description: 
       Languages:
-      - Tell them to stop being sad because it's annoying
+      - Avoid them
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_4_11
@@ -1876,21 +1874,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Say "Give me that!"
+      - Give me that!
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_3_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Say "Please, may I borrow it?"
+      - Please lend me
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_3_3
       TermType: 0
       Description: 
       Languages:
-      - Take it without asking
+      - 'Take it '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_4
@@ -1932,21 +1930,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Ignore them and walk away
+      - 'Ignore them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_5_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Smile and say "Hi, my name is _____. What's yours?"
+      - Smile and say hi
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_5_3
       TermType: 0
       Description: 
       Languages:
-      - Interrupt their conversation and start talking about yourself
+      - 'Interrupt them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_6
@@ -1967,14 +1965,14 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Say "I understand your point, but I think differently."
+      - I beg to disagree
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_6_3
       TermType: 0
       Description: 
       Languages:
-      - Laugh at them and call them names
+      - 'Laugh at them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_7
@@ -1988,21 +1986,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Ignore them and play with your phone
+      - 'Ignore them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_7_2_correct
       TermType: 0
       Description: 
       Languages:
-      - Listen attentively and respond appropriately
+      - 'Listen attentively '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_7_3
       TermType: 0
       Description: 
       Languages:
-      - Interrupt them and start talking about yourself
+      - 'Interrupt them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_8
@@ -2023,7 +2021,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Invite them to join your group or activity
+      - 'Invite them '
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_8_3
@@ -2051,7 +2049,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Say "Thank you for asking, but I can't make it this time."
+      - Thanks but no
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_9_3
@@ -2079,14 +2077,14 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Offer a listening ear and comfort them
+      - Listen and comfort
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_10_3
       TermType: 0
       Description: 
       Languages:
-      - Tell them to stop being so sensitive
+      - Avoid them
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_11
@@ -2108,14 +2106,14 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Offer to help them and explain the concept patiently
+      - Offer to help them
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_11_3
       TermType: 0
       Description: 
       Languages:
-      - Tell them they're stupid for not understanding
+      - Call them stupid
       Flags: 00
       Languages_Touch: []
     - Term: FlightGame/question_5_12
@@ -4733,7 +4731,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbyuHBWE02Awlx0_UU0rybCyqphLv_uL-QOqvnnO0VCy5b-sQXI9AcELgPpRe9JJhF7b/exec
     Google_SpreadsheetKey: 1Cu76dEewRcDZNxv9EW4fqGJ5RJFr0-QOEZq5t-rizhk
     Google_SpreadsheetName: I2Loc FlightGame Localization
-    Google_LastUpdatedVersion: 1716380133110
+    Google_LastUpdatedVersion: 1718656125706
     Google_Password: 1q2w3e4r5t
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2
