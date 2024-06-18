@@ -2,6 +2,7 @@ using System.Collections;
 using FlightGame.Managers;
 using FlightGame.Questions;
 using FlightGame.Tracks;
+using I2.Loc;
 using UnityEngine;
 
 namespace FlightGame.Players
@@ -46,6 +47,7 @@ namespace FlightGame.Players
         private const string TagObstacle = "Obstacle";
         private const string TagCollectable = "Collectable";
         private const string TagQuestion = "Question";
+        private const string TagQuestionHide = "QuestionHide";
         private const string TagOption = "Option";
 
         private static readonly int MoveXHash = Animator.StringToHash("MoveX");
@@ -177,20 +179,22 @@ namespace FlightGame.Players
             }
             else if (collision.CompareTag(TagCollectable))
             {
-
                 ManagerLevel.Instance.CollectItem(collision.transform);
-
-
-
             }
             else if (collision.CompareTag(TagQuestion))
             {
-                //Slowmo
                 //ManagerTime.Instance.DoSlowMotion();
-
-                ManagerUI.Instance.UpdateQuestion();
+                ObstacleQuestion question = collision.GetComponent<ObstacleQuestion>();
+                if (question != null)
+                {
+                    ManagerUI.Instance.ShowQuestion(LocalizationManager.GetTranslation(question.QuestionData.QuestionKey));
+                }
                 ManagerTime.Instance.StartSlowMotion(0.09f);
 
+            }
+            else if (collision.CompareTag(TagQuestionHide))
+            {
+                ManagerUI.Instance.HideQuestion();
             }
             else if (collision.CompareTag(TagOption))
             {

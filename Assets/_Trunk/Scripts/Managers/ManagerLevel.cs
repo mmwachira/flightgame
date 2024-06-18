@@ -51,7 +51,7 @@ namespace FlightGame.Managers
         private int _questionSpawnedCount;
         private int _nextQuestionSpawnSegment;
 
-        private const int QuestionSpawnOffset = 2;
+        private const int QuestionSpawnOffset = 4;
         private const int CollectablePoolSize = 200;
         private const int MaxSegmentCount = 8;
         private const float StartingSegmentDistance = 2f;
