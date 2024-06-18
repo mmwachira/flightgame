@@ -9,6 +9,7 @@ TagManager:
   - Option
   - Question
   - QuestionHide
+  - AnswerHide
   layers:
   - Default
   - TransparentFX

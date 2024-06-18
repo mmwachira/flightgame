@@ -48,6 +48,7 @@ namespace FlightGame.Players
         private const string TagCollectable = "Collectable";
         private const string TagQuestion = "Question";
         private const string TagQuestionHide = "QuestionHide";
+        private const string TagAnswerHide = "AnswerHide";
         private const string TagOption = "Option";
 
         private static readonly int MoveXHash = Animator.StringToHash("MoveX");
@@ -183,18 +184,23 @@ namespace FlightGame.Players
             }
             else if (collision.CompareTag(TagQuestion))
             {
-                //ManagerTime.Instance.DoSlowMotion();
+
                 ObstacleQuestion question = collision.GetComponent<ObstacleQuestion>();
                 if (question != null)
                 {
                     ManagerUI.Instance.ShowQuestion(LocalizationManager.GetTranslation(question.QuestionData.QuestionKey));
                 }
-                ManagerTime.Instance.StartSlowMotion(0.09f);
+                ManagerTime.Instance.DoSlowMotion();
+                //ManagerTime.Instance.StartSlowMotion(0.08f);
 
             }
             else if (collision.CompareTag(TagQuestionHide))
             {
                 ManagerUI.Instance.HideQuestion();
+            }
+            else if (collision.CompareTag(TagAnswerHide))
+            {
+                ManagerUI.Instance.HideAnswer();
             }
             else if (collision.CompareTag(TagOption))
             {
@@ -241,6 +247,7 @@ namespace FlightGame.Players
                 ManagerLevel.Instance.AddCollectedCoins(1);
                 Destroy(answerRing.gameObject);
             }
+
             else
             {
                 ManagerUI.Instance.UpdateAnswer("Wrong! Try again.");

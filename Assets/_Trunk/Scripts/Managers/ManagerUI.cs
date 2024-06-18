@@ -128,7 +128,7 @@ namespace FlightGame.Managers
             _viewMessage.SetActive(false);
             //_question.text = question.questionText;
         }
-        
+
         public void ShowQuestion(string text)
         {
             _question.text = text;
@@ -140,6 +140,12 @@ namespace FlightGame.Managers
         public void HideQuestion()
         {
             _viewQuestion.SetActive(false);
+
+        }
+
+        public void HideAnswer()
+        {
+            _viewMessage.SetActive(false);
         }
 
         public void UpdateAnswer(string answer_message)

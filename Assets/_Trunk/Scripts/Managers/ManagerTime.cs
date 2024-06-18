@@ -9,7 +9,7 @@ namespace FlightGame.Managers
         public static ManagerTime Instance { get; private set; }
 
         [SerializeField] private float _slowdownFactor = .2f;
-        [SerializeField] private float _slowdownLength = 4f;
+        [SerializeField] private float _slowdownLength = 7f;
         private bool isSlowingDown = false;
         private float originalTimeScale;
 
@@ -28,11 +28,13 @@ namespace FlightGame.Managers
 
         private void Update()
         {
-            if (!isSlowingDown)
-            {
-                Time.timeScale += 1f / _slowdownLength * Time.unscaledDeltaTime;
-                Time.timeScale = Math.Clamp(Time.timeScale, 0f, 1f);
-            }
+            //if (!isSlowingDown)
+            //{
+            Time.timeScale += 1f / _slowdownLength * Time.unscaledDeltaTime;
+            Time.timeScale = Math.Clamp(Time.timeScale, 0f, 1f);
+            //}
+            //Time.timeScale += 1f / _slowdownLength * Time.unscaledDeltaTime;
+            //Time.timeScale = Math.Clamp(Time.timeScale, 0f, 1f);
 
         }
         public void StartSlowMotion(float transitionTime)
